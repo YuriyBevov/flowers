@@ -1,0 +1,18 @@
+include ../../mixins/main-btn
+
+section.intro
+  .lw-container-fluid.intro__container
+    .intro__content
+      h1.intro__title
+        span Эксклюзивный
+        span дизайн
+
+      p.intro__text Лучшие букеты для ваших любимых,  в самые счастливые моменты
+
+      +main-btn({
+        type: 'button',
+        icon: 'menu-icon.svg',
+        text: 'Выбрать букет'
+      })
+
+    img(src="./assets/img/intro-image.jpg" alt="Цветы счастья" width="923" height="806")

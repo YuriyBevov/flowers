@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  border-radius: 0;
+
+  @extend .main-scroll;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+  -webkit-text-size-adjust: none;
+}
+
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--main-font, sans-serif);
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: var(--main-bg-color);
+
+  &.body-locked {
+    overflow: hidden;
+  }
+}
+
+footer {
+  margin-top: auto;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
