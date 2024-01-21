@@ -1,0 +1,37 @@
+-
+  const featuresList = [
+    {
+      icon: 'feature_1.svg',
+      text: 'Индивидуальная сборка букета'
+    },
+    {
+      icon:'feature_2.svg',
+      text: 'Первоклассная свежесть цветов'
+    },
+    {
+      icon:'feature_3.svg',
+      text: 'Контроль качества шеф-флористом'
+    },
+    {
+      icon: 'feature_4.svg',
+      text: 'Дизайнерские топеры и&nbsp;упаковка в&nbsp;подарок'
+    },
+    {
+      icon: 'feature_5.svg',
+      text: 'Эксклюзивные аксессуары и&nbsp;сладости'
+    },
+    {
+      icon: 'feature_6.svg',
+      text: 'Бесплатная доставка по&nbsp;Москве'
+    },
+  ]
+section.features
+  .lw-container
+    h2.visually-hidden Наши преимущества
+
+    ul.features__list
+      each feature in featuresList
+        li.features__list-item
+          img(src=`./assets/img/${feature.icon}` alt="Иконка" width="56" height="50")
+          span.lw-main-text.lw-text-light!= feature.text
+

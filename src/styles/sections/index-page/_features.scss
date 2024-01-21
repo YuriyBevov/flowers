@@ -1,0 +1,43 @@
+.features {
+  padding-top: clamp(30px, 5vw, 100px);
+  padding-bottom: clamp(30px, 2.5vw, 70px);
+  margin-top: -3vw;
+
+  @include m-b-desktop-lg-up {
+    margin-top: -70px;
+  }
+
+  background-color: var(--secondary);
+
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+    column-gap: 30px;
+    row-gap: 20px;
+    width: 65vw;
+    max-width: 960px;
+
+    @include m-b-tablet-down {
+      width: 100%;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: fit-content;
+      // margin-right: 1.6vw;
+      margin-right: 30px;
+      object-fit: contain;
+
+      width: clamp(28px, 8vw, 56px);
+    }
+
+    span {
+      font-size: clamp(14px, 2.1vw, 20px);
+    }
+  }
+}

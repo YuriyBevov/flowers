@@ -3,7 +3,6 @@
     margin: 0 auto;
     padding: 0 var(--container-offset);
     max-width: var(--container-width);
-    outline: 1px solid red;
   }
 
   &-container-fluid {
@@ -11,11 +10,6 @@
     margin: 0 auto;
     padding: 0 var(--container-fluid-offset);
     max-width: var(--container-fluid-width);
-
-    /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
-    @include m-b-laptop-down {
-      padding: 0 20px;
-    }
   }
 
   //-- font styles --//
@@ -27,6 +21,11 @@
     text-transform: uppercase;
 
     @extend .lw-text-accent;
+  }
+
+  &-main-text {
+    font-size: clamp(16px, 1.5vw, 20px);
+    color: var(--main-text-color);
   }
 
   &-text-accent {

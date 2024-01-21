@@ -27,12 +27,12 @@
 /*scroll*/
 .main-scroll {
   &::-webkit-scrollbar {
-      background-color: var(--main-scrollbar-color);
-      width: var(--main-scrollbar-width);
+    background-color: var(--main-scrollbar-color);
+    width: var(--main-scrollbar-width);
   }
 
   &::-webkit-scrollbar-thumb {
-      background-color: var(--main-scrollbar-thumb-color);
+    background-color: var(--main-scrollbar-thumb-color);
   }
 }
 
@@ -91,4 +91,16 @@
   &:focus {
     opacity: 0.7;
   }
+}
+
+/*decor*/
+
+.square {
+  width: 4vw;
+  min-width: 28px;
+  max-width: 75px;
+  height: 4vw;
+  min-height: 28px;
+  max-height: 75px;
+  background-color: var(--secondary);
 }
