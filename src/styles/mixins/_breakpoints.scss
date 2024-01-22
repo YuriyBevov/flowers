@@ -20,6 +20,12 @@
   }
 }
 
+@mixin m-b-laptop-lg-down {
+  @media (max-width: (1139px)) {
+    @content;
+  }
+}
+
 @mixin m-b-laptop-down {
   @media (max-width: (1023px)) {
     @content;
@@ -54,6 +60,12 @@
 
 @mixin m-b-desktop-up {
   @media (min-width: (1440px)) {
+    @content;
+  }
+}
+
+@mixin m-b-laptop-lg-up {
+  @media (max-width: (1140px)) {
     @content;
   }
 }
