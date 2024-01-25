@@ -21,6 +21,14 @@
     text-transform: uppercase;
 
     @extend .lw-text-accent;
+
+    &--md {
+      font-size: 38px;
+    }
+
+    &--sm {
+      font-size: clamp(18px, 2.6vw, 28px);
+    }
   }
 
   &-main-text {

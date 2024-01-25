@@ -1,0 +1,26 @@
+include ../../mixins/main-btn
+include ../../mixins/main-input
+
+section.subscribe
+  .lw-container.subscribe__container
+    h2.lw-section-title.lw-section-title--sm подписаться на&nbsp;рассылку
+    form(action="#").subscribe__form
+
+      fieldset
+        +main-input({
+          type: 'text',
+          placeholder: 'Имя'
+        })
+      fieldset
+        +main-input({
+          type: 'text',
+          placeholder: 'E-mail'
+        })
+
+      +main-btn({
+        type: 'button',
+        icon: 'subscribe-icon.svg',
+        text: 'Подписаться'
+      })
+
+

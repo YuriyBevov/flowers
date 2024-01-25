@@ -8,8 +8,15 @@
 @import "common";
 
 /* Компоненты */
+@import "layout/header";
+@import "layout/footer";
+
+/* Компоненты */
 @import "components/main-btn";
+@import "components/main-input";
 /* Секции */
 @import "sections/index-page/intro";
 @import "sections/index-page/features";
+
+@import "sections/common/subscribe";
 /* Модальные окна */

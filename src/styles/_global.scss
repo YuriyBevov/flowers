@@ -55,3 +55,7 @@ p {
 a {
   text-decoration: none;
 }
+
+fieldset {
+  @extend .fieldset-reset;
+}
