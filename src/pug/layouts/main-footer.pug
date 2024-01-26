@@ -1,3 +1,49 @@
 footer.footer
-  .lw-container
-    p footer
+  .lw-container.footer__container
+    .footer__section.footer__section--logo
+      a(href="#" aria-label="Цвет Счастья").footer-logo
+        img(src="./assets/img/footer-logo.svg" alt="Логотип" width="270" height="60")
+      span 2024 © Цвет счастья
+      a(href="#") Политика конфиденциальности
+
+    .footer__section.footer__section--info
+      span.footer__section-title Информация
+      nav.footer-nav
+        ul.footer-nav__list
+          li.footer-nav__list-item
+            a(href="#") Гарантия качества
+          li.footer-nav__list-item
+            a(href="#") Отзывы
+          li.footer-nav__list-item
+            a(href="#") ЧАВО
+          li.footer-nav__list-item
+            a(href="#") Доставка и оплата
+          li.footer-nav__list-item
+            a(href="#") Корпоративным клиентам
+
+    .footer__section.footer__section--contacts
+      span.footer__section-title Контакты
+
+      a(href="tel:71234567890") +7 123 456 78 90
+      small Без выходных с 10:00 до 20:00
+      a(href="mailto:zayavka@cvetschastya.ru") zayavka@cvetschastya.ru
+
+    .footer__section.footer__section--address
+      address г. Москва,107174 , ул Новая Басманная, д. 2/1, Адрес пример!!!
+
+    .footer__section.footer__section--social
+      .social
+        ul.social__list
+          li.social__list-item
+            a(href="#")
+              img(src="./assets/img/icon-insta.svg" alt="insta" width="24" height="24")
+          li.social__list-item
+            a(href="#")
+              img(src="./assets/img/icon-whatsapp.svg" alt="whatsapp" width="24" height="24")
+          li.social__list-item
+            a(href="#")
+              img(src="./assets/img/icon-tg.svg" alt="tg" width="24" height="24")
+
+    .footer__section.footer__section--dev
+      a(href="#" aria-label="LW").developer-link
+        img(src="./assets/img/lw-logo-purple.svg" alt="LW" width="250" height="80")
