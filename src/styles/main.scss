@@ -14,9 +14,15 @@
 /* Компоненты */
 @import "components/main-btn";
 @import "components/main-input";
+@import "components/product-card";
+@import "components/favourite-btn";
+@import "components/add-to-cart-btn";
+@import "components/show-btn";
+
 /* Секции */
 @import "sections/index-page/intro";
 @import "sections/index-page/features";
+@import "sections/common/catalog-section";
 
 @import "sections/common/subscribe";
 /* Модальные окна */

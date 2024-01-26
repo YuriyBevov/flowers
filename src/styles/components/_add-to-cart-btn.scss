@@ -1,0 +1,28 @@
+.add-to-cart-btn {
+  @extend .flex-centered-content;
+  @extend .btn-reset;
+  width: clamp(32px, 5.2vw, 50px);
+  height: clamp(32px, 5.2vw, 50px);
+
+  img,
+  svg {
+    width: clamp(16px, 2.6vw, 24px);
+    height: clamp(16px, 2.6vw, 24px);
+  }
+
+  border-radius: 50%;
+
+  background-color: #fffaf8;
+  opacity: 0.3;
+  transition: opacity var(--main-transition),
+    background-color var(--main-transition), transform var(--main-transition);
+
+  @include m-b-mobile-lg-up {
+    &:hover,
+    &:focus {
+      opacity: 1;
+      background-color: #b3686f;
+      transform: scale(1.2);
+    }
+  }
+}

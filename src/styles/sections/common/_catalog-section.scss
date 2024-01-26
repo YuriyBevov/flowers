@@ -1,0 +1,17 @@
+// .swiper-slide,
+// .swiper-wrapper {
+//   box-sizing: border-box;
+// }
+
+.catalog-section {
+  @extend .lw-section-offset;
+
+  .lw-section-title {
+    margin-bottom: 60px;
+  }
+
+  .swiper-slide {
+    // width: fit-content;
+    // max-width: calc(100% / 3 - 15px);
+  }
+}
