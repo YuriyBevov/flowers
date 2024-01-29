@@ -1,0 +1,42 @@
+.about {
+  background-color: var(--secondary);
+  background-image: url("../assets/img/about-bg.png");
+  background-size: cover;
+  background-position: center;
+  font-weight: 300;
+  color: var(--light);
+  padding: clamp(30px, 10vw, 160px) clamp(5px, 9vw, 160px);
+
+  @include m-b-down(420px) {
+    padding: 30px 0;
+  }
+
+  .content-block {
+    // ПЕРЕНЕСТИ!!!
+    font-size: clamp(16px, 1.2vw, 20px);
+
+    p,
+    span,
+    li,
+    strong,
+    b {
+      font-size: 1em;
+    }
+
+    small {
+      font-size: 0.75em;
+    }
+  }
+
+  &__wrapper {
+    padding: clamp(40px, 7.6vw, 72px) clamp(16px, 7.6vw, 148px);
+    border-radius: 10px;
+    background-color: var(--danger);
+  }
+
+  .lw-section-title {
+    margin-bottom: clamp(8px, 1.8vw, 30px);
+    text-align: left;
+    color: var(--white);
+  }
+}

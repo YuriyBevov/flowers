@@ -24,7 +24,7 @@ body {
   flex-direction: column;
   font-family: var(--main-font, sans-serif);
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 1.2;
   background-color: var(--main-bg-color);
 
   &.body-locked {
@@ -42,13 +42,13 @@ img {
   object-fit: cover;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+h1:not(.content-block h1),
+h2:not(.content-block h2),
+h3:not(.content-block h3),
+h4:not(.content-block h4),
+h5:not(.content-block h5),
+h6:not(.content-block h6),
+p:not(.content-block p) {
   margin: 0;
 }
 

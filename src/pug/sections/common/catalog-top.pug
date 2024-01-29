@@ -1,11 +1,11 @@
 include ../../mixins/product-card
 
-section.catalog-section.catalog-section--recommended
-  .lw-container-fluid
-    h2.lw-section-title Рекомендации флориста
+section.catalog-section
+  .lw-container
+    h2.lw-section-title Букет дня
 
-    .swiper-container.swiper-container--offset-right
-      .swiper.catalog-section-swiper(data-count="auto" data-reverse="true" data-offset="25")
+    .swiper-container
+      .swiper.catalog-top-swiper(data-count="3" data-offset="20")
         .swiper-wrapper
           .swiper-slide
             +product-card({
@@ -39,23 +39,4 @@ section.catalog-section.catalog-section--recommended
               title: 'Название',
               price: '135 000'
             })
-          .swiper-slide
-            +product-card({
-              img: 'buket_2.png',
-              imgW: '560',
-              imgH: '640',
-              title: 'Название',
-              price: '135 000'
-            })
-          .swiper-slide
-            +product-card({
-              img: 'buket_2.png',
-              imgW: '560',
-              imgH: '640',
-              title: 'Название',
-              price: '135 000'
-            })
 
-      .swiper-controls
-        .swiper-button-prev
-        .swiper-button-next

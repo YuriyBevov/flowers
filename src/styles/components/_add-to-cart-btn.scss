@@ -3,6 +3,7 @@
   @extend .btn-reset;
   width: clamp(32px, 5.2vw, 50px);
   height: clamp(32px, 5.2vw, 50px);
+  transform: scale(1.01);
 
   img,
   svg {
