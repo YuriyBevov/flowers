@@ -1,0 +1,23 @@
+include ../../mixins/main-btn
+section.faq
+  .lw-container
+    .lw-section-header-container
+      h2.lw-section-title.lw-section-title--md Вопрос - Ответ
+
+      +main-btn({
+        type: 'button',
+        icon: 'question-icon.svg',
+        text: 'Задать вопрос',
+        cls: 'faq__top-btn'
+      })
+
+    include ../../components/accordeon
+
+    +main-btn({
+      type: 'button',
+      icon: 'question-icon.svg',
+      text: 'Задать вопрос',
+      cls: 'faq__bottom-btn'
+    })
+
+

@@ -9,6 +9,7 @@ if (catalogTopSlider) {
   new Swiper(catalogTopSlider, {
     slidesPerView: 2,
     spaceBetween: 10,
+    grabCursor: true,
 
     breakpoints: {
       420: {
@@ -42,6 +43,7 @@ if (catalogSectionSlider) {
     spaceBetween: 10,
     initialSlide,
     slidesOffsetBefore: 0,
+    grabCursor: true,
 
     navigation: {
       prevEl,

@@ -1,6 +1,6 @@
 mixin main-btn(data)
   if data.type == "button"
-    button(type="button").main-btn
+    button(type="button" class= data.cls ? data.cls : null).main-btn
       if data.icon
         img(src=`./assets/img/${data.icon}` alt="Иконка кнопки" width="20" height="20")
 

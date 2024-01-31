@@ -1,0 +1,103 @@
+:root {
+  --accordeon-bg-color: #e8d3d5;
+  --accordeon-content-bg-color: #ffffff;
+  --accordeon-text-color: #000000;
+  --accordeon-border-radius: 10px;
+  --accordeon-offset: clamp(16px, 1.6vw, 30px);
+  --accordeon-item-offset: 5px;
+  --accordeon-max-width: 1440px;
+  --accordeon-icon-color: #c0c0c0;
+  --accordeon-content-block-transition: 0.25s linear;
+}
+
+.accordeon {
+  width: 100%;
+  max-width: var(--accordeon-max-width);
+  margin: 0 auto;
+
+  &-item {
+    margin-bottom: var(--accordeon-item-offset);
+    border-radius: var(--accordeon-border-radius);
+    background-color: var(--accordeon-bg-color);
+  }
+
+  &-item-header {
+    position: relative;
+    padding: var(--accordeon-offset);
+    margin-bottom: var(--accordeon-offset);
+    padding-right: calc(var(--accordeon-offset) * 2 + var(--accordeon-offset));
+
+    color: var(--accordeon-text-color);
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      top: 50%;
+      content: "";
+      background-color: var(--accordeon-icon-color);
+    }
+
+    &::before {
+      width: 10px;
+      height: 2px;
+      right: var(--accordeon-offset);
+    }
+
+    &::after {
+      width: 2px;
+      height: 10px;
+      top: calc(50% + 1px);
+      right: calc(var(--accordeon-offset) + 4px);
+      transform: translateY(-50%);
+      opacity: 1;
+    }
+  }
+
+  &-item-content {
+    padding: 0 var(--accordeon-offset);
+    padding-top: 0;
+    height: 0;
+    opacity: 0;
+    visibility: visible;
+    margin-top: calc(-1 * var(--accordeon-offset));
+    transition: all var(--accordeon-content-block-transition);
+
+    .lw-content {
+      padding: var(--accordeon-offset);
+      border-radius: var(--accordeon-border-radius);
+      background-color: var(--accordeon-content-bg-color);
+
+      opacity: 0;
+      transition: all var(--accordeon-content-block-transition);
+    }
+  }
+
+  &-item.expanded {
+    .accordeon-item-content {
+      padding: var(--accordeon-offset);
+      padding-top: 0;
+      height: auto;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .lw-content {
+      display: block;
+      opacity: 1;
+    }
+
+    .accordeon-item-header::after {
+      animation: accordeonArrowAnimation 0.25s linear forwards;
+    }
+  }
+}
+
+@keyframes accordeonArrowAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

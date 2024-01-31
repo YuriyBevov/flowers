@@ -6,6 +6,7 @@
   font-weight: 300;
   color: var(--light);
   padding: clamp(30px, 10vw, 160px) clamp(5px, 9vw, 160px);
+  margin-bottom: 30px;
 
   @include m-b-down(420px) {
     padding: 30px 0;

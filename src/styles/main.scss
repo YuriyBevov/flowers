@@ -7,7 +7,7 @@
 @import "extends";
 @import "common";
 
-/* Компоненты */
+/* шаблон */
 @import "layout/header";
 @import "layout/footer";
 
@@ -18,12 +18,15 @@
 @import "components/favourite-btn";
 @import "components/add-to-cart-btn";
 @import "components/show-btn";
+@import "components/accordeon";
 
 /* Секции */
 @import "sections/index-page/intro";
 @import "sections/index-page/features";
 @import "sections/common/catalog-section";
 @import "sections/index-page/about";
+@import "sections/common/faq";
+@import "sections/index-page/clients";
 
 @import "sections/common/subscribe";
 /* Модальные окна */

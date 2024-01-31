@@ -1,0 +1,23 @@
+.faq {
+  @extend .lw-section-offset;
+
+  .lw-section-header-container {
+    margin-bottom: clamp(30px, 5.2vw, 60px);
+  }
+
+  .lw-section-title {
+    margin: 0;
+  }
+
+  .faq__bottom-btn {
+    display: none;
+
+    @include m-b-tablet-down {
+      display: flex;
+      max-width: 192px;
+      height: 45px;
+      margin: 0 auto;
+      margin-top: 40px;
+    }
+  }
+}

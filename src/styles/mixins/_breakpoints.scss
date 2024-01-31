@@ -65,7 +65,7 @@
 }
 
 @mixin m-b-laptop-lg-up {
-  @media (max-width: (1140px)) {
+  @media (min-width: (1140px)) {
     @content;
   }
 }
