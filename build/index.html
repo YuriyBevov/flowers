@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta name="description" content=""/>
+    <meta name="keywords" content=""/>
+    <title></title>
+    <link rel="stylesheet" href="./assets/main.css"/>
+    <script defer="defer" src="./assets/bundle.js"></script>
+  </head>
+  <body>
+    <header>
+      <p>header</p>
+    </header>
+    <main>
+      <section class="intro">
+        <div class="lw-container-fluid intro__container">
+          <div class="intro__content">
+            <h1 class="intro__title"><span>Эксклюзивный</span><span>дизайн</span></h1>
+            <p class="intro__text">Лучшие букеты для ваших любимых, в&nbsp;самые счастливые моменты</p>
+                  <button class="main-btn" type="button"><img src="./assets/img/menu-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Выбрать букет</span>
+                  </button>
+          </div><img class="intro__img" src="./assets/img/intro-image.jpg" alt="Цветы счастья" width="923" height="806">
+        </div>
+      </section>
+      <section class="features">
+        <div class="lw-container features__container">
+          <h2 class="visually-hidden">Наши преимущества</h2>
+          <ul class="features__list">
+            <li class="features__list-item"><img src="./assets/img/feature_1.svg" alt="Иконка" width="56" height="50"><span class="lw-main-text lw-text-light">Индивидуальная сборка букета</span></li>
+            <li class="features__list-item"><img src="./assets/img/feature_2.svg" alt="Иконка" width="56" height="50"><span class="lw-main-text lw-text-light">Первоклассная свежесть цветов</span></li>
+            <li class="features__list-item"><img src="./assets/img/feature_3.svg" alt="Иконка" width="56" height="50"><span class="lw-main-text lw-text-light">Контроль качества шеф-флористом</span></li>
+            <li class="features__list-item"><img src="./assets/img/feature_4.svg" alt="Иконка" width="56" height="50"><span class="lw-main-text lw-text-light">Дизайнерские топеры и&nbsp;упаковка в&nbsp;подарок</span></li>
+            <li class="features__list-item"><img src="./assets/img/feature_5.svg" alt="Иконка" width="56" height="50"><span class="lw-main-text lw-text-light">Эксклюзивные аксессуары и&nbsp;сладости</span></li>
+            <li class="features__list-item"><img src="./assets/img/feature_6.svg" alt="Иконка" width="56" height="50"><span class="lw-main-text lw-text-light">Бесплатная доставка по&nbsp;Москве</span></li>
+          </ul>
+        </div>
+      </section>
+      <section class="catalog-section">
+        <div class="lw-container">
+          <h2 class="lw-section-title">Букет дня</h2>
+          <div class="swiper-container">
+            <div class="swiper catalog-top-swiper" data-count="3" data-offset="20">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название букета</h3><span class="product-card__price">5 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название букета длинно или очень длинное название букета" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название букета длинно или очень длинное название букета</h3><span class="product-card__price">640<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета длинно или очень" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название букета длинно или очень</h3><span class="product-card__price">14 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="catalog-section catalog-section--recommended">
+        <div class="lw-container-fluid">
+          <h2 class="lw-section-title">Рекомендации флориста</h2>
+          <div class="swiper-container swiper-container--offset-right">
+            <div class="swiper catalog-section-swiper" data-count="auto" data-reverse="true" data-offset="25">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название букета</h3><span class="product-card__price">5 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название букета длинно или очень длинное название букета" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название букета длинно или очень длинное название букета</h3><span class="product-card__price">640<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета длинно или очень" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название букета длинно или очень</h3><span class="product-card__price">14 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="product-card">
+                          <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
+                            <div class="product-card__top-side">
+                              <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
+                                -->
+                              </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
+                                --></a>
+                            </div>
+                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                              -->
+                            </button>
+                          </div>
+                          <div class="product-card__bottom"><span class="product-card__category"></span>
+                            <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>
+                          </div>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-controls">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="lw-container">
+          <div class="about__wrapper">
+            <h2 class="lw-section-title">SEO-текст</h2>
+            <div class="content-block">
+              <p>С каждым днем поисковые роботы все лучше распознают полезный материал. Учитываются его качество, смысловая уникальность, а также поведенческие факторы.</p>
+              <p>Идеально, если пишет эксперт или если он консультирует копирайтера. Именно такие материалы получаются максимально полезными. Однако без использования ключевых запросов такой контент останется на задворках интернета.</p>
+              <p>Чтобы статья продвигалась, она должна максимально охватывать пользовательский запрос. Как написать SEO-текст под этот критерий? Для начала нужно собрать основные ключевые слова с помощью Яндекс Wordstat.</p>
+              <p>Кроме ключевиков, нужны LSI-слова. Они отражают специфику темы, его экспертность, помогают поисковикам лучше понять, о чем речь. Например, если в LSI-тексте про кондиционеры упоминаются «наносить», «смыть», «минут», «шелковистые», робот понимает, что имеется ввиду кондиционер для волос, а не для дома.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq">
+        <div class="lw-container">
+          <div class="lw-section-header-container">
+            <h2 class="lw-section-title lw-section-title--md">Вопрос - Ответ</h2>
+                  <button class="faq__top-btn main-btn" type="button"><img src="./assets/img/question-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Задать вопрос</span>
+                  </button>
+          </div>
+          <div class="accordeon">
+            <div class="accordeon-item expanded">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары&nbsp;?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon-item">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon-item">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon-item">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon-item">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon-item">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon-item">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordeon-item">
+              <div class="accordeon-item-header">Будут ли в магазине использоваться торговые предложения или будут просто товары?</div>
+              <div class="accordeon-item-content">
+                <div class="lw-content">
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum velit unde et.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+                <button class="faq__bottom-btn main-btn" type="button"><img src="./assets/img/question-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Задать вопрос</span>
+                </button>
+        </div>
+      </section>
+      <section class="reviews">
+        <div class="lw-container">
+          <div class="lw-section-header-container">
+            <h2 class="lw-section-title">Отзывы</h2>
+                  <button class="reviews__top-btn main-btn" type="button"><img src="./assets/img/chat-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Оставить отзыв</span>
+                  </button>
+          </div>
+        </div>
+        <div class="lw-container-fluid">
+          <div class="swiper-container swiper-container--offset-right">
+            <div class="swiper review-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/user-avatar-empty.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+                <div class="swiper-slide">
+                        <div class="review-card">
+                          <div class="review-card-header">
+                            <div class="review-card-header-top"><img src="./assets/img/mock/user-avatar.png" alt="Аватар" width="60" height="60"></div>
+                            <div class="review-card-header-bottom"><span class="review-card-author">Константин</span>
+                              <div class="review-card-rate-container">
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item active"></div>
+                                <div class="review-card-rate-item"></div>
+                                <div class="review-card-rate-item"></div>
+                              </div><span class="review-card-date">08.12.2023</span>
+                            </div>
+                          </div>
+                          <div class="review-card-content">Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...</div>
+                          <button class="review-card-btn" type="button">Еще</button>
+                        </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-controls">
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+                <button class="reviews__bottom-btn main-btn" type="button"><img src="./assets/img/chat-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Оставить отзыв</span>
+                </button>
+        </div>
+      </section>
+      <section class="clients">
+        <div class="lw-container clients__container">
+          <h2 class="lw-section-title lw-section-title--md">Корпоративные клиенты</h2>
+          <ul class="clients__list">
+            <li class="clients__list-item"><img src="./assets/img/mock/client_1.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_2.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_3.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_4.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_5.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_6.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_1.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_2.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_3.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_4.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_5.png" alt="client" width="150" height="100"></li>
+            <li class="clients__list-item"><img src="./assets/img/mock/client_6.png" alt="client" width="150" height="100"></li>
+          </ul>
+        </div>
+      </section>
+      <section class="subscribe">
+        <div class="lw-container subscribe__container">
+          <h2 class="lw-section-title lw-section-title--sm">подписаться на&nbsp;рассылку</h2>
+          <form class="subscribe__form" action="#">
+            <fieldset>
+                    <input type="text" placeholder="Имя">
+            </fieldset>
+            <fieldset>
+                    <input type="text" placeholder="E-mail">
+            </fieldset>
+                  <button class="main-btn" type="button"><img src="./assets/img/subscribe-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Подписаться</span>
+                  </button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="lw-container footer__container">
+        <div class="footer__section footer__section--logo"><a class="footer-logo" href="#" aria-label="Цвет Счастья"><img src="./assets/img/footer-logo.svg" alt="Логотип" width="270" height="60"></a><span>2024 © Цвет счастья</span><a href="#">Политика конфиденциальности</a></div>
+        <div class="footer__section footer__section--info"><span class="footer__section-title">Информация</span>
+          <nav class="footer-nav">
+            <ul class="footer-nav__list">
+              <li class="footer-nav__list-item"><a href="#">Гарантия качества</a></li>
+              <li class="footer-nav__list-item"><a href="#">Отзывы</a></li>
+              <li class="footer-nav__list-item"><a href="#">ЧАВО</a></li>
+              <li class="footer-nav__list-item"><a href="#">Доставка и оплата</a></li>
+              <li class="footer-nav__list-item"><a href="#">Корпоративным клиентам</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__section footer__section--contacts"><span class="footer__section-title">Контакты</span><a href="tel:71234567890">+7 123 456 78 90</a><small>Без выходных с 10:00 до 20:00</small><a href="mailto:zayavka@cvetschastya.ru">zayavka@cvetschastya.ru</a></div>
+        <div class="footer__section footer__section--address">
+          <address>г. Москва,107174 , ул Новая Басманная, д. 2/1, Адрес пример!!!</address>
+        </div>
+        <div class="footer__section footer__section--social">
+          <div class="social">
+            <ul class="social__list">
+              <li class="social__list-item"><a href="#"><img src="./assets/img/icon-insta.svg" alt="insta" width="24" height="24"></a></li>
+              <li class="social__list-item"><a href="#"><img src="./assets/img/icon-whatsapp.svg" alt="whatsapp" width="24" height="24"></a></li>
+              <li class="social__list-item"><a href="#"><img src="./assets/img/icon-tg.svg" alt="tg" width="24" height="24"></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__section footer__section--dev"><a class="developer-link" href="#" aria-label="LW"><img src="./assets/img/lw-logo-purple.svg" alt="LW" width="250" height="80"></a></div>
+      </div>
+    </footer>
+    <!--include ./modals/...-->
+    <!--script(src="./js/bundle.js")-->
+  </body>
+</html>
