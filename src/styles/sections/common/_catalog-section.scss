@@ -16,7 +16,6 @@
       padding-left: 0;
       padding-right: 0;
 
-      /* up/down desktop-lg(1920),desktop(1440),laptop(1140),tablet-lg(960),tablet(768),mobile-lg(534)*/
       @include m-b-mobile-lg-down {
         padding: 0 var(--container-offset);
       }

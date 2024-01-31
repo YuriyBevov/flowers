@@ -24,6 +24,7 @@
     max-width: clamp(160px, 26vw, 266px);
     min-height: clamp(40px, 6vw, 62px);
     padding: 5px 12px;
+    line-height: 1;
     font-size: clamp(14px, 2.4vw, 18px);
 
     @include m-b-tablet-down {
@@ -31,10 +32,6 @@
         display: none;
       }
     }
-
-    // @include m-b-down(620px) {
-    //   grid-row: 3/4;
-    // }
   }
 
   &__title {
@@ -143,7 +140,7 @@
     z-index: 2;
   }
 
-  img {
+  &__img {
     height: 100%;
 
     @include m-b-down(620px) {

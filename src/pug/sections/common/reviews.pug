@@ -1,0 +1,39 @@
+include ../../mixins/main-btn
+include ../../mixins/review-card
+
+section.reviews
+  .lw-container
+    .lw-section-header-container
+      h2.lw-section-title Отзывы
+
+      +main-btn({
+        type: 'button',
+        icon: 'chat-icon.svg',
+        text: 'Оставить отзыв',
+        cls: 'reviews__top-btn'
+      })
+  .lw-container-fluid
+    .swiper-container.swiper-container--offset-right
+      .swiper.review-swiper
+        .swiper-wrapper
+          each item in [1,2,3,4,5,6,7,8]
+            .swiper-slide
+              +review-card({
+                text: 'Следует отметить, что высокое качество позиционных исследований играет определяющее значение для существующих финансовых и административных условий.',
+                img: 'user-avatar-empty.png'
+              })
+            .swiper-slide
+              +review-card({
+                text: 'Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализации укрепления моральных ценностей! Идейные соображения высшего порядка, а также базовый вектор развития не оставляет шанса для новых предложений. Прежде всего, дальнейшее развитие различных форм деятельности прекрасно подходит для реализац...',
+                img: 'mock/user-avatar.png'
+              })
+      .swiper-controls
+        .swiper-button-prev
+        .swiper-button-next
+
+    +main-btn({
+      type: 'button',
+      icon: 'chat-icon.svg',
+      text: 'Оставить отзыв',
+      cls: 'reviews__bottom-btn'
+    })

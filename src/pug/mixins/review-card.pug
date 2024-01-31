@@ -1,0 +1,21 @@
+mixin review-card(data)
+  .review-card
+    .review-card-header
+      .review-card-header-top
+        img(src=`./assets/img/${data.img}` alt="Аватар" width="60" height="60")
+
+      .review-card-header-bottom
+        span.review-card-author Константин
+        .review-card-rate-container
+          .review-card-rate-item.active
+          .review-card-rate-item.active
+          .review-card-rate-item.active
+          .review-card-rate-item
+          .review-card-rate-item
+
+        span.review-card-date 08.12.2023
+
+    .review-card-content!= data.text
+
+    button(type="button").review-card-btn Еще
+

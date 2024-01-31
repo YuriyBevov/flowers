@@ -65,3 +65,46 @@ if (catalogSectionSlider) {
     },
   });
 }
+
+const reviewSlider = document.querySelector(".swiper-container .review-swiper");
+
+if (reviewSlider) {
+  const initialSlide = reviewSlider.querySelectorAll(".swiper-slide").length;
+
+  const controls = reviewSlider.parentNode.querySelector(".swiper-controls");
+
+  let prevEl = null;
+  let nextEl = null;
+
+  if (controls) {
+    prevEl = controls.querySelector(".swiper-button-prev");
+    nextEl = controls.querySelector(".swiper-button-next");
+  }
+
+  new Swiper(reviewSlider, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    initialSlide,
+    slidesOffsetBefore: 0,
+    grabCursor: true,
+
+    navigation: {
+      prevEl: prevEl ? prevEl : null,
+      nextEl: nextEl ? nextEl : null,
+    },
+
+    breakpoints: {
+      534: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        slidesOffsetBefore: 0,
+      },
+
+      768: {
+        slidesPerView: "auto",
+        spaceBetween: 20,
+        slidesOffsetBefore: 20,
+      },
+    },
+  });
+}

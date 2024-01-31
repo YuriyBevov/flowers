@@ -14,7 +14,7 @@
 
     @include m-b-tablet-down {
       display: flex;
-      max-width: 192px;
+      max-width: fit-content;
       height: 45px;
       margin: 0 auto;
       margin-top: 40px;

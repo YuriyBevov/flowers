@@ -1,0 +1,75 @@
+.review-card {
+  border-radius: 10px;
+  padding: clamp(24px, 4vw, 30px) clamp(16px, 4vw, 30px);
+  background-color: var(--white);
+
+  &-header {
+    margin-bottom: 15px;
+
+    &-top {
+      margin-bottom: 10px;
+    }
+
+    &-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 10px;
+      width: 100%;
+    }
+  }
+
+  &-avatar {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+  }
+
+  &-author {
+    font-size: clamp(14px, 2.2vw, 20px);
+    font-weight: 300;
+    padding-right: 15px;
+    margin-right: auto;
+  }
+
+  &-rate {
+    &-container {
+      @extend .flex-centered-content;
+      padding-right: 15px;
+      margin-right: auto;
+    }
+
+    &-item {
+      width: 14px;
+      height: 14px;
+      margin: 0 1px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("../assets/img/rate-star.svg");
+      &.active {
+        background-image: url("../assets/img/rate-star-filled.svg");
+      }
+    }
+  }
+
+  &-date {
+    font-size: clamp(14px, 1.2vw, 16px);
+    font-weight: 300;
+    color: #9c9c9c;
+  }
+
+  &-content {
+    font-size: clamp(14px, 1.2vw, 16px);
+    font-weight: 300;
+    line-height: 1.5;
+
+    @include text-truncate(15);
+  }
+
+  &-btn {
+    @extend .btn-reset;
+    @extend .flex-centered-content;
+    margin-top: 30px;
+    color: var(--primary);
+  }
+}
