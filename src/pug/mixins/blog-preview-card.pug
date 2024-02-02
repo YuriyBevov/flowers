@@ -4,13 +4,16 @@ mixin blog-preview-card(data)
     img(src=`./assets/img/${data.imgMiddlePath}` alt="Цветы" width="560" height="630")
 
     .blog-preview-card-content
-      .blog-preciew-card-count <span class="blog-preciew-card-count-current">02</span> \ <span class="blog-preciew-card-count-total">03</span>
-      .blog-preview-card-content-title!= data.title
-      .blog-preview-card-content-date!= data.date
-      .blog-preview-card-content-text!= data.text
+      .blog-preview-card-count 01
+        .blog-preview-card-count-current
+        | \ 
+        .blog-preview-card-count-total 
+      .blog-preview-card-title!= data.title
+      .blog-preview-card-date!= data.date
+      .blog-preview-card-text!= data.text
 
-      a(href="#").blog-preview-card-content-link Подробнее
+      a(href="#").blog-preview-card-more-btn Подробнее
 
       .blog-preview-card-navigation
-        button.blog-preview-card-btn-prev Назад
-        button.blog-preview-card-btn-next Вперед
+        button.blog-preview-card-btn-prev
+        button.blog-preview-card-btn-next

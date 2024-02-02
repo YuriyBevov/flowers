@@ -393,7 +393,6 @@ template {
   display: flex;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
@@ -423,7 +422,6 @@ template {
   position: relative;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
@@ -442,7 +440,6 @@ template {
   align-items: flex-start;
   -webkit-transition-property: height, -webkit-transform;
   transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
   transition-property: transform, height, -webkit-transform;
 }
@@ -480,25 +477,21 @@ template {
 
 .swiper-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -661,7 +654,6 @@ template {
   position: absolute;
   text-align: center;
   -webkit-transition: 0.3s opacity;
-  -o-transition: 0.3s opacity;
   transition: 0.3s opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -787,7 +779,6 @@ button.swiper-pagination-bullet {
   display: inline-block;
   -webkit-transition: 0.2s top, 0.2s -webkit-transform;
   transition: 0.2s top, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s top;
   transition: 0.2s transform, 0.2s top;
   transition: 0.2s transform, 0.2s top, 0.2s -webkit-transform;
 }
@@ -807,7 +798,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 0.2s left, 0.2s -webkit-transform;
   transition: 0.2s left, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s left;
   transition: 0.2s transform, 0.2s left;
   transition: 0.2s transform, 0.2s left, 0.2s -webkit-transform;
 }
@@ -815,7 +805,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 0.2s right, 0.2s -webkit-transform;
   transition: 0.2s right, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s right;
   transition: 0.2s transform, 0.2s right;
   transition: 0.2s transform, 0.2s right, 0.2s -webkit-transform;
 }
@@ -1001,7 +990,6 @@ button.swiper-pagination-bullet {
 
 .swiper-free-mode > .swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
@@ -1022,14 +1010,12 @@ button.swiper-pagination-bullet {
 
 .swiper-fade.swiper-free-mode .swiper-slide {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-fade .swiper-slide {
   pointer-events: none;
   -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -1136,7 +1122,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   -webkit-transition-property: opacity, height, -webkit-transform;
   transition-property: opacity, height, -webkit-transform;
-  -o-transition-property: transform, opacity, height;
   transition-property: transform, opacity, height;
   transition-property: transform, opacity, height, -webkit-transform;
 }
@@ -1178,6 +1163,7 @@ button.swiper-pagination-bullet {
   --success: #a1c982;
   --info: #5d5d5d;
   --light: #f5f5f5;
+  --basic-gray: #9c9c9c;
   --main-input-bg: #fffaf8;
   --main-input-placeholder: #8f664e;
   --main-text-color: var(--black);
@@ -1290,7 +1276,7 @@ a {
 }
 
 .flex-centered-content, .clients__list-item, .swiper-button-next,
-.swiper-button-prev, .review-card-btn, .review-card-rate-container, .add-to-cart-btn, .main-btn, .social__list-item a, .lw-product-card-btn, .show-btn, .favourite-btn, .lw-section-header-container {
+.swiper-button-prev, .blog-preview-card-btn-prev, .blog-preview-card-btn-next, .review-card-btn, .review-card-rate-container, .add-to-cart-btn, .main-btn, .social__list-item a, .lw-product-card-btn, .show-btn, .favourite-btn, .lw-section-header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1302,7 +1288,7 @@ a {
   justify-content: center;
 }
 
-.flex-column, .product-card__bottom, .product-card__top-side, .product-card, .footer-nav__list, .footer__section {
+.flex-column, .blog-preview-card-content, .product-card__bottom, .product-card__top-side, .product-card, .footer-nav__list, .footer__section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1316,7 +1302,6 @@ a {
 .text-truncate {
   white-space: nowrap;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 
@@ -1342,7 +1327,7 @@ a {
   border: 0;
 }
 
-.btn-reset, .review-card-btn, .add-to-cart-btn, .main-btn, .lw-product-card-btn, .show-btn, .favourite-btn {
+.btn-reset, .blog-preview-card-btn-prev, .blog-preview-card-btn-next, .review-card-btn, .add-to-cart-btn, .main-btn, .lw-product-card-btn, .show-btn, .favourite-btn {
   border: none;
   padding: 0;
   background: transparent;
@@ -1376,7 +1361,6 @@ a {
 /*transitions*/
 .hover-opacity, .footer__section a {
   -webkit-transition: opacity var(--main-transition);
-  -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
 .hover-opacity:hover, .footer__section a:hover, .hover-opacity:focus, .footer__section a:focus {
@@ -1491,7 +1475,6 @@ a {
   background-color: #fffaf8;
   opacity: 0.3;
   -webkit-transition: opacity var(--main-transition);
-  -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
 .lw-product-card-btn img, .show-btn img, .favourite-btn img,
@@ -1866,14 +1849,10 @@ input.invalid-control {
   font-weight: 300;
   margin: 0;
   margin-bottom: clamp(6px, 1.3vw, 12px);
-  -webkit-line-clamp: 2;
-  /* Число отображаемых строк */
-  display: -webkit-box;
-  /* Включаем флексбоксы */
-  -webkit-box-orient: vertical;
-  /* Вертикальная ориентация */
-  overflow: hidden;
-  /* Обрезаем всё за пределами блока */
+  -webkit-line-clamp: 2; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .product-card__price {
   display: inline-block;
@@ -1897,7 +1876,6 @@ input.invalid-control {
   opacity: 0.3;
   -webkit-transition: opacity var(--main-transition), background-color var(--main-transition), -webkit-transform var(--main-transition);
   transition: opacity var(--main-transition), background-color var(--main-transition), -webkit-transform var(--main-transition);
-  -o-transition: opacity var(--main-transition), background-color var(--main-transition), transform var(--main-transition);
   transition: opacity var(--main-transition), background-color var(--main-transition), transform var(--main-transition);
   transition: opacity var(--main-transition), background-color var(--main-transition), transform var(--main-transition), -webkit-transform var(--main-transition);
 }
@@ -1975,7 +1953,6 @@ input.invalid-control {
   visibility: visible;
   margin-top: calc(-1 * var(--accordeon-offset));
   -webkit-transition: all var(--accordeon-content-block-transition);
-  -o-transition: all var(--accordeon-content-block-transition);
   transition: all var(--accordeon-content-block-transition);
 }
 .accordeon-item-content .lw-content {
@@ -1984,7 +1961,6 @@ input.invalid-control {
   background-color: var(--accordeon-content-bg-color);
   opacity: 0;
   -webkit-transition: all var(--accordeon-content-block-transition);
-  -o-transition: all var(--accordeon-content-block-transition);
   transition: all var(--accordeon-content-block-transition);
 }
 .accordeon-item.expanded .accordeon-item-content {
@@ -2079,14 +2055,10 @@ input.invalid-control {
   font-size: clamp(14px, 1.2vw, 16px);
   font-weight: 300;
   line-height: 1.5;
-  -webkit-line-clamp: 15;
-  /* Число отображаемых строк */
-  display: -webkit-box;
-  /* Включаем флексбоксы */
-  -webkit-box-orient: vertical;
-  /* Вертикальная ориентация */
-  overflow: hidden;
-  /* Обрезаем всё за пределами блока */
+  -webkit-line-clamp: 15; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .review-card-btn {
   margin-top: 30px;
@@ -2101,18 +2073,22 @@ input.invalid-control {
   display: grid;
   -ms-grid-columns: 3fr 4fr 5fr;
   grid-template-columns: 3fr 4fr 5fr;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+}
+@media (max-width: 960px) {
+  .blog-preview-card {
+    -ms-grid-columns: 4fr 6fr;
+    grid-template-columns: 4fr 6fr;
+  }
 }
 .blog-preview-card img {
   border-radius: 10px;
+  margin: auto 0;
 }
 .blog-preview-card img:nth-child(1) {
-  margin: 80px 0;
+  aspect-ratio: 1/1.1;
 }
 .blog-preview-card img:nth-child(2) {
-  margin: 60px 0;
+  aspect-ratio: 1/1.1;
 }
 .blog-preview-card-content {
   padding: clamp(18px, 4.8vw, 75px) clamp(18px, 3.2vw, 135px);
@@ -2121,6 +2097,73 @@ input.invalid-control {
   background-color: var(--secondary);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+@media (max-width: 960px) {
+  .blog-preview-card-content {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+}
+.blog-preview-card-count {
+  margin-bottom: 24px;
+  font-weight: 300;
+  color: var(--basic-gray);
+}
+.blog-preview-card-count span:first-child {
+  color: var(--black);
+}
+.blog-preview-card-title {
+  font-family: var(--secondary-font);
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.blog-preview-card-date {
+  margin-bottom: 24px;
+  font-weight: 300;
+  color: var(--basic-gray);
+}
+.blog-preview-card-text {
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+.blog-preview-card-more-btn {
+  text-transform: uppercase;
+  padding-left: 32px;
+  background-image: url("../assets/img/more-icon.svg");
+  background-size: 21px;
+  background-repeat: no-repeat;
+  background-position: left;
+  margin-top: auto;
+  color: var(--primary);
+}
+.blog-preview-card-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 20px;
+  margin: 64px -10px 0;
+}
+.blog-preview-card-btn-prev, .blog-preview-card-btn-next {
+  width: 40px;
+  height: 40px;
+  background-image: url("../assets/img/icon-slider-arr.svg");
+  background-size: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.blog-preview-card-btn-prev {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 /* Секции */
