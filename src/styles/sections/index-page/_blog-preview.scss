@@ -1,0 +1,28 @@
+.blog-preview {
+  @extend .lw-section-offset;
+
+  .swiper-container {
+    outline: 1px solid red;
+    padding-bottom: 20px;
+  }
+
+  .swiper-wrapper {
+    outline: 1pxsolid black;
+  }
+
+  .swiper-pagination {
+    top: unset;
+    bottom: 0;
+
+    &-bullet {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: var(--danger);
+    }
+
+    &-bullet-active {
+      background-color: var(--black);
+    }
+  }
+}

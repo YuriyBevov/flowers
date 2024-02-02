@@ -1,5 +1,5 @@
-import Swiper, { Navigation, Pagination, Autoplay } from "swiper";
-Swiper.use([Navigation, Pagination, Autoplay]);
+import Swiper, { Navigation, Pagination, Autoplay, EffectFade } from "swiper";
+Swiper.use([Navigation, Pagination, Autoplay, EffectFade]);
 
 const catalogTopSlider = document.querySelector(
   ".swiper-container .catalog-top-swiper"
@@ -107,4 +107,53 @@ if (reviewSlider) {
       },
     },
   });
+}
+
+const blogSlider = document.querySelector(".blog-preview-slider");
+
+if (blogSlider) {
+  let currentSlideIndex = 0;
+  const blogSlider = new Swiper(blogSlider, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    effect: "fade",
+
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true,
+    },
+
+    navigation: {
+      prevEl: ".swiper-button-prev.blog-preview-slider-btn-prev",
+      nextEl: ".swiper-button-next.blog-preview-slider-btn-next",
+    },
+
+    on: {
+      slideChange: function () {
+        console.log(this.el, this.activeIndex, "changed");
+        currentSlideIndex = this.activeIndex;
+      },
+    },
+  });
+
+  const navigators = document.querySelectorAll(
+    ".blog-preview-card-navigation button"
+  );
+
+  if (navigators) {
+    console.log(navigators);
+
+    navigators.forEach((navigator) => {
+      navigator.addEventListener("click", (evt) => {
+        console.log(evt.currentTarget);
+        if (
+          evt.currentTarget.classList.contains("blog-preview-card-btn-next")
+        ) {
+          console.log(blogSlider);
+          // blogSlider.slideNext(1000, false);
+        }
+      });
+    });
+  }
 }

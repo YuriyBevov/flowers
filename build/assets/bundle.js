@@ -65,7 +65,7 @@ if (container) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade]);
 var catalogTopSlider = document.querySelector(".swiper-container .catalog-top-swiper");
 
 if (catalogTopSlider) {
@@ -155,6 +155,48 @@ if (reviewSlider) {
       }
     }
   });
+}
+
+var blogSlider = document.querySelector(".blog-preview-slider");
+
+if (blogSlider) {
+  var currentSlideIndex = 0;
+
+  var _blogSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](_blogSlider, {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    effect: "fade",
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+      clickable: true
+    },
+    navigation: {
+      prevEl: ".swiper-button-prev.blog-preview-slider-btn-prev",
+      nextEl: ".swiper-button-next.blog-preview-slider-btn-next"
+    },
+    on: {
+      slideChange: function slideChange() {
+        console.log(this.el, this.activeIndex, "changed");
+        currentSlideIndex = this.activeIndex;
+      }
+    }
+  });
+
+  var navigators = document.querySelectorAll(".blog-preview-card-navigation button");
+
+  if (navigators) {
+    console.log(navigators);
+    navigators.forEach(function (navigator) {
+      navigator.addEventListener("click", function (evt) {
+        console.log(evt.currentTarget);
+
+        if (evt.currentTarget.classList.contains("blog-preview-card-btn-next")) {
+          console.log(_blogSlider); // blogSlider.slideNext(1000, false);
+        }
+      });
+    });
+  }
 }
 
 /***/ }),
