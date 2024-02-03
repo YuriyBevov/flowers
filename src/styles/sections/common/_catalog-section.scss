@@ -6,7 +6,7 @@
   }
 
   &--recommended {
-    .swiper-slide {
+    .catalog-section-swiper .swiper-slide {
       width: calc(100% / 3);
       max-width: 415px;
       height: auto;
@@ -74,9 +74,13 @@
     }
   }
 }
+.catalog-section-swiper {
+  .swiper-slide {
+    border-radius: 10px;
+  }
+}
 
 .swiper-slide {
-  border-radius: 10px;
   height: auto;
 }
 

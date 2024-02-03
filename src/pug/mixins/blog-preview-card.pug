@@ -1,13 +1,14 @@
 mixin blog-preview-card(data)
   .blog-preview-card
-    img(src=`./assets/img/${data.imgLeftPath}` alt="Цветы" width="410" height="465")
-    img(src=`./assets/img/${data.imgMiddlePath}` alt="Цветы" width="560" height="630")
+    .blog-preview-card-gallery
+      img(src=`./assets/img/${data.imgLeftPath}` alt="Цветы" width="410" height="465")
+      img(src=`./assets/img/${data.imgMiddlePath}` alt="Цветы" width="560" height="630")
 
     .blog-preview-card-content
-      .blog-preview-card-count 01
-        .blog-preview-card-count-current
-        | \ 
-        .blog-preview-card-count-total 
+      .blog-preview-card-count
+        span.blog-preview-card-count-current 01
+        | \
+        span.blog-preview-card-count-total 15
       .blog-preview-card-title!= data.title
       .blog-preview-card-date!= data.date
       .blog-preview-card-text!= data.text

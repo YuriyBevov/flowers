@@ -13,6 +13,7 @@ if (catalogTopSlider) {
 
     breakpoints: {
       420: {
+        slidesPerView: 2,
         spaceBetween: 15,
       },
 
@@ -56,7 +57,6 @@ if (catalogSectionSlider) {
         spaceBetween: 20,
         slidesOffsetBefore: 0,
       },
-
       768: {
         slidesPerView: "auto",
         spaceBetween: 20,
@@ -112,22 +112,13 @@ if (reviewSlider) {
 const blogSlider = document.querySelector(".blog-preview-slider");
 
 if (blogSlider) {
-  
   let currentSlideIndex = 0;
-  const countSlidesNode = document.querySelectorAll('.blog-preview-card-count');
-  const fillCountSlidesNode = (currentSlideIndex, totalSlidesLength) => {
 
-    countSlidesNode[currentSlideIndex].innerHTML = `
-      <span>${currentSlideIndex + 1 < 10 ? "0" + (currentSlideIndex + 1) : currentSlideIndex + 1}</span> 
-      / 
-      <span>${totalSlidesLength < 10 ? "0" + totalSlidesLength : totalSlidesLength}</span>
-    `;
-    
-  }
   const slider = new Swiper(blogSlider, {
     slidesPerView: 1,
     spaceBetween: 10,
     effect: "fade",
+    grabCursor: true,
 
     pagination: {
       el: ".swiper-pagination",
@@ -138,52 +129,49 @@ if (blogSlider) {
     on: {
       afterInit: function () {
         currentSlideIndex = this.activeIndex;
-
-        fillCountSlidesNode(currentSlideIndex, this.slides.length);
       },
-
 
       slideChange: function () {
         currentSlideIndex = this.activeIndex;
-        fillCountSlidesNode(currentSlideIndex, this.slides.length);
       },
-
-      slideChangeTransitionEnd: function () {
-        console.log('transition end');
-      }
     },
   });
-
-
 
   const navigators = document.querySelectorAll(
     ".blog-preview-card-navigation button"
   );
-  
 
   if (navigators) {
     const sliderSlideTo = (index) => slider.slideTo(index);
     const onClickChangeSlide = (evt) => {
-
       if (
-        evt.currentTarget.classList.contains("blog-preview-card-btn-next") && currentSlideIndex !== slider.slides.length - 1
+        evt.currentTarget.classList.contains("blog-preview-card-btn-next") &&
+        currentSlideIndex !== slider.slides.length - 1
       ) {
         currentSlideIndex++;
         sliderSlideTo(currentSlideIndex);
-        console.log('NEXT');
       }
 
       if (
-        evt.currentTarget.classList.contains("blog-preview-card-btn-prev") && currentSlideIndex !== 0
+        evt.currentTarget.classList.contains("blog-preview-card-btn-prev") &&
+        currentSlideIndex !== 0
       ) {
         currentSlideIndex--;
         sliderSlideTo(currentSlideIndex);
-        console.log('PREV');
       }
-    }
+    };
 
     navigators.forEach((navigator) => {
       navigator.addEventListener("click", onClickChangeSlide);
     });
   }
+}
+
+const sortSlider = document.querySelector(".sort-swiper-slider");
+
+if (sortSlider) {
+  new Swiper(sortSlider, {
+    slidesPerView: "auto",
+    spaceBetween: 30,
+  });
 }
