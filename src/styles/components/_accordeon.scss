@@ -1,7 +1,8 @@
 :root {
-  --accordeon-bg-color: #e8d3d5;
-  --accordeon-content-bg-color: #ffffff;
+  --accordeon-bg-color: rgba(232, 211, 213, 0.3);
+  --accordeon-content-bg-color: transparent;
   --accordeon-text-color: #000000;
+  --accordeon-text-weight: 300;
   --accordeon-border-radius: 10px;
   --accordeon-offset: clamp(16px, 1.6vw, 30px);
   --accordeon-item-offset: 5px;
@@ -28,6 +29,7 @@
     padding-right: calc(var(--accordeon-offset) * 2 + var(--accordeon-offset));
 
     color: var(--accordeon-text-color);
+    font-weight: var(--accordeon-text-weight);
     cursor: pointer;
 
     &::before,
@@ -65,11 +67,11 @@
 
     .lw-content {
       padding: var(--accordeon-offset);
-      border-radius: var(--accordeon-border-radius);
       background-color: var(--accordeon-content-bg-color);
 
       opacity: 0;
       transition: all var(--accordeon-content-block-transition);
+      font-style: italic;
     }
   }
 
