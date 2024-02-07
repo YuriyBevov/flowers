@@ -1,2 +1,24 @@
-header
-  p header
+include ../mixins/main-btn
+
+main-header.main-header
+  .lw-container
+    .main-header__top
+      include ../components/header-simple-nav
+     
+      .main-header__workflow Без выходных с 10:00 до 20:00
+      a(href="tel:+71234567890").main-header__phone +7 123 456 78 90
+      
+      include ../components/header-social
+
+      +main-btn({
+        type: 'button',
+        text: 'Обратный звонок',
+        cls: 'main-header__callback-btn'
+      })
+    .main-header__bottom
+      a(href="#" aria-label="Цвет Счастья").footer-logo
+        img(src="./assets/img/header-logo.svg" alt="Логотип" width="270" height="60")
+      
+      include ./main-nav
+
+      include ../components/user-section

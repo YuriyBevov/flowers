@@ -11,9 +11,44 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <header>
-      <p>header</p>
-    </header>
+    <main-header class="main-header">
+      <div class="lw-container">
+        <div class="main-header__top">
+          <div class="header-simple-nav">
+            <ul class="header-simple-nav__list">
+              <li class="header-simple-nav__list-item"><a href="#">О нас</a></li>
+              <li class="header-simple-nav__list-item"><a href="#">Доставка и оплата</a></li>
+              <li class="header-simple-nav__list-item"><a href="#">Блог</a></li>
+              <li class="header-simple-nav__list-item"><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="main-header__workflow">Без выходных с 10:00 до 20:00</div><a class="main-header__phone" href="tel:+71234567890">+7 123 456 78 90</a>
+          <div class="header-social">
+            <ul class="header-social__list">
+              <li class="header-social__list-item"><a href="#"> <img src="./assets/img/whatsapp-icon.png" alt="whatsapp" width="40" height="40"></a></li>
+              <li class="header-social__list-item"><a href="#"> <img src="./assets/img/tg-icon.png" alt="telegram" width="40" height="40"></a></li>
+            </ul>
+          </div>
+              <button class="main-header__callback-btn main-btn" type="button"><span>Обратный звонок</span>
+              </button>
+        </div>
+        <div class="main-header__bottom"><a class="footer-logo" href="#" aria-label="Цвет Счастья"><img src="./assets/img/header-logo.svg" alt="Логотип" width="270" height="60"></a>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__list-item"><a href="#">Повод</a></li>
+              <li class="main-nav__list-item"><a href="#">Цветы</a></li>
+              <li class="main-nav__list-item"><a href="#">Композиции</a></li>
+              <li class="main-nav__list-item"><a href="#">Доставка и оплата</a></li>
+              <li class="main-nav__list-item"><a href="#">Букеты</a></li>
+              <li class="main-nav__list-item"><a href="#">Акции</a></li>
+              <li class="main-nav__list-item"><a href="#">Аксессуары</a></li>
+              <li class="main-nav__list-item"><a href="#">Корпоративным клиентам</a></li>
+            </ul>
+          </nav>
+          <div class="personal"><a href="#"><img src="./assets/img/icon-user.png" alt="" width="22" height="22"></a><a href="#"><img src="./assets/img/cart-icon.png" alt="" width="22" height="22"></a><a class="cart-link" href="#"><img src="./assets/img/heart-icon.png" alt="" width="22" height="22"></a><a href="#"><img src="./assets/img/search-icon.png" alt="" width="22" height="22"></a></div>
+        </div>
+      </div>
+    </main-header>
     <main>
       <section class="intro">
         <div class="lw-container-fluid intro__container">
@@ -147,7 +182,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-container swiper-container--offset-right">
+          <div class="swiper-container swiper-container--offset-right" dir="rtl">
             <div class="swiper catalog-section-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
@@ -621,7 +656,7 @@
           </div>
         </div>
         <div class="lw-container-fluid">
-          <div class="swiper-container swiper-container--offset-right">
+          <div class="swiper-container swiper-container--offset-right" dir="rtl">
             <div class="swiper review-swiper">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">

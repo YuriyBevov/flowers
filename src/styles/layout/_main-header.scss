@@ -1,0 +1,31 @@
+.main-header {
+    &__top,
+    &__bottom {
+        @extend .flex-wrap;
+        align-items: center;
+        padding: 15px 0;
+    }
+
+    &__workflow {
+        font-weight: 300;
+        color: var(--info);
+        margin: 0 auto;
+        @extend .hover-opacity;
+
+        // @include m-b-desktop-down {
+        //     display: none;
+        // }
+    }
+
+    &__phone {
+        font-size: 28px;
+        font-family: var(--secondary-font);
+        color: var(--black);
+        margin: 0 auto;
+    }
+
+    &__callback-btn {
+        max-width: 260px;
+        margin-left: auto;
+    }
+}

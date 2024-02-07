@@ -1,0 +1,17 @@
+.main-nav {
+    margin:  0 auto;
+    &__list {
+        @extend .list-reset;
+        @extend .flex-wrap;
+    }
+
+    &__list-item {
+        a {
+            @extend .flex-centered-content;
+            padding: 6px 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #40242b;
+        }
+    }
+}

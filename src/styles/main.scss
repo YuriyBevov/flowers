@@ -7,11 +7,10 @@
 @import "extends";
 @import "common";
 
-/* шаблон */
-@import "layout/header";
-@import "layout/footer";
-
 /* Компоненты */
+@import "components/header-simple-nav";
+@import "components/header-social";
+@import "components/personal";
 @import "components/main-btn";
 @import "components/main-input";
 @import "components/product-card";
@@ -22,6 +21,11 @@
 @import "components/review-card";
 @import "components/blog-preview-card";
 @import "components/sort-swiper-slider";
+
+/* шаблон */
+@import "layout/main-header";
+@import "layout/footer";
+@import "layout/main-nav";
 
 /* Секции */
 @import "sections/index-page/intro";

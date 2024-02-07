@@ -88,8 +88,8 @@ if (catalogSectionSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](catalogSectionSlider, {
     slidesPerView: 2,
     spaceBetween: 10,
-    initialSlide,
-    slidesOffsetBefore: 0,
+    // initialSlide,
+    slidesOffsetAfter: 0,
     grabCursor: true,
     navigation: {
       prevEl,
@@ -99,12 +99,12 @@ if (catalogSectionSlider) {
       534: {
         slidesPerView: 3,
         spaceBetween: 20,
-        slidesOffsetBefore: 0
+        slidesOffsetAfter: 0
       },
       768: {
         slidesPerView: "auto",
         spaceBetween: 20,
-        slidesOffsetBefore: 20
+        slidesOffsetAfter: 20
       }
     }
   });
@@ -122,8 +122,8 @@ if (reviewSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](reviewSlider, {
     slidesPerView: 1,
     spaceBetween: 10,
-    initialSlide,
-    slidesOffsetBefore: 0,
+    // initialSlide,
+    slidesOffsetAfter: 20,
     grabCursor: true,
     navigation: {
       prevEl: prevEl ? prevEl : null,
