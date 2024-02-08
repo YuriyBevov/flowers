@@ -1,0 +1,23 @@
+.header-top-nav {
+  margin-right: auto;
+  width: 100%;
+
+  &__list {
+    @extend .list-reset;
+    @extend .flex-wrap;
+
+    margin: 0 -10px;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+    a {
+      padding: 10px;
+      font-weight: 300;
+      color: var(--info);
+      @extend .hover-opacity;
+    }
+  }
+}

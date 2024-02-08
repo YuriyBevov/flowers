@@ -1,24 +1,26 @@
 include ../mixins/main-btn
 
 main-header.main-header
-  .lw-container
-    .main-header__top
-      include ../components/header-simple-nav
-     
+  .lw-container.main-header__container
+    .main-header__section.main-header__section--top-nav
+      include ../components/header-top-nav
+    .main-header__section.main-header__section--workflow
       .main-header__workflow Без выходных с 10:00 до 20:00
+    .main-header__section
       a(href="tel:+71234567890").main-header__phone +7 123 456 78 90
-      
+    .main-header__section
       include ../components/header-social
-
+    .main-header__section
       +main-btn({
         type: 'button',
+        icon: 'phone-icon.svg',
         text: 'Обратный звонок',
         cls: 'main-header__callback-btn'
       })
-    .main-header__bottom
-      a(href="#" aria-label="Цвет Счастья").footer-logo
+    .main-header__section.main-header__section--logo
+      a(href="#" aria-label="Цвет Счастья")
         img(src="./assets/img/header-logo.svg" alt="Логотип" width="270" height="60")
-      
+    .main-header__section.main-header__section--nav
       include ./main-nav
-
-      include ../components/user-section
+    .main-header__section.main-header__section--personal
+      include ../components/personal

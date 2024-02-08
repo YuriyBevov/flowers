@@ -1,8 +1,14 @@
 .personal {
-    a {
-        &:not(:last-child) {
-            margin-right: 40px;
-        }
-    }
+  display: flex;
+  align-items: center;
+  width: 100%;
 
+  a {
+    width: 40px;
+    height: 40px;
+    @extend .flex-centered-content;
+    &:not(:last-child) {
+      margin-right: auto;
+    }
+  }
 }

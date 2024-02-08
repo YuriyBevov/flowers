@@ -12,28 +12,37 @@
   </head>
   <body>
     <main-header class="main-header">
-      <div class="lw-container">
-        <div class="main-header__top">
-          <div class="header-simple-nav">
-            <ul class="header-simple-nav__list">
-              <li class="header-simple-nav__list-item"><a href="#">О нас</a></li>
-              <li class="header-simple-nav__list-item"><a href="#">Доставка и оплата</a></li>
-              <li class="header-simple-nav__list-item"><a href="#">Блог</a></li>
-              <li class="header-simple-nav__list-item"><a href="#">Контакты</a></li>
+      <div class="lw-container main-header__container">
+        <div class="main-header__section main-header__section--top-nav">
+          <div class="header-top-nav">
+            <ul class="header-top-nav__list">
+              <li class="header-top-nav__list-item"><a href="#">О нас</a></li>
+              <li class="header-top-nav__list-item"><a href="#">Доставка и оплата</a></li>
+              <li class="header-top-nav__list-item"><a href="#">Блог</a></li>
+              <li class="header-top-nav__list-item"><a href="#">Контакты</a></li>
             </ul>
           </div>
-          <div class="main-header__workflow">Без выходных с 10:00 до 20:00</div><a class="main-header__phone" href="tel:+71234567890">+7 123 456 78 90</a>
+        </div>
+        <div class="main-header__section main-header__section--workflow">
+          <div class="main-header__workflow">Без выходных с 10:00 до 20:00</div>
+        </div>
+        <div class="main-header__section"><a class="main-header__phone" href="tel:+71234567890">+7 123 456 78 90</a></div>
+        <div class="main-header__section">
           <div class="header-social">
             <ul class="header-social__list">
-              <li class="header-social__list-item"><a href="#"> <img src="./assets/img/whatsapp-icon.png" alt="whatsapp" width="40" height="40"></a></li>
-              <li class="header-social__list-item"><a href="#"> <img src="./assets/img/tg-icon.png" alt="telegram" width="40" height="40"></a></li>
+              <li class="header-social__list-item"><a href="#"><img src="./assets/img/whapp-icon.svg" alt="whatsapp" width="28" height="28"></a></li>
+              <li class="header-social__list-item"><a href="#"><img src="./assets/img/tg-icon.svg" alt="telegram" width="28" height="28"></a></li>
             </ul>
           </div>
-              <button class="main-header__callback-btn main-btn" type="button"><span>Обратный звонок</span>
+        </div>
+        <div class="main-header__section">
+              <button class="main-header__callback-btn main-btn" type="button"><img src="./assets/img/phone-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Обратный звонок</span>
               </button>
         </div>
-        <div class="main-header__bottom"><a class="footer-logo" href="#" aria-label="Цвет Счастья"><img src="./assets/img/header-logo.svg" alt="Логотип" width="270" height="60"></a>
+        <div class="main-header__section main-header__section--logo"><a href="#" aria-label="Цвет Счастья"><img src="./assets/img/header-logo.svg" alt="Логотип" width="270" height="60"></a></div>
+        <div class="main-header__section main-header__section--nav">
           <nav class="main-nav">
+            <button class="burger" type="button" aria-label="Открыть меню"><span class="burger-line burger-line--top"></span><span class="burger-line burger-line--middle"></span><span class="burger-line burger-line--bottom"></span></button>
             <ul class="main-nav__list">
               <li class="main-nav__list-item"><a href="#">Повод</a></li>
               <li class="main-nav__list-item"><a href="#">Цветы</a></li>
@@ -43,8 +52,15 @@
               <li class="main-nav__list-item"><a href="#">Акции</a></li>
               <li class="main-nav__list-item"><a href="#">Аксессуары</a></li>
               <li class="main-nav__list-item"><a href="#">Корпоративным клиентам</a></li>
+              <li class="main-nav__list-item main-nav__list-item-nested hidden">...
+                <div class="main-nav__list-item-nested-overlay">
+                  <ul></ul>
+                </div>
+              </li>
             </ul>
           </nav>
+        </div>
+        <div class="main-header__section main-header__section--personal">
           <div class="personal"><a href="#"><img src="./assets/img/icon-user.png" alt="" width="22" height="22"></a><a href="#"><img src="./assets/img/cart-icon.png" alt="" width="22" height="22"></a><a class="cart-link" href="#"><img src="./assets/img/heart-icon.png" alt="" width="22" height="22"></a><a href="#"><img src="./assets/img/search-icon.png" alt="" width="22" height="22"></a></div>
         </div>
       </div>

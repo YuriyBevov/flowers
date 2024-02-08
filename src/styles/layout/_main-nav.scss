@@ -1,17 +1,90 @@
 .main-nav {
-    margin:  0 auto;
-    &__list {
-        @extend .list-reset;
-        @extend .flex-wrap;
+  margin: 0 auto;
+
+  &__list {
+    @extend .list-reset;
+    display: flex;
+    align-items: center;
+
+    @include m-b-laptop-down {
+      display: none;
+    }
+  }
+
+  &__list-item {
+    a {
+      @extend .flex-centered-content;
+      padding: 6px 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #40242b;
+      white-space: nowrap;
+
+      @extend .hover-opacity;
     }
 
-    &__list-item {
-        a {
-            @extend .flex-centered-content;
-            padding: 6px 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-            color: #40242b;
-        }
+    &.desktop-hidden {
+      @include m-b-laptop-up {
+        display: none;
+      }
     }
+
+    &-nested {
+      position: relative;
+      cursor: pointer;
+      padding: 6px 12px;
+
+      &-overlay {
+        padding: 15px 25px;
+        margin-right: -45px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: fit-content;
+        max-width: 320px;
+        height: fit-content;
+        z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+
+        transition: opacity 0.3s ease-in;
+      }
+
+      &:hover {
+        .main-nav__list-item-nested-overlay {
+          visibility: visible;
+          opacity: 1;
+
+          ul {
+            transform: translateY(0);
+          }
+        }
+      }
+
+      ul {
+        @extend .list-reset;
+        background-color: var(--white);
+        padding: 20px;
+        width: 100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+          rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        z-index: 10;
+        transform: translateY(30px);
+
+        transition: transform 0.3s ease-in;
+
+        li {
+          &:not(:last-child) {
+            margin-bottom: 10px;
+          }
+
+          a {
+            white-space: initial;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
 }
