@@ -2,6 +2,10 @@
   padding: clamp(35px, 5vw, 90px) 0;
   background-color: var(--danger);
 
+  @include m-b-laptop-down {
+    margin-bottom: 60px;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -135,7 +139,6 @@
       grid-row: 4/5;
 
       @include m-b-down(960px) {
-        grid-row: 3/4;
         grid-column: 1/2;
       }
     }
@@ -178,22 +181,6 @@
         justify-content: center;
         margin: 0 auto;
       }
-    }
-  }
-}
-
-.social {
-  &__list {
-    @extend .list-reset;
-    @extend .flex-wrap;
-    align-items: center;
-    margin: -12px;
-  }
-
-  &__list-item {
-    a {
-      @extend .flex-centered-content;
-      padding: 12px;
     }
   }
 }

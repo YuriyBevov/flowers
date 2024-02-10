@@ -108,6 +108,80 @@ if (nav) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/mobile-nav.js":
+/*!*******************************************!*\
+  !*** ./src/scripts/modules/mobile-nav.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
+
+var nav = document.querySelector(".main-nav");
+
+if (nav) {
+  var opener = nav.querySelector(".main-nav-opener");
+  var closer = nav.querySelector(".main-nav-closer");
+
+  var onClickOpenNav = function onClickOpenNav() {
+    (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(true);
+    nav.classList.add("expanded");
+    opener.removeEventListener("click", onClickOpenNav);
+    closer.addEventListener("click", onCloserBtnClickCloseNav);
+    document.addEventListener("click", onOverlayClickCloseNav);
+    window.addEventListener("keydown", onEscBtnCloseNav);
+  };
+
+  var closeNav = function closeNav() {
+    (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
+    nav.classList.remove("expanded");
+    opener.addEventListener("click", onClickOpenNav);
+    closer.removeEventListener("click", onCloserBtnClickCloseNav);
+    document.removeEventListener("click", onOverlayClickCloseNav);
+    window.removeEventListener("keydown", onEscBtnCloseNav);
+  };
+
+  var onCloserBtnClickCloseNav = function onCloserBtnClickCloseNav() {
+    closeNav();
+  };
+
+  var onOverlayClickCloseNav = function onOverlayClickCloseNav(evt) {
+    if (evt.target === nav) {
+      closeNav();
+    }
+  };
+
+  var onEscBtnCloseNav = function onEscBtnCloseNav(evt) {
+    if (evt.code === "Escape" || evt.code === "27") {
+      closeNav();
+    }
+  };
+
+  opener.addEventListener("click", onClickOpenNav);
+}
+
+var expanders = document.querySelectorAll(".main-nav-expand-btn");
+
+if (expanders) {
+  var onClickExpandItem = function onClickExpandItem(evt) {
+    var target = evt.currentTarget;
+    var expandedItem = document.querySelector(".main-nav__inner-list-wrapper.expanded");
+
+    if (!expandedItem) {
+      target.nextElementSibling.classList.add("expanded");
+    } else {
+      expandedItem.classList.remove("expanded");
+    }
+  };
+
+  expanders.forEach(function (expander) {
+    expander.addEventListener("click", onClickExpandItem);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/swiper.js":
 /*!***************************************!*\
   !*** ./src/scripts/modules/swiper.js ***!
@@ -126,6 +200,7 @@ if (catalogTopSlider) {
     slidesPerView: 2,
     spaceBetween: 10,
     grabCursor: true,
+    speed: 1000,
     breakpoints: {
       420: {
         slidesPerView: 2,
@@ -149,6 +224,7 @@ if (catalogSectionSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](catalogSectionSlider, {
     slidesPerView: 2,
     spaceBetween: 10,
+    speed: 1000,
     // initialSlide,
     slidesOffsetAfter: 0,
     grabCursor: true,
@@ -192,6 +268,7 @@ if (reviewSlider) {
     // initialSlide,
     slidesOffsetAfter: 20,
     grabCursor: true,
+    speed: 1000,
     navigation: {
       prevEl: _prevEl ? _prevEl : null,
       nextEl: _nextEl ? _nextEl : null
@@ -220,6 +297,7 @@ if (blogSlider) {
     spaceBetween: 10,
     effect: "fade",
     grabCursor: true,
+    speed: 1000,
     pagination: {
       el: ".swiper-pagination",
       dynamicBullets: true,
@@ -264,9 +342,187 @@ var sortSlider = document.querySelector(".sort-swiper-slider");
 if (sortSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](sortSlider, {
     slidesPerView: "auto",
-    spaceBetween: 30
+    spaceBetween: 30,
+    speed: 1000
   });
 }
+
+/***/ }),
+
+/***/ "./src/scripts/utils/functions.js":
+/*!****************************************!*\
+  !*** ./src/scripts/utils/functions.js ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "addClass": () => (/* binding */ addClass),
+/* harmony export */   "bodyLocker": () => (/* binding */ bodyLocker),
+/* harmony export */   "checkClass": () => (/* binding */ checkClass),
+/* harmony export */   "focusTrap": () => (/* binding */ focusTrap),
+/* harmony export */   "getBoundingClientRect": () => (/* binding */ getBoundingClientRect),
+/* harmony export */   "getCssPropertyValue": () => (/* binding */ getCssPropertyValue),
+/* harmony export */   "getMousePos": () => (/* binding */ getMousePos),
+/* harmony export */   "getRadians": () => (/* binding */ getRadians),
+/* harmony export */   "lerp": () => (/* binding */ lerp),
+/* harmony export */   "limitStr": () => (/* binding */ limitStr),
+/* harmony export */   "removeClass": () => (/* binding */ removeClass),
+/* harmony export */   "setCssProperty": () => (/* binding */ setCssProperty),
+/* harmony export */   "setVieportHeight": () => (/* binding */ setVieportHeight),
+/* harmony export */   "toggleClass": () => (/* binding */ toggleClass)
+/* harmony export */ });
+// работа с root
+var root = document.querySelector(':root');
+
+function getCssPropertyValue(name) {
+  return getComputedStyle(root).getPropertyValue(name);
+}
+
+function setCssProperty(name, value) {
+  root.style.setProperty(name, value);
+}
+
+function setVieportHeight() {
+  var vh = window.innerHeight * 0.01; //document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  setCssProperty('--vh', "".concat(vh, "px"));
+  window.addEventListener('resize', function () {
+    var vh = window.innerHeight * 0.01;
+    setCssProperty('--vh', "".concat(vh, "px"));
+  });
+}
+
+function addClass(el, cl) {
+  el.classList.add(cl);
+}
+
+function removeClass(el, cl) {
+  el.classList.remove(cl);
+}
+
+function checkClass(el, cl) {
+  return el.classList.contains(cl);
+}
+
+function toggleClass(el, cl) {
+  el.classList.toggle(cl);
+} // Linear interpolation
+
+
+var lerp = function lerp(a, b, n) {
+  return (1 - n) * a + n * b;
+}; // Позиция мыши
+
+
+var getMousePos = function getMousePos(evt) {
+  return {
+    x: evt.clientX,
+    y: evt.clientY
+  };
+}; //получение радиан из градусов(для канваса)
+
+
+function getRadians(degrees) {
+  return Math.PI / 180 * degrees;
+} // Ограничение длины текста по кол-ву символов
+
+
+function limitStr(str, n) {
+  if (str.length > n) {
+    return str.slice(0, n) + '...';
+  } else {
+    return str;
+  }
+} // запрет скролла у body
+
+
+function bodyLocker(bool) {
+  var body = document.querySelector('body');
+  var paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+
+  if (bool) {
+    body.style.overflow = 'hidden';
+    body.style.paddingRight = paddingOffset;
+  } else {
+    body.style.overflow = 'auto';
+    body.style.paddingRight = '0px';
+  }
+}
+
+function focusTrap(el) {
+  var initialFocusedEl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  var focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
+  var firstFocusableElement = el.querySelectorAll(focusableElements)[0];
+  var focusableContent = el.querySelectorAll(focusableElements);
+  var lastFocusableElement = focusableContent[focusableContent.length - 1];
+
+  var onBtnClickHandler = function onBtnClickHandler(evt) {
+    var isTabPressed = evt.key === 'Tab' || evt.key === 9;
+
+    if (evt.key === 'Escape') {
+      document.removeEventListener('keydown', onBtnClickHandler);
+      console.log('ESC');
+    }
+
+    if (!isTabPressed) {
+      return;
+    }
+
+    if (evt.shiftKey) {
+      if (document.activeElement === firstFocusableElement) {
+        lastFocusableElement.focus();
+        evt.preventDefault();
+      }
+    } else {
+      if (document.activeElement === lastFocusableElement) {
+        firstFocusableElement.focus();
+        evt.preventDefault();
+      }
+    }
+  };
+
+  document.addEventListener('keydown', onBtnClickHandler);
+  initialFocusedEl !== null ? initialFocusedEl.focus() : firstFocusableElement.focus();
+} // вычисление поз-и/размеров эл-та
+
+
+function getBoundingClientRect(elem, side) {
+  if (side === 'height') {
+    return elem.getBoundingClientRect().height;
+  }
+
+  if (side === 'width') {
+    return elem.getBoundingClientRect().width;
+  }
+
+  if (side === 'top') {
+    return elem.getBoundingClientRect().top;
+  }
+
+  if (side === 'bottom') {
+    return elem.getBoundingClientRect().bottom;
+  }
+
+  if (side === 'left') {
+    return elem.getBoundingClientRect().left;
+  }
+
+  if (side === 'right') {
+    return elem.getBoundingClientRect().right;
+  }
+
+  if (side === 'x') {
+    return elem.getBoundingClientRect().x;
+  }
+
+  if (side === 'y') {
+    return elem.getBoundingClientRect().y;
+  }
+}
+
+
 
 /***/ }),
 
@@ -13319,11 +13575,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_main_nav__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/main-nav */ "./src/scripts/modules/main-nav.js");
 /* harmony import */ var _modules_main_nav__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_modules_main_nav__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _modules_introSectionSquares__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/introSectionSquares */ "./src/scripts/modules/introSectionSquares.js");
-/* harmony import */ var _modules_introSectionSquares__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_modules_introSectionSquares__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/swiper */ "./src/scripts/modules/swiper.js");
-/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/accordeon */ "./src/scripts/modules/accordeon.js");
-/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_modules_accordeon__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _modules_mobile_nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/mobile-nav */ "./src/scripts/modules/mobile-nav.js");
+/* harmony import */ var _modules_introSectionSquares__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/introSectionSquares */ "./src/scripts/modules/introSectionSquares.js");
+/* harmony import */ var _modules_introSectionSquares__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_modules_introSectionSquares__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _modules_swiper__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/swiper */ "./src/scripts/modules/swiper.js");
+/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/accordeon */ "./src/scripts/modules/accordeon.js");
+/* harmony import */ var _modules_accordeon__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_modules_accordeon__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 

@@ -8,7 +8,7 @@
   }
 
   @include m-b-tablet-down {
-    margin-top: -58px;
+    margin-top: calc(-6vw + -35px);
   }
 
   background-color: var(--secondary);

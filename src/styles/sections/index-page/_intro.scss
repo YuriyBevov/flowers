@@ -45,6 +45,10 @@
 
     color: var(--main-text-color);
 
+    @include m-b-down(620px) {
+      margin-top: 0;
+    }
+
     span {
       display: block;
       width: fit-content;
@@ -107,8 +111,8 @@
     color: var(--main-text-color);
 
     @include m-b-down(620px) {
-      width: 65%;
-      max-width: 205px;
+      width: 60%;
+      max-width: 200px;
     }
   }
 
@@ -127,6 +131,7 @@
   &__content {
     position: relative;
     padding-top: 6vw;
+
     @include m-b-desktop-lg-up {
       padding-top: 115px;
     }
@@ -135,6 +140,10 @@
 
     @include m-b-laptop-down {
       padding-left: 0;
+    }
+
+    @include m-b-down(620px) {
+      padding-top: 5px;
     }
 
     z-index: 2;
@@ -148,21 +157,22 @@
       right: 15px;
       bottom: 0;
       width: auto;
-      max-height: 60%;
+      max-height: 80%;
     }
 
-    @include m-b-down(520px) {
-      width: 48vw;
-      max-height: 70%;
-    }
+    // @include m-b-down(520px) {
+    //   width: 48vw;
+    //   max-height: 70%;
+    // }
 
     @include m-b-down(480px) {
+      width: 48vw;
       right: 0;
     }
 
     @include m-b-down(420px) {
-      width: 34vw;
-      max-height: 60%;
+      width: 35vw;
+      max-height: 70%;
     }
   }
 }

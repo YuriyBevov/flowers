@@ -14,7 +14,10 @@
   border-radius: 50%;
 
   background-color: #fffaf8;
-  opacity: 0.3;
+
+  @include m-b-laptop-up {
+    opacity: 0.3;
+  }
   transition: opacity var(--main-transition),
     background-color var(--main-transition), transform var(--main-transition);
 

@@ -6,11 +6,11 @@ main-header.main-header
       include ../components/header-top-nav
     .main-header__section.main-header__section--workflow
       .main-header__workflow Без выходных с 10:00 до 20:00
-    .main-header__section
+    .main-header__section.main-header__section--phone
       a(href="tel:+71234567890").main-header__phone +7 123 456 78 90
-    .main-header__section
+    .main-header__section.main-header__section--social
       include ../components/header-social
-    .main-header__section
+    .main-header__section.main-header__section--offer
       +main-btn({
         type: 'button',
         icon: 'phone-icon.svg',
@@ -19,7 +19,7 @@ main-header.main-header
       })
     .main-header__section.main-header__section--logo
       a(href="#" aria-label="Цвет Счастья")
-        img(src="./assets/img/header-logo.svg" alt="Логотип" width="270" height="60")
+        img(src="./assets/img/logo-black.svg" alt="Логотип" width="270" height="60")
     .main-header__section.main-header__section--nav
       include ./main-nav
     .main-header__section.main-header__section--personal

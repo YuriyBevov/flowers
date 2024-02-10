@@ -1,22 +1,139 @@
 nav.main-nav
   include ../components/burger
-  ul.main-nav__list
-    li.main-nav__list-item
-      a(href="#") Повод
-    li.main-nav__list-item
-      a(href="#") Цветы
-    li.main-nav__list-item
-      a(href="#") Композиции
-    li.main-nav__list-item
-      a(href="#") Доставка и оплата
-    li.main-nav__list-item
-      a(href="#") Букеты
-    li.main-nav__list-item
-      a(href="#") Акции
-    li.main-nav__list-item
-      a(href="#") Аксессуары
-    li.main-nav__list-item
-      a(href="#") Корпоративным клиентам
-    li.main-nav__list-item.main-nav__list-item-nested.hidden ...
-      .main-nav__list-item-nested-overlay
-        ul
+
+  .main-nav__wrapper
+    .main-nav__header
+      a(href="#" aria-label="Цвет счатья").main-nav__header-logo
+        img(src="./assets/img/logo-white.svg" alt="Логотип" width="270" height="60")
+      button(type="button" aria-label="Закрыть меню").main-nav-closer
+    ul.main-nav__list
+      li.main-nav__list-item
+        a(href="#") Повод
+        button(type="button").main-nav-expand-btn
+
+        .main-nav__inner-list-wrapper
+          ul.main-nav__inner-list
+            li.main-nav__inner-list-item.main-nav__inner-list-item--head
+              button(type="button").main-nav-expand-btn
+              a(href="#") Повод
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+
+      li.main-nav__list-item
+        a(href="#") Цветы
+      li.main-nav__list-item
+        a(href="#") Композиции
+        button(type="button").main-nav-expand-btn
+
+        .main-nav__inner-list-wrapper
+          ul.main-nav__inner-list
+            li.main-nav__inner-list-item.main-nav__inner-list-item--head
+              button(type="button").main-nav-expand-btn
+              a(href="#") Композиции
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+      li.main-nav__list-item
+        a(href="#") Доставка и оплата
+      li.main-nav__list-item
+        a(href="#") Букеты
+      li.main-nav__list-item
+        a(href="#") Акции
+        .main-nav__inner-list-wrapper
+          ul.main-nav__inner-list
+            li.main-nav__inner-list-item.main-nav__inner-list-item--head
+              button(type="button").main-nav-expand-btn
+              a(href="#") Композиции
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+      li.main-nav__list-item
+        a(href="#") Аксессуары
+      li.main-nav__list-item
+        a(href="#") Корпоративным клиентам
+        button(type="button").main-nav-expand-btn
+
+        .main-nav__inner-list-wrapper
+          ul.main-nav__inner-list
+            li.main-nav__inner-list-item.main-nav__inner-list-item--head
+              button(type="button").main-nav-expand-btn
+              a(href="#") Композиции
+            li.main-nav__inner-list-item
+              a(href="#") Цветы в коробке
+            li.main-nav__inner-list-item
+              a(href="#") Сердце из цветов
+            li.main-nav__inner-list-item
+              a(href="#") Подарочные наборы
+      li.main-nav__list-item.main-nav__list-item-nested.hidden ...
+        .main-nav__list-item-nested-overlay
+          ul
+
+    ul.main-nav__simple-list
+      li.main-nav__simple-list-item
+        a(href="#") О нас
+      li.main-nav__simple-list-item
+        a(href="#") Доставка и оплата
+      li.main-nav__simple-list-item
+        a(href="#") Блог
+      li.main-nav__simple-list-item
+        a(href="#") Контакты
+
+    .main-nav__info
+      a(href="tel:+71234567890").main-nav__info-phone +7 123 456 78 90
+      span.main-nav__info-worktime Без выходных с 10:00 до 20:00
+      a(href="mailto:zayavka@cvetschastya.ru").main-nav__info-mail zayavka@cvetschastya.ru
+
+    .main-nav__social
+      include ../components/social

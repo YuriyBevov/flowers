@@ -1,9 +1,14 @@
 .personal
     a(href="#")
-        img(src="./assets/img/icon-user.png" alt="" width="22" height="22")
+      svg(width="24" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-user")
+    a(href="#").cart-link.cart-link--filled
+      span.cart-link-count 15
+      svg(width="20" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-cart")
     a(href="#")
-        img(src="./assets/img/cart-icon.png" alt="" width="22" height="22")
-    a(href="#").cart-link
-        img(src="./assets/img/heart-icon.png" alt="" width="22" height="22")
+      svg(width="22" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-heart")
     a(href="#")
-        img(src="./assets/img/search-icon.png" alt="" width="22" height="22")
+      svg(width="20" height="20")
+        use(xlink:href="./assets/sprite.svg#icon-search")

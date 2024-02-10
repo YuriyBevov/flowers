@@ -10,6 +10,7 @@ if (catalogTopSlider) {
     slidesPerView: 2,
     spaceBetween: 10,
     grabCursor: true,
+    speed: 1000,
 
     breakpoints: {
       420: {
@@ -42,6 +43,7 @@ if (catalogSectionSlider) {
   new Swiper(catalogSectionSlider, {
     slidesPerView: 2,
     spaceBetween: 10,
+    speed: 1000,
     // initialSlide,
     slidesOffsetAfter: 0,
     grabCursor: true,
@@ -87,6 +89,7 @@ if (reviewSlider) {
     // initialSlide,
     slidesOffsetAfter: 20,
     grabCursor: true,
+    speed: 1000,
 
     navigation: {
       prevEl: prevEl ? prevEl : null,
@@ -119,6 +122,7 @@ if (blogSlider) {
     spaceBetween: 10,
     effect: "fade",
     grabCursor: true,
+    speed: 1000,
 
     pagination: {
       el: ".swiper-pagination",
@@ -173,5 +177,6 @@ if (sortSlider) {
   new Swiper(sortSlider, {
     slidesPerView: "auto",
     spaceBetween: 30,
+    speed: 1000,
   });
 }

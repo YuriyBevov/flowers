@@ -4,14 +4,14 @@
     @extend .list-reset;
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: clamp(5px, 2vw, 15px);
   }
 
   &__list-item {
     a {
       @extend .flex-centered-content;
-      width: 40px;
-      height: 40px;
+      width: clamp(28px, 3vw, 40px);
+      height: clamp(28px, 3vw, 40px);
 
       img {
         width: 100%;

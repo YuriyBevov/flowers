@@ -1,0 +1,17 @@
+.social {
+  &__list {
+    @extend .list-reset;
+    @extend .flex-wrap;
+    align-items: center;
+    margin: -12px;
+  }
+
+  &__list-item {
+    a {
+      @extend .flex-centered-content;
+      padding: 12px;
+
+      @extend .hover-opacity;
+    }
+  }
+}

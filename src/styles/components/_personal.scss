@@ -3,12 +3,70 @@
   align-items: center;
   width: 100%;
 
+  @include m-b-laptop-down {
+    padding: 10px 30px;
+    justify-content: space-around;
+  }
+
   a {
     width: 40px;
     height: 40px;
     @extend .flex-centered-content;
+
+    svg {
+      fill: #c0c0c0;
+      transition: fill var(--main-transition);
+
+      @include m-b-laptop-down {
+        fill: var(--white);
+      }
+
+      &:hover,
+      &:focus {
+        fill: var(--black) !important;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: auto;
+
+      @include m-b-laptop-down {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.cart-link {
+  position: relative;
+
+  &--filled svg {
+    fill: var(--black) !important;
+
+    @include m-b-laptop-down {
+      fill: var(--white) !important;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: -6px;
+    left: calc(100% + -14px);
+    @extend .flex-centered-content;
+    font-size: 12px;
+    line-height: 1;
+    text-align: center;
+    width: fit-content;
+    min-width: 21px;
+    height: fit-content;
+    min-height: 21px;
+    border-radius: 50%;
+    color: var(--white);
+    background-color: var(--primary);
+
+    @include m-b-laptop-down {
+      color: var(--black);
+      background-color: var(--white);
     }
   }
 }
