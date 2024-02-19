@@ -1,0 +1,33 @@
+.breadcrumbs {
+  &__list {
+    @extend .list-reset;
+    @extend .flex-centered-content;
+  }
+
+  &__list-item {
+    padding: 0 20px;
+
+    font-weight: 300;
+
+    a {
+      position: relative;
+      color: var(--primary);
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: -20px;
+        transform: translateY(-50%);
+        content: "";
+        width: 1px;
+        height: 90%;
+
+        background-color: var(--basic-gray);
+      }
+    }
+
+    & > span {
+      color: var(--basic-gray);
+    }
+  }
+}

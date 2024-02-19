@@ -54,8 +54,11 @@
     @extend .lw-text-normal;
     text-transform: uppercase;
     text-align: center;
-    @extend .lw-text-accent;
     padding: 0 10px;
+
+    &--xl {
+      font-size: clamp(24px, 4.4vw, 60px);
+    }
 
     &--md {
       font-size: clamp(20px, 4.4vw, 38px);
@@ -64,6 +67,10 @@
     &--sm {
       font-size: clamp(18px, 2.6vw, 28px);
     }
+  }
+
+  &-accent-color {
+    @extend .lw-text-accent;
   }
 
   &-main-text {

@@ -14,6 +14,7 @@
 @import "components/personal";
 @import "components/main-btn";
 @import "components/main-input";
+@import "components/breadcrumbs";
 @import "components/product-card";
 @import "components/favourite-btn";
 @import "components/add-to-cart-btn";
@@ -23,6 +24,7 @@
 @import "components/blog-preview-card";
 @import "components/sort-swiper-slider";
 @import "components/social";
+@import "components/blog-card";
 
 /* шаблон */
 @import "layout/main-header";
@@ -39,5 +41,9 @@
 @import "sections/index-page/clients";
 @import "sections/index-page/blog-preview";
 
+@import "sections/blog-page/index";
+@import "sections/blog-page/detail";
+
 @import "sections/common/subscribe";
+@import "sections/common/page-top-section";
 /* Модальные окна */

@@ -8,7 +8,7 @@
 
   &__container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 40px;
 
     @include m-b-down(960px) {
@@ -116,32 +116,32 @@
       }
     }
 
-    &--address {
-      grid-row: 2/3;
+    // &--address {
+    //   grid-row: 2/3;
 
-      address {
-        font-style: normal;
-        @extend .lw-footer-text;
-        max-width: 260px;
-      }
+    //   address {
+    //     font-style: normal;
+    //     @extend .lw-footer-text;
+    //     max-width: 260px;
+    //   }
 
-      @include m-b-down(960px) {
-        grid-row: 3/4;
-        grid-column: 3/4;
-      }
-    }
+    //   @include m-b-down(960px) {
+    //     grid-row: 3/4;
+    //     grid-column: 3/4;
+    //   }
+    // }
 
     &--social {
       grid-row: 4/5;
     }
 
-    &--dev {
-      grid-row: 4/5;
+    // &--dev {
+    //   grid-row: 4/5;
 
-      @include m-b-down(960px) {
-        grid-column: 1/2;
-      }
-    }
+    //   @include m-b-down(960px) {
+    //     grid-column: 1/2;
+    //   }
+    // }
 
     &-title {
       font-family: var(--secondary-font);

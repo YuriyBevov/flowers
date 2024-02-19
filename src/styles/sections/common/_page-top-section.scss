@@ -1,0 +1,12 @@
+.page-top-section {
+  padding: clamp(25px, 2.2vw, 32px) 0;
+  background-color: var(--page-top-section-bg);
+
+  .breadcrumbs {
+    margin-bottom: 16px;
+  }
+
+  .lw-section-title {
+    margin: 0;
+  }
+}
