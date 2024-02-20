@@ -1,2 +1,12 @@
 .blog {
+  &__list {
+    @extend .list-reset;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: clamp(24px, 3vw, 40px) clamp(12px, 2vw, 24px);
+
+    @include m-b-down(960px) {
+      grid-template-columns: 1fr;
+    }
+  }
 }
