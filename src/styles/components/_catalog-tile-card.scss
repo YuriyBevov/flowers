@@ -1,0 +1,57 @@
+.catalog-tile-card {
+    &__header {
+        position: relative;
+        margin-left: clamp(70px, 9vw, 95px);
+    }
+
+    &-square {
+        &-box {
+            position: absolute;
+            bottom: clamp(10px, 1.2vw, 20px);
+            left: clamp(10px, 1.2vw, 20px);
+            width: fit-content;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        width: 15px;
+        height: 15px;
+        background-color: var(--white);
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        max-width: 316px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    &__title {
+        position: relative;
+
+        font-family: var(--secondary-font);
+        font-style: normal;
+        font-weight: 400;
+        font-size: clamp(20px, 3.6vw, 32px);
+        text-transform: uppercase;
+        
+        padding-left: clamp(10px, 1.2vw, 20px);
+        margin: clamp(10px, 1.2vw, 20px) 0 0;
+        color: var(--black);
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            width: clamp(50px, 7vw, 65px);
+            height: clamp(120px, 15vw, 150px);
+            background-color: var(--secondary);
+            z-index: -1;
+        }
+    }
+
+
+}
