@@ -1,4 +1,5 @@
 import "./modules/main-nav";
+import "./modules/search-field";
 import "./modules/mobile-nav";
 import "./modules/introSectionSquares";
 import "./modules/swiper";
