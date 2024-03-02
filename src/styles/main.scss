@@ -28,6 +28,8 @@
 @import "components/blog-card";
 @import "components/content-block";
 
+@import "components/catalog-tile-card";
+
 /* шаблон */
 @import "layout/main-header";
 @import "layout/footer";
@@ -42,6 +44,9 @@
 @import "sections/common/reviews";
 @import "sections/index-page/clients";
 @import "sections/index-page/blog-preview";
+
+@import "sections/catalog/catalog";
+@import "sections/catalog/catalog-tile";
 
 @import "sections/blog-page/index";
 @import "sections/blog-page/detail";

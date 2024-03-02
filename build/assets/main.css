@@ -393,7 +393,6 @@ template {
   display: flex;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   -webkit-box-sizing: content-box;
@@ -423,7 +422,6 @@ template {
   position: relative;
   -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
-  -o-transition-property: transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
 }
@@ -442,7 +440,6 @@ template {
   align-items: flex-start;
   -webkit-transition-property: height, -webkit-transform;
   transition-property: height, -webkit-transform;
-  -o-transition-property: transform, height;
   transition-property: transform, height;
   transition-property: transform, height, -webkit-transform;
 }
@@ -480,25 +477,21 @@ template {
 
 .swiper-3d .swiper-slide-shadow-left {
   background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-right {
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-top {
   background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .swiper-3d .swiper-slide-shadow-bottom {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0)));
-  background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
@@ -661,7 +654,6 @@ template {
   position: absolute;
   text-align: center;
   -webkit-transition: 0.3s opacity;
-  -o-transition: 0.3s opacity;
   transition: 0.3s opacity;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
@@ -787,7 +779,6 @@ button.swiper-pagination-bullet {
   display: inline-block;
   -webkit-transition: 0.2s top, 0.2s -webkit-transform;
   transition: 0.2s top, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s top;
   transition: 0.2s transform, 0.2s top;
   transition: 0.2s transform, 0.2s top, 0.2s -webkit-transform;
 }
@@ -807,7 +798,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 0.2s left, 0.2s -webkit-transform;
   transition: 0.2s left, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s left;
   transition: 0.2s transform, 0.2s left;
   transition: 0.2s transform, 0.2s left, 0.2s -webkit-transform;
 }
@@ -815,7 +805,6 @@ button.swiper-pagination-bullet {
 .swiper-horizontal.swiper-rtl > .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
   -webkit-transition: 0.2s right, 0.2s -webkit-transform;
   transition: 0.2s right, 0.2s -webkit-transform;
-  -o-transition: 0.2s transform, 0.2s right;
   transition: 0.2s transform, 0.2s right;
   transition: 0.2s transform, 0.2s right, 0.2s -webkit-transform;
 }
@@ -1001,7 +990,6 @@ button.swiper-pagination-bullet {
 
 .swiper-free-mode > .swiper-wrapper {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
   margin: 0 auto;
 }
@@ -1022,14 +1010,12 @@ button.swiper-pagination-bullet {
 
 .swiper-fade.swiper-free-mode .swiper-slide {
   -webkit-transition-timing-function: ease-out;
-  -o-transition-timing-function: ease-out;
   transition-timing-function: ease-out;
 }
 
 .swiper-fade .swiper-slide {
   pointer-events: none;
   -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 
@@ -1136,7 +1122,6 @@ button.swiper-pagination-bullet {
   overflow: hidden;
   -webkit-transition-property: opacity, height, -webkit-transform;
   transition-property: opacity, height, -webkit-transform;
-  -o-transition-property: transform, opacity, height;
   transition-property: transform, opacity, height;
   transition-property: transform, opacity, height, -webkit-transform;
 }
@@ -1290,7 +1275,7 @@ a {
 }
 
 /* flex*/
-.flex-wrap, .social__list, .header-top-nav__list {
+.flex-wrap, .catalog-tile ul, .social__list, .header-top-nav__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1326,7 +1311,6 @@ a {
 .text-truncate {
   white-space: nowrap;
   overflow: hidden;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 
@@ -1340,7 +1324,7 @@ a {
 }
 
 /*resets*/
-.list-reset, .blog__list, .clients__list, .features__list, .main-nav__simple-list, .main-nav__inner-list, .main-nav__list-item-nested ul, .main-nav__list, .footer-nav__list, .social__list, .breadcrumbs__list, .header-social__list, .header-top-nav__list {
+.list-reset, .blog__list, .catalog-tile ul, .clients__list, .features__list, .main-nav__simple-list, .main-nav__inner-list, .main-nav__list-item-nested ul, .main-nav__list, .footer-nav__list, .social__list, .breadcrumbs__list, .header-social__list, .header-top-nav__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -1386,7 +1370,6 @@ a {
 /*transitions*/
 .hover-opacity, .main-nav__info-mail, .main-nav__info-phone, .footer__section a, .main-header .main-phone, .main-header__workflow, .social__list-item a, .header-social__list-item a, .header-top-nav__list-item a {
   -webkit-transition: opacity var(--main-transition);
-  -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
 .hover-opacity:hover, .main-nav__info-mail:hover, .main-nav__info-phone:hover, .footer__section a:hover, .main-header .main-phone:hover, .main-header__workflow:hover, .social__list-item a:hover, .header-social__list-item a:hover, .header-top-nav__list-item a:hover, .hover-opacity:focus, .main-nav__info-mail:focus, .main-nav__info-phone:focus, .footer__section a:focus, .main-header .main-phone:focus, .main-header__workflow:focus, .social__list-item a:focus, .header-social__list-item a:focus, .header-top-nav__list-item a:focus {
@@ -1503,7 +1486,6 @@ a {
   border-radius: 50%;
   background-color: #fffaf8;
   -webkit-transition: opacity var(--main-transition);
-  -o-transition: opacity var(--main-transition);
   transition: opacity var(--main-transition);
 }
 .lw-product-card-btn img, .show-btn img, .favourite-btn img,
@@ -1744,7 +1726,6 @@ a {
 .personal button svg {
   fill: #c0c0c0;
   -webkit-transition: fill var(--main-transition);
-  -o-transition: fill var(--main-transition);
   transition: fill var(--main-transition);
 }
 @media (max-width: 1023px) {
@@ -1942,14 +1923,10 @@ a {
   font-weight: 300;
   margin: 0;
   margin-bottom: clamp(6px, 1.3vw, 12px);
-  -webkit-line-clamp: 2;
-  /* Число отображаемых строк */
-  display: -webkit-box;
-  /* Включаем флексбоксы */
-  -webkit-box-orient: vertical;
-  /* Вертикальная ориентация */
-  overflow: hidden;
-  /* Обрезаем всё за пределами блока */
+  -webkit-line-clamp: 2; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .product-card__price {
   display: inline-block;
@@ -1972,7 +1949,6 @@ a {
   background-color: #fffaf8;
   -webkit-transition: opacity var(--main-transition), background-color var(--main-transition), -webkit-transform var(--main-transition);
   transition: opacity var(--main-transition), background-color var(--main-transition), -webkit-transform var(--main-transition);
-  -o-transition: opacity var(--main-transition), background-color var(--main-transition), transform var(--main-transition);
   transition: opacity var(--main-transition), background-color var(--main-transition), transform var(--main-transition);
   transition: opacity var(--main-transition), background-color var(--main-transition), transform var(--main-transition), -webkit-transform var(--main-transition);
 }
@@ -2057,7 +2033,6 @@ a {
   visibility: visible;
   margin-top: calc(-1 * var(--accordeon-offset));
   -webkit-transition: all var(--accordeon-content-block-transition);
-  -o-transition: all var(--accordeon-content-block-transition);
   transition: all var(--accordeon-content-block-transition);
 }
 .accordeon-item-content .lw-content {
@@ -2065,7 +2040,6 @@ a {
   background-color: var(--accordeon-content-bg-color);
   opacity: 0;
   -webkit-transition: all var(--accordeon-content-block-transition);
-  -o-transition: all var(--accordeon-content-block-transition);
   transition: all var(--accordeon-content-block-transition);
   font-style: italic;
 }
@@ -2161,14 +2135,10 @@ a {
   font-size: clamp(14px, 1.2vw, 16px);
   font-weight: 300;
   line-height: 1.5;
-  -webkit-line-clamp: 15;
-  /* Число отображаемых строк */
-  display: -webkit-box;
-  /* Включаем флексбоксы */
-  -webkit-box-orient: vertical;
-  /* Вертикальная ориентация */
-  overflow: hidden;
-  /* Обрезаем всё за пределами блока */
+  -webkit-line-clamp: 15; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .review-card-btn {
   margin-top: 30px;
@@ -2266,14 +2236,10 @@ a {
   font-size: clamp(16px, 3.6vw, 20px);
   font-weight: 300;
   margin-bottom: clamp(16px, 1.8vw, 24px);
-  -webkit-line-clamp: 10;
-  /* Число отображаемых строк */
-  display: -webkit-box;
-  /* Включаем флексбоксы */
-  -webkit-box-orient: vertical;
-  /* Вертикальная ориентация */
-  overflow: hidden;
-  /* Обрезаем всё за пределами блока */
+  -webkit-line-clamp: 10; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .blog-preview-card-more-btn {
   text-transform: uppercase;
@@ -2431,14 +2397,10 @@ a {
   font-size: clamp(16px, 3vw, 20px);
   font-weight: 300;
   margin-bottom: clamp(16px, 1.8vw, 24px);
-  -webkit-line-clamp: 10;
-  /* Число отображаемых строк */
-  display: -webkit-box;
-  /* Включаем флексбоксы */
-  -webkit-box-orient: vertical;
-  /* Вертикальная ориентация */
-  overflow: hidden;
-  /* Обрезаем всё за пределами блока */
+  -webkit-line-clamp: 10; /* Число отображаемых строк */
+  display: -webkit-box; /* Включаем флексбоксы */
+  -webkit-box-orient: vertical; /* Вертикальная ориентация */
+  overflow: hidden; /* Обрезаем всё за пределами блока */
 }
 .blog-card-more-btn {
   text-transform: uppercase;
@@ -2566,6 +2528,59 @@ a {
 }
 .content-block a {
   color: var(--primary);
+}
+
+.catalog-tile-card__header {
+  position: relative;
+  margin-left: clamp(70px, 9vw, 95px);
+}
+.catalog-tile-card-square {
+  width: 15px;
+  height: 15px;
+  background-color: var(--white);
+}
+.catalog-tile-card-square-box {
+  position: absolute;
+  bottom: clamp(10px, 1.2vw, 20px);
+  left: clamp(10px, 1.2vw, 20px);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 10px;
+}
+.catalog-tile-card img {
+  display: block;
+  width: 100%;
+  max-width: 316px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+.catalog-tile-card__title {
+  position: relative;
+  font-family: var(--secondary-font);
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(20px, 3.6vw, 32px);
+  text-transform: uppercase;
+  padding-left: clamp(10px, 1.2vw, 20px);
+  margin: clamp(10px, 1.2vw, 20px) 0 0;
+  color: var(--black);
+}
+.catalog-tile-card__title::before {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: clamp(50px, 7vw, 65px);
+  height: clamp(120px, 15vw, 150px);
+  background-color: var(--secondary);
+  z-index: -1;
 }
 
 /* шаблон */
@@ -2941,7 +2956,6 @@ a {
   color: var(--black);
   white-space: nowrap;
   -webkit-transition: color var(--main-transition);
-  -o-transition: color var(--main-transition);
   transition: color var(--main-transition);
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
@@ -2985,7 +2999,6 @@ a {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
   transition: opacity 0.3s ease-in;
 }
 .main-nav__list-item-nested:hover .main-nav__list-item-nested-overlay {
@@ -3052,7 +3065,6 @@ a {
     transform: translateY(50px);
     -webkit-transition: -webkit-transform var(--main-transition);
     transition: -webkit-transform var(--main-transition);
-    -o-transition: transform var(--main-transition);
     transition: transform var(--main-transition);
     transition: transform var(--main-transition), -webkit-transform var(--main-transition);
   }
@@ -3165,7 +3177,6 @@ a {
   padding: 6px 12px;
   color: #fffaf8;
   -webkit-transition: color var(--main-transition);
-  -o-transition: color var(--main-transition);
   transition: color var(--main-transition);
 }
 .main-nav__simple-list-item a:hover, .main-nav__simple-list-item a:focus {
@@ -3260,7 +3271,6 @@ a {
     white-space: initial;
     color: #fffaf8;
     -webkit-transition: color var(--main-transition);
-    -o-transition: color var(--main-transition);
     transition: color var(--main-transition);
   }
   .main-nav.expanded .main-nav__list-item a:hover, .main-nav.expanded .main-nav__list-item a:focus {
@@ -3927,6 +3937,16 @@ a {
 }
 .blog-preview .swiper-pagination-bullet-active {
   background-color: var(--black);
+}
+
+.catalog-tile {
+  margin-bottom: 150px;
+}
+.catalog-tile ul {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  gap: clamp(20px, 4.2vw, 60px) 20px;
 }
 
 .blog__list {
