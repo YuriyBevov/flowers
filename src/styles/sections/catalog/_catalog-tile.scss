@@ -1,11 +1,14 @@
 .catalog-tile {
+  margin-bottom: 150px;
 
-    margin-bottom: 150px;
+  ul {
+    @extend .list-reset;
+    @extend .flex-wrap;
+    justify-content: center;
+    gap: clamp(20px, 4.2vw, 60px) 20px;
 
-    ul {
-        @extend .list-reset;
-        @extend .flex-wrap;
-        justify-content: center;
-        gap: clamp(20px, 4.2vw, 60px) 20px;
+    li {
+      max-width: 415px;
     }
+  }
 }
