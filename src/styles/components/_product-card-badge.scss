@@ -1,0 +1,13 @@
+.product-card-badge {
+  @extend .flex-centered-content;
+  width: clamp(32px, 5.2vw, 50px);
+  height: clamp(32px, 5.2vw, 50px);
+
+  border-radius: 50%;
+
+  background-color: transparent; //rgb(255, 250, 248, 0.3);
+  color: var(--primary);
+
+  font-size: clamp(12px, 1.2vw, 14px);
+  font-weight: 600;
+}
