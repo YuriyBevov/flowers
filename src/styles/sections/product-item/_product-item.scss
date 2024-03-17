@@ -1,0 +1,16 @@
+.product-item {
+  &-container {
+    outline: 1px solid red;
+    display: grid;
+    grid-template-columns: 7fr 5fr;
+    grid-gap: clamp(40px, 10vw, 165px);
+
+    // display: flex;
+    // column-gap: clamp(40px, 10vw, 165px);
+  }
+
+  &-section {
+    width: 100%;
+    // max-width: 50vw;
+  }
+}

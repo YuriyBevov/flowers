@@ -240,7 +240,7 @@ if (searchOpener) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
-swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade]);
+swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller]);
 var catalogTopSlider = document.querySelector(".swiper-container .catalog-top-swiper");
 
 if (catalogTopSlider) {
@@ -393,6 +393,41 @@ if (sortSlider) {
     spaceBetween: 30,
     speed: 1000
   });
+}
+
+var productItemSlider = document.querySelector(".product-item-slider");
+
+if (productItemSlider) {
+  var thumbslider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-thumbslider", {
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    slidesPerView: 3,
+    // watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    direction: "vertical"
+  });
+  var mainSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-slider", {
+    watchOverflow: true,
+    watchSlidesVisibility: true,
+    watchSlidesProgress: true,
+    preventInteractionOnTransition: true,
+    navigation: {
+      nextEl: ".product-item-slider .swiper-button-next",
+      prevEl: ".product-item-slider .swiper-button-prev"
+    },
+    thumbs: {
+      swiper: thumbslider
+    }
+  });
+  mainSlider.on("slideChangeTransitionStart", function () {
+    thumbslider.slideTo(mainSlider.activeIndex);
+  });
+  thumbslider.on("transitionStart", function () {
+    mainSlider.slideTo(thumbslider.activeIndex);
+  }); // two way control
+  // mainSlider.controller.control = thumbslider;
+  // thumbslider.controller.control = mainSlider;
 }
 
 /***/ }),

@@ -31,6 +31,11 @@
 
 @import "components/catalog-tile-card";
 
+@import "components/lw-filter";
+@import "components/controls";
+
+@import "components/product-item-slider";
+
 /*BX*/
 
 @import "components/bx-popup-window";
@@ -58,4 +63,6 @@
 
 @import "sections/common/subscribe";
 @import "sections/common/page-top-section";
+
+@import "sections/product-item/product-item";
 /* Модальные окна */
