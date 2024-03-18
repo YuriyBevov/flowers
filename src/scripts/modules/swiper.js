@@ -194,18 +194,20 @@ if (productItemSlider) {
   const thumbslider = new Swiper(".product-item-thumbslider", {
     centeredSlides: true,
     centeredSlidesBounds: true,
-    slidesPerView: 3,
-    // watchOverflow: true,
-    watchSlidesVisibility: true,
+    slidesPerView: "auto",
+    watchOverflow: true,
+    // freeMode: true,
+    // watchSlidesVisibility: true,
     watchSlidesProgress: true,
     direction: "vertical",
   });
 
   const mainSlider = new Swiper(".product-item-slider", {
+    slidesPerView: 1,
     watchOverflow: true,
-    watchSlidesVisibility: true,
+    // watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    preventInteractionOnTransition: true,
+    // preventInteractionOnTransition: true,
     navigation: {
       nextEl: ".product-item-slider .swiper-button-next",
       prevEl: ".product-item-slider .swiper-button-prev",
@@ -216,15 +218,32 @@ if (productItemSlider) {
     },
   });
 
-  mainSlider.on("slideChangeTransitionStart", function () {
-    thumbslider.slideTo(mainSlider.activeIndex);
-  });
+  // mainSlider.on("slideChangeTransitionStart", function () {
+  //   thumbslider.slideTo(mainSlider.activeIndex);
+  // });
 
-  thumbslider.on("transitionStart", function () {
-    mainSlider.slideTo(thumbslider.activeIndex);
-  });
+  // thumbslider.on("transitionStart", function () {
+  //   mainSlider.slideTo(thumbslider.activeIndex);
+  // });
 
   // two way control
   // mainSlider.controller.control = thumbslider;
   // thumbslider.controller.control = mainSlider;
 }
+
+// var swiper = new Swiper(".mySwiper", {
+//   spaceBetween: 10,
+//   slidesPerView: 4,
+//   freeMode: true,
+//   watchSlidesProgress: true,
+// });
+// var swiper2 = new Swiper(".mySwiper2", {
+//   spaceBetween: 10,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   thumbs: {
+//     swiper: swiper,
+//   },
+// });

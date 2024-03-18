@@ -7,23 +7,21 @@
   \******************************************/
 /***/ (() => {
 
-var accordeons = document.querySelectorAll(".accordeon");
-
+const accordeons = document.querySelectorAll(".accordeon");
 if (accordeons) {
-  var onClickExpandItem = function onClickExpandItem(evt) {
-    var target = evt.currentTarget;
-    var items = target.closest(".accordeon").querySelectorAll(".accordeon-item");
-    items.forEach(function (item) {
+  const onClickExpandItem = evt => {
+    const target = evt.currentTarget;
+    const items = target.closest(".accordeon").querySelectorAll(".accordeon-item");
+    items.forEach(item => {
       if (item !== target.parentNode && item.classList.contains("expanded")) {
         item.classList.remove("expanded");
       }
     });
     !target.parentNode.classList.contains("expanded") ? target.parentNode.classList.add("expanded") : null;
   };
-
-  accordeons.forEach(function (accordeon) {
-    var expanders = accordeon.querySelectorAll(".accordeon-item-header");
-    expanders.forEach(function (expander) {
+  accordeons.forEach(accordeon => {
+    const expanders = accordeon.querySelectorAll(".accordeon-item-header");
+    expanders.forEach(expander => {
       expander.addEventListener("click", onClickExpandItem);
     });
   });
@@ -39,17 +37,15 @@ if (accordeons) {
 
 const containers = document.querySelectorAll(".catalog-tile-card__top");
 if (containers) {
-  var COUNT = 3;
-  containers.forEach(function (container) {
-    var squareBox = document.createElement("div");
+  const COUNT = 3;
+  containers.forEach(container => {
+    const squareBox = document.createElement("div");
     squareBox.classList.add("catalog-tile-card-square-box");
-
-    for (var i = 0; i < COUNT; i++) {
-      var square = document.createElement("div");
+    for (let i = 0; i < COUNT; i++) {
+      const square = document.createElement("div");
       square.classList.add("catalog-tile-card-square");
       squareBox.append(square);
     }
-
     container.append(squareBox);
   });
 }
@@ -62,19 +58,16 @@ if (containers) {
   \****************************************************/
 /***/ (() => {
 
-var container = document.querySelector(".features__container");
-
+const container = document.querySelector(".features__container");
 if (container) {
-  var COUNT = 3;
-  var squareBox = document.createElement("div");
+  const COUNT = 3;
+  const squareBox = document.createElement("div");
   squareBox.classList.add("square-box");
-
-  for (var i = 0; i < COUNT; i++) {
-    var square = document.createElement("div");
+  for (let i = 0; i < COUNT; i++) {
+    const square = document.createElement("div");
     square.classList.add("square");
     squareBox.append(square);
   }
-
   container.append(squareBox);
 }
 
@@ -86,47 +79,41 @@ if (container) {
   \*****************************************/
 /***/ (() => {
 
-var nav = document.querySelector(".main-nav");
-
+const nav = document.querySelector(".main-nav");
 if (nav) {
-  var navItems = nav.querySelectorAll(".main-nav__list-item:not(.main-nav__list-item-nested)");
-  var nestedNavItem = nav.querySelector(".main-nav__list-item-nested");
-  var nestedNavList = nestedNavItem.querySelector("ul");
-  var navItemsMenu = nav.querySelector(".main-nav__list-item-nested");
-  var navContainer = document.querySelector(".main-header__section--nav");
-
-  var fillNavItems = function fillNavItems() {
-    var navContainerWidth = navContainer.getBoundingClientRect().width;
-    var itemsTotalWidth = 0;
-    navItems.forEach(function (item) {
+  const navItems = nav.querySelectorAll(".main-nav__list-item:not(.main-nav__list-item-nested)");
+  const nestedNavItem = nav.querySelector(".main-nav__list-item-nested");
+  const nestedNavList = nestedNavItem.querySelector("ul");
+  const navItemsMenu = nav.querySelector(".main-nav__list-item-nested");
+  const navContainer = document.querySelector(".main-header__section--nav");
+  const fillNavItems = () => {
+    const navContainerWidth = navContainer.getBoundingClientRect().width;
+    let itemsTotalWidth = 0;
+    navItems.forEach(item => {
       item.classList.contains("desktop-hidden") ? item.classList.remove("desktop-hidden") : null;
     });
-    var nestedNavListItems = nestedNavList.querySelectorAll("li");
-    nestedNavListItems.forEach(function (item) {
+    const nestedNavListItems = nestedNavList.querySelectorAll("li");
+    nestedNavListItems.forEach(item => {
       item.remove();
     });
     !navItemsMenu.classList.contains("desktop-hidden") ? navItemsMenu.classList.add("desktop-hidden") : null;
-
-    for (var i = 0; i < navItems.length; i++) {
-      var item = navItems[i];
+    for (let i = 0; i < navItems.length; i++) {
+      const item = navItems[i];
       itemsTotalWidth += item.getBoundingClientRect().width;
-
       if (navContainerWidth - 40 < itemsTotalWidth) {
         item.classList.add("desktop-hidden");
         navItemsMenu.classList.contains("desktop-hidden") ? navItemsMenu.classList.remove("desktop-hidden") : null;
-        var itemClone = item.cloneNode(true);
+        let itemClone = item.cloneNode(true);
         itemClone.classList.remove("desktop-hidden");
-
         if (!nestedNavList.contains(itemClone)) {
           nestedNavList.appendChild(itemClone);
         }
       }
     }
   };
-
   fillNavItems();
   window.addEventListener("resize", fillNavItems);
-  nestedNavItem.addEventListener("click", function () {
+  nestedNavItem.addEventListener("click", () => {
     nestedNavList.style.display = "block";
   });
 }
@@ -143,13 +130,11 @@ if (nav) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_functions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/functions */ "./src/scripts/utils/functions.js");
 
-var nav = document.querySelector(".main-nav");
-
+const nav = document.querySelector(".main-nav");
 if (nav) {
-  var opener = nav.querySelector(".main-nav-opener");
-  var closer = nav.querySelector(".main-nav-closer");
-
-  var onClickOpenNav = function onClickOpenNav() {
+  const opener = nav.querySelector(".main-nav-opener");
+  const closer = nav.querySelector(".main-nav-closer");
+  const onClickOpenNav = () => {
     (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(true);
     nav.classList.add("expanded");
     opener.removeEventListener("click", onClickOpenNav);
@@ -157,8 +142,7 @@ if (nav) {
     document.addEventListener("click", onOverlayClickCloseNav);
     window.addEventListener("keydown", onEscBtnCloseNav);
   };
-
-  var closeNav = function closeNav() {
+  const closeNav = () => {
     (0,_utils_functions__WEBPACK_IMPORTED_MODULE_0__.bodyLocker)(false);
     nav.classList.remove("expanded");
     opener.addEventListener("click", onClickOpenNav);
@@ -166,41 +150,33 @@ if (nav) {
     document.removeEventListener("click", onOverlayClickCloseNav);
     window.removeEventListener("keydown", onEscBtnCloseNav);
   };
-
-  var onCloserBtnClickCloseNav = function onCloserBtnClickCloseNav() {
+  const onCloserBtnClickCloseNav = () => {
     closeNav();
   };
-
-  var onOverlayClickCloseNav = function onOverlayClickCloseNav(evt) {
+  const onOverlayClickCloseNav = evt => {
     if (evt.target === nav) {
       closeNav();
     }
   };
-
-  var onEscBtnCloseNav = function onEscBtnCloseNav(evt) {
+  const onEscBtnCloseNav = evt => {
     if (evt.code === "Escape" || evt.code === "27") {
       closeNav();
     }
   };
-
   opener.addEventListener("click", onClickOpenNav);
 }
-
-var expanders = document.querySelectorAll(".main-nav-expand-btn");
-
+const expanders = document.querySelectorAll(".main-nav-expand-btn");
 if (expanders) {
-  var onClickExpandItem = function onClickExpandItem(evt) {
-    var target = evt.currentTarget;
-    var expandedItem = document.querySelector(".main-nav__inner-list-wrapper.expanded");
-
+  const onClickExpandItem = evt => {
+    const target = evt.currentTarget;
+    const expandedItem = document.querySelector(".main-nav__inner-list-wrapper.expanded");
     if (!expandedItem) {
       target.nextElementSibling.classList.add("expanded");
     } else {
       expandedItem.classList.remove("expanded");
     }
   };
-
-  expanders.forEach(function (expander) {
+  expanders.forEach(expander => {
     expander.addEventListener("click", onClickExpandItem);
   });
 }
@@ -213,16 +189,13 @@ if (expanders) {
   \*********************************************/
 /***/ (() => {
 
-var searchOpener = document.querySelector(".search-block-opener");
-
+const searchOpener = document.querySelector(".search-block-opener");
 if (searchOpener) {
-  var searchBlock = document.querySelector(".search-block");
-  var searchCloser = document.querySelector(".search-block-closer");
-
-  var onClickToggleSearchBlock = function onClickToggleSearchBlock() {
+  const searchBlock = document.querySelector(".search-block");
+  const searchCloser = document.querySelector(".search-block-closer");
+  const onClickToggleSearchBlock = () => {
     searchBlock.classList.toggle("expanded");
   };
-
   searchOpener.addEventListener("click", onClickToggleSearchBlock);
   searchCloser.addEventListener("click", onClickToggleSearchBlock);
 }
@@ -240,8 +213,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.EffectFade, swiper__WEBPACK_IMPORTED_MODULE_0__.Thumbs, swiper__WEBPACK_IMPORTED_MODULE_0__.Controller]);
-var catalogTopSlider = document.querySelector(".swiper-container .catalog-top-swiper");
-
+const catalogTopSlider = document.querySelector(".swiper-container .catalog-top-swiper");
 if (catalogTopSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](catalogTopSlider, {
     slidesPerView: 2,
@@ -260,14 +232,12 @@ if (catalogTopSlider) {
     }
   });
 }
-
-var catalogSectionSlider = document.querySelector(".swiper-container .catalog-section-swiper");
-
+const catalogSectionSlider = document.querySelector(".swiper-container .catalog-section-swiper");
 if (catalogSectionSlider) {
-  var initialSlide = catalogSectionSlider.querySelectorAll(".swiper-slide").length;
-  var controls = catalogSectionSlider.parentNode.querySelector(".swiper-controls");
-  var prevEl = controls.querySelector(".swiper-button-prev");
-  var nextEl = controls.querySelector(".swiper-button-next");
+  const initialSlide = catalogSectionSlider.querySelectorAll(".swiper-slide").length;
+  const controls = catalogSectionSlider.parentNode.querySelector(".swiper-controls");
+  const prevEl = controls.querySelector(".swiper-button-prev");
+  const nextEl = controls.querySelector(".swiper-button-next");
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](catalogSectionSlider, {
     slidesPerView: 2,
     spaceBetween: 10,
@@ -276,8 +246,8 @@ if (catalogSectionSlider) {
     slidesOffsetAfter: 0,
     grabCursor: true,
     navigation: {
-      prevEl: prevEl,
-      nextEl: nextEl
+      prevEl,
+      nextEl
     },
     breakpoints: {
       534: {
@@ -293,22 +263,16 @@ if (catalogSectionSlider) {
     }
   });
 }
-
-var reviewSlider = document.querySelector(".swiper-container .review-swiper");
-
+const reviewSlider = document.querySelector(".swiper-container .review-swiper");
 if (reviewSlider) {
-  var _initialSlide = reviewSlider.querySelectorAll(".swiper-slide").length;
-
-  var _controls = reviewSlider.parentNode.querySelector(".swiper-controls");
-
-  var _prevEl = null;
-  var _nextEl = null;
-
-  if (_controls) {
-    _prevEl = _controls.querySelector(".swiper-button-prev");
-    _nextEl = _controls.querySelector(".swiper-button-next");
+  const initialSlide = reviewSlider.querySelectorAll(".swiper-slide").length;
+  const controls = reviewSlider.parentNode.querySelector(".swiper-controls");
+  let prevEl = null;
+  let nextEl = null;
+  if (controls) {
+    prevEl = controls.querySelector(".swiper-button-prev");
+    nextEl = controls.querySelector(".swiper-button-next");
   }
-
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](reviewSlider, {
     slidesPerView: 1,
     spaceBetween: 10,
@@ -317,8 +281,8 @@ if (reviewSlider) {
     grabCursor: true,
     speed: 1000,
     navigation: {
-      prevEl: _prevEl ? _prevEl : null,
-      nextEl: _nextEl ? _nextEl : null
+      prevEl: prevEl ? prevEl : null,
+      nextEl: nextEl ? nextEl : null
     },
     breakpoints: {
       534: {
@@ -334,12 +298,10 @@ if (reviewSlider) {
     }
   });
 }
-
-var blogSlider = document.querySelector(".blog-preview-slider");
-
+const blogSlider = document.querySelector(".blog-preview-slider");
 if (blogSlider) {
-  var currentSlideIndex = 0;
-  var slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](blogSlider, {
+  let currentSlideIndex = 0;
+  const slider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](blogSlider, {
     slidesPerView: 1,
     spaceBetween: 10,
     effect: "fade",
@@ -351,41 +313,33 @@ if (blogSlider) {
       clickable: true
     },
     on: {
-      afterInit: function afterInit() {
+      afterInit: function () {
         currentSlideIndex = this.activeIndex;
       },
-      slideChange: function slideChange() {
+      slideChange: function () {
         currentSlideIndex = this.activeIndex;
       }
     }
   });
-  var navigators = document.querySelectorAll(".blog-preview-card-navigation button");
-
+  const navigators = document.querySelectorAll(".blog-preview-card-navigation button");
   if (navigators) {
-    var sliderSlideTo = function sliderSlideTo(index) {
-      return slider.slideTo(index);
-    };
-
-    var onClickChangeSlide = function onClickChangeSlide(evt) {
+    const sliderSlideTo = index => slider.slideTo(index);
+    const onClickChangeSlide = evt => {
       if (evt.currentTarget.classList.contains("blog-preview-card-btn-next") && currentSlideIndex !== slider.slides.length - 1) {
         currentSlideIndex++;
         sliderSlideTo(currentSlideIndex);
       }
-
       if (evt.currentTarget.classList.contains("blog-preview-card-btn-prev") && currentSlideIndex !== 0) {
         currentSlideIndex--;
         sliderSlideTo(currentSlideIndex);
       }
     };
-
-    navigators.forEach(function (navigator) {
+    navigators.forEach(navigator => {
       navigator.addEventListener("click", onClickChangeSlide);
     });
   }
 }
-
-var sortSlider = document.querySelector(".sort-swiper-slider");
-
+const sortSlider = document.querySelector(".sort-swiper-slider");
 if (sortSlider) {
   new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](sortSlider, {
     slidesPerView: "auto",
@@ -393,24 +347,24 @@ if (sortSlider) {
     speed: 1000
   });
 }
-
-var productItemSlider = document.querySelector(".product-item-slider");
-
+const productItemSlider = document.querySelector(".product-item-slider");
 if (productItemSlider) {
-  var thumbslider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-thumbslider", {
+  const thumbslider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-thumbslider", {
     centeredSlides: true,
     centeredSlidesBounds: true,
-    slidesPerView: 3,
-    // watchOverflow: true,
-    watchSlidesVisibility: true,
+    slidesPerView: "auto",
+    watchOverflow: true,
+    // freeMode: true,
+    // watchSlidesVisibility: true,
     watchSlidesProgress: true,
     direction: "vertical"
   });
-  var mainSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-slider", {
+  const mainSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-slider", {
+    slidesPerView: 1,
     watchOverflow: true,
-    watchSlidesVisibility: true,
+    // watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    preventInteractionOnTransition: true,
+    // preventInteractionOnTransition: true,
     navigation: {
       nextEl: ".product-item-slider .swiper-button-next",
       prevEl: ".product-item-slider .swiper-button-prev"
@@ -419,15 +373,36 @@ if (productItemSlider) {
       swiper: thumbslider
     }
   });
-  mainSlider.on("slideChangeTransitionStart", function () {
-    thumbslider.slideTo(mainSlider.activeIndex);
-  });
-  thumbslider.on("transitionStart", function () {
-    mainSlider.slideTo(thumbslider.activeIndex);
-  }); // two way control
+
+  // mainSlider.on("slideChangeTransitionStart", function () {
+  //   thumbslider.slideTo(mainSlider.activeIndex);
+  // });
+
+  // thumbslider.on("transitionStart", function () {
+  //   mainSlider.slideTo(thumbslider.activeIndex);
+  // });
+
+  // two way control
   // mainSlider.controller.control = thumbslider;
   // thumbslider.controller.control = mainSlider;
 }
+
+// var swiper = new Swiper(".mySwiper", {
+//   spaceBetween: 10,
+//   slidesPerView: 4,
+//   freeMode: true,
+//   watchSlidesProgress: true,
+// });
+// var swiper2 = new Swiper(".mySwiper2", {
+//   spaceBetween: 10,
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+//   thumbs: {
+//     swiper: swiper,
+//   },
+// });
 
 /***/ }),
 
@@ -437,13 +412,11 @@ if (productItemSlider) {
   \************************************************/
 /***/ (() => {
 
-var contentBlock = document.querySelector(".content-block");
-
+const contentBlock = document.querySelector(".content-block");
 if (contentBlock) {
-  var tables = contentBlock.getElementsByTagName("table"),
-      i,
-      wrapper;
-
+  let tables = contentBlock.getElementsByTagName("table"),
+    i,
+    wrapper;
   if (tables.length) {
     for (i = 0; i < tables.length; i++) {
       wrapper = document.createElement("div");
@@ -451,7 +424,10 @@ if (contentBlock) {
       tables[i].parentNode.insertBefore(wrapper, tables[i]);
       wrapper.appendChild(tables[i]);
     }
-  } // let imgs = contentBlock.querySelectorAll("img");
+  }
+
+  // let imgs = contentBlock.querySelectorAll("img");
+
   // if (imgs.length) {
   //   imgs.forEach((img) => {
   //     console.log(img.getAttribute("style"));
@@ -459,11 +435,13 @@ if (contentBlock) {
   //       img.style.margin = "0 20px 20px 0";
   //       img.style.maxWidth = "50vw";
   //     }
+
   //     if (getComputedStyle(img).float === "right") {
   //       img.style.margin = "0 0 20px 20px";
   //       img.style.maxWidth = "50vw";
   //     }
   //   });
+
   // window.addEventListener("resize", () => {
   //   if (window.innerWidth < 535) {
   //     imgs.forEach((img) => {
@@ -471,6 +449,7 @@ if (contentBlock) {
   //         img.style.margin = "0";
   //         img.style.maxWidth = "100%";
   //       }
+
   //       if (getComputedStyle(img).float === "right") {
   //         img.style.margin = "0";
   //         img.style.maxWidth = "100%";
@@ -482,6 +461,7 @@ if (contentBlock) {
   //         img.style.margin = "0 20px 20px 0";
   //         img.style.maxWidth = "50vw";
   //       }
+
   //       if (getComputedStyle(img).float === "right") {
   //         img.style.margin = "0 0 20px 20px";
   //         img.style.maxWidth = "50vw";
@@ -490,7 +470,6 @@ if (contentBlock) {
   //   }
   // });
   // }
-
 }
 
 /***/ }),
@@ -504,90 +483,80 @@ if (contentBlock) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "addClass": () => (/* binding */ addClass),
-/* harmony export */   "bodyLocker": () => (/* binding */ bodyLocker),
-/* harmony export */   "checkClass": () => (/* binding */ checkClass),
-/* harmony export */   "focusTrap": () => (/* binding */ focusTrap),
-/* harmony export */   "getBoundingClientRect": () => (/* binding */ getBoundingClientRect),
-/* harmony export */   "getCssPropertyValue": () => (/* binding */ getCssPropertyValue),
-/* harmony export */   "getMousePos": () => (/* binding */ getMousePos),
-/* harmony export */   "getRadians": () => (/* binding */ getRadians),
-/* harmony export */   "lerp": () => (/* binding */ lerp),
-/* harmony export */   "limitStr": () => (/* binding */ limitStr),
-/* harmony export */   "removeClass": () => (/* binding */ removeClass),
-/* harmony export */   "setCssProperty": () => (/* binding */ setCssProperty),
-/* harmony export */   "setVieportHeight": () => (/* binding */ setVieportHeight),
-/* harmony export */   "toggleClass": () => (/* binding */ toggleClass)
+/* harmony export */   addClass: () => (/* binding */ addClass),
+/* harmony export */   bodyLocker: () => (/* binding */ bodyLocker),
+/* harmony export */   checkClass: () => (/* binding */ checkClass),
+/* harmony export */   focusTrap: () => (/* binding */ focusTrap),
+/* harmony export */   getBoundingClientRect: () => (/* binding */ getBoundingClientRect),
+/* harmony export */   getCssPropertyValue: () => (/* binding */ getCssPropertyValue),
+/* harmony export */   getMousePos: () => (/* binding */ getMousePos),
+/* harmony export */   getRadians: () => (/* binding */ getRadians),
+/* harmony export */   lerp: () => (/* binding */ lerp),
+/* harmony export */   limitStr: () => (/* binding */ limitStr),
+/* harmony export */   removeClass: () => (/* binding */ removeClass),
+/* harmony export */   setCssProperty: () => (/* binding */ setCssProperty),
+/* harmony export */   setVieportHeight: () => (/* binding */ setVieportHeight),
+/* harmony export */   toggleClass: () => (/* binding */ toggleClass)
 /* harmony export */ });
 // работа с root
-var root = document.querySelector(':root');
 
+const root = document.querySelector(':root');
 function getCssPropertyValue(name) {
   return getComputedStyle(root).getPropertyValue(name);
 }
-
 function setCssProperty(name, value) {
   root.style.setProperty(name, value);
 }
-
 function setVieportHeight() {
-  var vh = window.innerHeight * 0.01; //document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-  setCssProperty('--vh', "".concat(vh, "px"));
-  window.addEventListener('resize', function () {
-    var vh = window.innerHeight * 0.01;
-    setCssProperty('--vh', "".concat(vh, "px"));
+  let vh = window.innerHeight * 0.01;
+  //document.documentElement.style.setProperty('--vh', `${vh}px`);
+  setCssProperty('--vh', `${vh}px`);
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    setCssProperty('--vh', `${vh}px`);
   });
 }
-
 function addClass(el, cl) {
   el.classList.add(cl);
 }
-
 function removeClass(el, cl) {
   el.classList.remove(cl);
 }
-
 function checkClass(el, cl) {
   return el.classList.contains(cl);
 }
-
 function toggleClass(el, cl) {
   el.classList.toggle(cl);
-} // Linear interpolation
+}
 
+// Linear interpolation
+const lerp = (a, b, n) => (1 - n) * a + n * b;
 
-var lerp = function lerp(a, b, n) {
-  return (1 - n) * a + n * b;
-}; // Позиция мыши
-
-
-var getMousePos = function getMousePos(evt) {
+// Позиция мыши
+const getMousePos = evt => {
   return {
     x: evt.clientX,
     y: evt.clientY
   };
-}; //получение радиан из градусов(для канваса)
+};
 
-
+//получение радиан из градусов(для канваса)
 function getRadians(degrees) {
   return Math.PI / 180 * degrees;
-} // Ограничение длины текста по кол-ву символов
+}
 
-
+// Ограничение длины текста по кол-ву символов
 function limitStr(str, n) {
   if (str.length > n) {
     return str.slice(0, n) + '...';
   } else {
     return str;
   }
-} // запрет скролла у body
-
-
+}
+// запрет скролла у body
 function bodyLocker(bool) {
-  var body = document.querySelector('body');
-  var paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
-
+  let body = document.querySelector('body');
+  let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
   if (bool) {
     body.style.overflow = 'hidden';
     body.style.paddingRight = paddingOffset;
@@ -596,26 +565,21 @@ function bodyLocker(bool) {
     body.style.paddingRight = '0px';
   }
 }
-
 function focusTrap(el) {
-  var initialFocusedEl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-  var focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
-  var firstFocusableElement = el.querySelectorAll(focusableElements)[0];
-  var focusableContent = el.querySelectorAll(focusableElements);
-  var lastFocusableElement = focusableContent[focusableContent.length - 1];
-
-  var onBtnClickHandler = function onBtnClickHandler(evt) {
-    var isTabPressed = evt.key === 'Tab' || evt.key === 9;
-
+  let initialFocusedEl = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+  const focusableElements = ['a[href]', 'input', 'select', 'textarea', 'button', 'iframe', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
+  const firstFocusableElement = el.querySelectorAll(focusableElements)[0];
+  const focusableContent = el.querySelectorAll(focusableElements);
+  const lastFocusableElement = focusableContent[focusableContent.length - 1];
+  let onBtnClickHandler = evt => {
+    let isTabPressed = evt.key === 'Tab' || evt.key === 9;
     if (evt.key === 'Escape') {
       document.removeEventListener('keydown', onBtnClickHandler);
       console.log('ESC');
     }
-
     if (!isTabPressed) {
       return;
     }
-
     if (evt.shiftKey) {
       if (document.activeElement === firstFocusableElement) {
         lastFocusableElement.focus();
@@ -628,46 +592,37 @@ function focusTrap(el) {
       }
     }
   };
-
   document.addEventListener('keydown', onBtnClickHandler);
   initialFocusedEl !== null ? initialFocusedEl.focus() : firstFocusableElement.focus();
-} // вычисление поз-и/размеров эл-та
+}
 
-
+// вычисление поз-и/размеров эл-та
 function getBoundingClientRect(elem, side) {
   if (side === 'height') {
     return elem.getBoundingClientRect().height;
   }
-
   if (side === 'width') {
     return elem.getBoundingClientRect().width;
   }
-
   if (side === 'top') {
     return elem.getBoundingClientRect().top;
   }
-
   if (side === 'bottom') {
     return elem.getBoundingClientRect().bottom;
   }
-
   if (side === 'left') {
     return elem.getBoundingClientRect().left;
   }
-
   if (side === 'right') {
     return elem.getBoundingClientRect().right;
   }
-
   if (side === 'x') {
     return elem.getBoundingClientRect().x;
   }
-
   if (side === 'y') {
     return elem.getBoundingClientRect().y;
   }
 }
-
 
 
 /***/ }),
@@ -681,92 +636,92 @@ function getBoundingClientRect(elem, side) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "$": () => (/* binding */ $),
-/* harmony export */   "add": () => (/* binding */ add),
-/* harmony export */   "addClass": () => (/* binding */ addClass),
-/* harmony export */   "animate": () => (/* binding */ animate),
-/* harmony export */   "animationEnd": () => (/* binding */ animationEnd),
-/* harmony export */   "append": () => (/* binding */ append),
-/* harmony export */   "appendTo": () => (/* binding */ appendTo),
-/* harmony export */   "attr": () => (/* binding */ attr),
-/* harmony export */   "blur": () => (/* binding */ blur),
-/* harmony export */   "change": () => (/* binding */ change),
-/* harmony export */   "children": () => (/* binding */ children),
-/* harmony export */   "click": () => (/* binding */ click),
-/* harmony export */   "closest": () => (/* binding */ closest),
-/* harmony export */   "css": () => (/* binding */ css),
-/* harmony export */   "data": () => (/* binding */ data),
-/* harmony export */   "dataset": () => (/* binding */ dataset),
+/* harmony export */   $: () => (/* binding */ $),
+/* harmony export */   add: () => (/* binding */ add),
+/* harmony export */   addClass: () => (/* binding */ addClass),
+/* harmony export */   animate: () => (/* binding */ animate),
+/* harmony export */   animationEnd: () => (/* binding */ animationEnd),
+/* harmony export */   append: () => (/* binding */ append),
+/* harmony export */   appendTo: () => (/* binding */ appendTo),
+/* harmony export */   attr: () => (/* binding */ attr),
+/* harmony export */   blur: () => (/* binding */ blur),
+/* harmony export */   change: () => (/* binding */ change),
+/* harmony export */   children: () => (/* binding */ children),
+/* harmony export */   click: () => (/* binding */ click),
+/* harmony export */   closest: () => (/* binding */ closest),
+/* harmony export */   css: () => (/* binding */ css),
+/* harmony export */   data: () => (/* binding */ data),
+/* harmony export */   dataset: () => (/* binding */ dataset),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   "detach": () => (/* binding */ detach),
-/* harmony export */   "each": () => (/* binding */ each),
-/* harmony export */   "empty": () => (/* binding */ empty),
-/* harmony export */   "eq": () => (/* binding */ eq),
-/* harmony export */   "filter": () => (/* binding */ filter),
-/* harmony export */   "find": () => (/* binding */ find),
-/* harmony export */   "focus": () => (/* binding */ focus),
-/* harmony export */   "focusin": () => (/* binding */ focusin),
-/* harmony export */   "focusout": () => (/* binding */ focusout),
-/* harmony export */   "hasClass": () => (/* binding */ hasClass),
-/* harmony export */   "height": () => (/* binding */ height),
-/* harmony export */   "hide": () => (/* binding */ hide),
-/* harmony export */   "html": () => (/* binding */ html),
-/* harmony export */   "index": () => (/* binding */ index),
-/* harmony export */   "insertAfter": () => (/* binding */ insertAfter),
-/* harmony export */   "insertBefore": () => (/* binding */ insertBefore),
-/* harmony export */   "is": () => (/* binding */ is),
-/* harmony export */   "keydown": () => (/* binding */ keydown),
-/* harmony export */   "keypress": () => (/* binding */ keypress),
-/* harmony export */   "keyup": () => (/* binding */ keyup),
-/* harmony export */   "mousedown": () => (/* binding */ mousedown),
-/* harmony export */   "mouseenter": () => (/* binding */ mouseenter),
-/* harmony export */   "mouseleave": () => (/* binding */ mouseleave),
-/* harmony export */   "mousemove": () => (/* binding */ mousemove),
-/* harmony export */   "mouseout": () => (/* binding */ mouseout),
-/* harmony export */   "mouseover": () => (/* binding */ mouseover),
-/* harmony export */   "mouseup": () => (/* binding */ mouseup),
-/* harmony export */   "next": () => (/* binding */ next),
-/* harmony export */   "nextAll": () => (/* binding */ nextAll),
-/* harmony export */   "off": () => (/* binding */ off),
-/* harmony export */   "offset": () => (/* binding */ offset),
-/* harmony export */   "on": () => (/* binding */ on),
-/* harmony export */   "once": () => (/* binding */ once),
-/* harmony export */   "outerHeight": () => (/* binding */ outerHeight),
-/* harmony export */   "outerWidth": () => (/* binding */ outerWidth),
-/* harmony export */   "parent": () => (/* binding */ parent),
-/* harmony export */   "parents": () => (/* binding */ parents),
-/* harmony export */   "prepend": () => (/* binding */ prepend),
-/* harmony export */   "prependTo": () => (/* binding */ prependTo),
-/* harmony export */   "prev": () => (/* binding */ prev),
-/* harmony export */   "prevAll": () => (/* binding */ prevAll),
-/* harmony export */   "prop": () => (/* binding */ prop),
-/* harmony export */   "remove": () => (/* binding */ remove),
-/* harmony export */   "removeAttr": () => (/* binding */ removeAttr),
-/* harmony export */   "removeClass": () => (/* binding */ removeClass),
-/* harmony export */   "removeData": () => (/* binding */ removeData),
-/* harmony export */   "resize": () => (/* binding */ resize),
-/* harmony export */   "scroll": () => (/* binding */ scroll),
-/* harmony export */   "scrollLeft": () => (/* binding */ scrollLeft),
-/* harmony export */   "scrollTo": () => (/* binding */ scrollTo),
-/* harmony export */   "scrollTop": () => (/* binding */ scrollTop),
-/* harmony export */   "show": () => (/* binding */ show),
-/* harmony export */   "siblings": () => (/* binding */ siblings),
-/* harmony export */   "stop": () => (/* binding */ stop),
-/* harmony export */   "styles": () => (/* binding */ styles),
-/* harmony export */   "submit": () => (/* binding */ submit),
-/* harmony export */   "text": () => (/* binding */ text),
-/* harmony export */   "toggleClass": () => (/* binding */ toggleClass),
-/* harmony export */   "touchend": () => (/* binding */ touchend),
-/* harmony export */   "touchmove": () => (/* binding */ touchmove),
-/* harmony export */   "touchstart": () => (/* binding */ touchstart),
-/* harmony export */   "transform": () => (/* binding */ transform),
-/* harmony export */   "transition": () => (/* binding */ transition),
-/* harmony export */   "transitionEnd": () => (/* binding */ transitionEnd),
-/* harmony export */   "transitionStart": () => (/* binding */ transitionStart),
-/* harmony export */   "trigger": () => (/* binding */ trigger),
-/* harmony export */   "val": () => (/* binding */ val),
-/* harmony export */   "value": () => (/* binding */ value),
-/* harmony export */   "width": () => (/* binding */ width)
+/* harmony export */   detach: () => (/* binding */ detach),
+/* harmony export */   each: () => (/* binding */ each),
+/* harmony export */   empty: () => (/* binding */ empty),
+/* harmony export */   eq: () => (/* binding */ eq),
+/* harmony export */   filter: () => (/* binding */ filter),
+/* harmony export */   find: () => (/* binding */ find),
+/* harmony export */   focus: () => (/* binding */ focus),
+/* harmony export */   focusin: () => (/* binding */ focusin),
+/* harmony export */   focusout: () => (/* binding */ focusout),
+/* harmony export */   hasClass: () => (/* binding */ hasClass),
+/* harmony export */   height: () => (/* binding */ height),
+/* harmony export */   hide: () => (/* binding */ hide),
+/* harmony export */   html: () => (/* binding */ html),
+/* harmony export */   index: () => (/* binding */ index),
+/* harmony export */   insertAfter: () => (/* binding */ insertAfter),
+/* harmony export */   insertBefore: () => (/* binding */ insertBefore),
+/* harmony export */   is: () => (/* binding */ is),
+/* harmony export */   keydown: () => (/* binding */ keydown),
+/* harmony export */   keypress: () => (/* binding */ keypress),
+/* harmony export */   keyup: () => (/* binding */ keyup),
+/* harmony export */   mousedown: () => (/* binding */ mousedown),
+/* harmony export */   mouseenter: () => (/* binding */ mouseenter),
+/* harmony export */   mouseleave: () => (/* binding */ mouseleave),
+/* harmony export */   mousemove: () => (/* binding */ mousemove),
+/* harmony export */   mouseout: () => (/* binding */ mouseout),
+/* harmony export */   mouseover: () => (/* binding */ mouseover),
+/* harmony export */   mouseup: () => (/* binding */ mouseup),
+/* harmony export */   next: () => (/* binding */ next),
+/* harmony export */   nextAll: () => (/* binding */ nextAll),
+/* harmony export */   off: () => (/* binding */ off),
+/* harmony export */   offset: () => (/* binding */ offset),
+/* harmony export */   on: () => (/* binding */ on),
+/* harmony export */   once: () => (/* binding */ once),
+/* harmony export */   outerHeight: () => (/* binding */ outerHeight),
+/* harmony export */   outerWidth: () => (/* binding */ outerWidth),
+/* harmony export */   parent: () => (/* binding */ parent),
+/* harmony export */   parents: () => (/* binding */ parents),
+/* harmony export */   prepend: () => (/* binding */ prepend),
+/* harmony export */   prependTo: () => (/* binding */ prependTo),
+/* harmony export */   prev: () => (/* binding */ prev),
+/* harmony export */   prevAll: () => (/* binding */ prevAll),
+/* harmony export */   prop: () => (/* binding */ prop),
+/* harmony export */   remove: () => (/* binding */ remove),
+/* harmony export */   removeAttr: () => (/* binding */ removeAttr),
+/* harmony export */   removeClass: () => (/* binding */ removeClass),
+/* harmony export */   removeData: () => (/* binding */ removeData),
+/* harmony export */   resize: () => (/* binding */ resize),
+/* harmony export */   scroll: () => (/* binding */ scroll),
+/* harmony export */   scrollLeft: () => (/* binding */ scrollLeft),
+/* harmony export */   scrollTo: () => (/* binding */ scrollTo),
+/* harmony export */   scrollTop: () => (/* binding */ scrollTop),
+/* harmony export */   show: () => (/* binding */ show),
+/* harmony export */   siblings: () => (/* binding */ siblings),
+/* harmony export */   stop: () => (/* binding */ stop),
+/* harmony export */   styles: () => (/* binding */ styles),
+/* harmony export */   submit: () => (/* binding */ submit),
+/* harmony export */   text: () => (/* binding */ text),
+/* harmony export */   toggleClass: () => (/* binding */ toggleClass),
+/* harmony export */   touchend: () => (/* binding */ touchend),
+/* harmony export */   touchmove: () => (/* binding */ touchmove),
+/* harmony export */   touchstart: () => (/* binding */ touchstart),
+/* harmony export */   transform: () => (/* binding */ transform),
+/* harmony export */   transition: () => (/* binding */ transition),
+/* harmony export */   transitionEnd: () => (/* binding */ transitionEnd),
+/* harmony export */   transitionStart: () => (/* binding */ transitionStart),
+/* harmony export */   trigger: () => (/* binding */ trigger),
+/* harmony export */   val: () => (/* binding */ val),
+/* harmony export */   value: () => (/* binding */ value),
+/* harmony export */   width: () => (/* binding */ width)
 /* harmony export */ });
 /* harmony import */ var ssr_window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ssr-window */ "./node_modules/ssr-window/ssr-window.esm.js");
 /**
@@ -2280,11 +2235,11 @@ const scroll = shortcut('scroll');
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "extend": () => (/* binding */ extend),
-/* harmony export */   "getDocument": () => (/* binding */ getDocument),
-/* harmony export */   "getWindow": () => (/* binding */ getWindow),
-/* harmony export */   "ssrDocument": () => (/* binding */ ssrDocument),
-/* harmony export */   "ssrWindow": () => (/* binding */ ssrWindow)
+/* harmony export */   extend: () => (/* binding */ extend),
+/* harmony export */   getDocument: () => (/* binding */ getDocument),
+/* harmony export */   getWindow: () => (/* binding */ getWindow),
+/* harmony export */   ssrDocument: () => (/* binding */ ssrDocument),
+/* harmony export */   ssrWindow: () => (/* binding */ ssrWindow)
 /* harmony export */ });
 /**
  * SSR Window 4.0.2
@@ -13161,7 +13116,7 @@ function effectVirtualTransitionEnd({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getBrowser": () => (/* binding */ getBrowser)
+/* harmony export */   getBrowser: () => (/* binding */ getBrowser)
 /* harmony export */ });
 /* harmony import */ var ssr_window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ssr-window */ "./node_modules/ssr-window/ssr-window.esm.js");
 
@@ -13202,7 +13157,7 @@ function getBrowser() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getDevice": () => (/* binding */ getDevice)
+/* harmony export */   getDevice: () => (/* binding */ getDevice)
 /* harmony export */ });
 /* harmony import */ var ssr_window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ssr-window */ "./node_modules/ssr-window/ssr-window.esm.js");
 /* harmony import */ var _get_support_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./get-support.js */ "./node_modules/swiper/shared/get-support.js");
@@ -13275,7 +13230,7 @@ function getDevice(overrides = {}) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getSupport": () => (/* binding */ getSupport)
+/* harmony export */   getSupport: () => (/* binding */ getSupport)
 /* harmony export */ });
 /* harmony import */ var ssr_window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ssr-window */ "./node_modules/ssr-window/ssr-window.esm.js");
 
@@ -13331,15 +13286,15 @@ function getSupport() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "animateCSSModeScroll": () => (/* binding */ animateCSSModeScroll),
-/* harmony export */   "deleteProps": () => (/* binding */ deleteProps),
-/* harmony export */   "extend": () => (/* binding */ extend),
-/* harmony export */   "getComputedStyle": () => (/* binding */ getComputedStyle),
-/* harmony export */   "getTranslate": () => (/* binding */ getTranslate),
-/* harmony export */   "isObject": () => (/* binding */ isObject),
-/* harmony export */   "nextTick": () => (/* binding */ nextTick),
-/* harmony export */   "now": () => (/* binding */ now),
-/* harmony export */   "setCSSProperty": () => (/* binding */ setCSSProperty)
+/* harmony export */   animateCSSModeScroll: () => (/* binding */ animateCSSModeScroll),
+/* harmony export */   deleteProps: () => (/* binding */ deleteProps),
+/* harmony export */   extend: () => (/* binding */ extend),
+/* harmony export */   getComputedStyle: () => (/* binding */ getComputedStyle),
+/* harmony export */   getTranslate: () => (/* binding */ getTranslate),
+/* harmony export */   isObject: () => (/* binding */ isObject),
+/* harmony export */   nextTick: () => (/* binding */ nextTick),
+/* harmony export */   now: () => (/* binding */ now),
+/* harmony export */   setCSSProperty: () => (/* binding */ setCSSProperty)
 /* harmony export */ });
 /* harmony import */ var ssr_window__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ssr-window */ "./node_modules/ssr-window/ssr-window.esm.js");
 
@@ -13551,31 +13506,31 @@ function animateCSSModeScroll({
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "A11y": () => (/* reexport safe */ _modules_a11y_a11y_js__WEBPACK_IMPORTED_MODULE_11__["default"]),
-/* harmony export */   "Autoplay": () => (/* reexport safe */ _modules_autoplay_autoplay_js__WEBPACK_IMPORTED_MODULE_14__["default"]),
-/* harmony export */   "Controller": () => (/* reexport safe */ _modules_controller_controller_js__WEBPACK_IMPORTED_MODULE_10__["default"]),
-/* harmony export */   "EffectCards": () => (/* reexport safe */ _modules_effect_cards_effect_cards_js__WEBPACK_IMPORTED_MODULE_24__["default"]),
-/* harmony export */   "EffectCoverflow": () => (/* reexport safe */ _modules_effect_coverflow_effect_coverflow_js__WEBPACK_IMPORTED_MODULE_22__["default"]),
-/* harmony export */   "EffectCreative": () => (/* reexport safe */ _modules_effect_creative_effect_creative_js__WEBPACK_IMPORTED_MODULE_23__["default"]),
-/* harmony export */   "EffectCube": () => (/* reexport safe */ _modules_effect_cube_effect_cube_js__WEBPACK_IMPORTED_MODULE_20__["default"]),
-/* harmony export */   "EffectFade": () => (/* reexport safe */ _modules_effect_fade_effect_fade_js__WEBPACK_IMPORTED_MODULE_19__["default"]),
-/* harmony export */   "EffectFlip": () => (/* reexport safe */ _modules_effect_flip_effect_flip_js__WEBPACK_IMPORTED_MODULE_21__["default"]),
-/* harmony export */   "FreeMode": () => (/* reexport safe */ _modules_free_mode_free_mode_js__WEBPACK_IMPORTED_MODULE_16__["default"]),
-/* harmony export */   "Grid": () => (/* reexport safe */ _modules_grid_grid_js__WEBPACK_IMPORTED_MODULE_17__["default"]),
-/* harmony export */   "HashNavigation": () => (/* reexport safe */ _modules_hash_navigation_hash_navigation_js__WEBPACK_IMPORTED_MODULE_13__["default"]),
-/* harmony export */   "History": () => (/* reexport safe */ _modules_history_history_js__WEBPACK_IMPORTED_MODULE_12__["default"]),
-/* harmony export */   "Keyboard": () => (/* reexport safe */ _modules_keyboard_keyboard_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
-/* harmony export */   "Lazy": () => (/* reexport safe */ _modules_lazy_lazy_js__WEBPACK_IMPORTED_MODULE_9__["default"]),
-/* harmony export */   "Manipulation": () => (/* reexport safe */ _modules_manipulation_manipulation_js__WEBPACK_IMPORTED_MODULE_18__["default"]),
-/* harmony export */   "Mousewheel": () => (/* reexport safe */ _modules_mousewheel_mousewheel_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
-/* harmony export */   "Navigation": () => (/* reexport safe */ _modules_navigation_navigation_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
-/* harmony export */   "Pagination": () => (/* reexport safe */ _modules_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_5__["default"]),
-/* harmony export */   "Parallax": () => (/* reexport safe */ _modules_parallax_parallax_js__WEBPACK_IMPORTED_MODULE_7__["default"]),
-/* harmony export */   "Scrollbar": () => (/* reexport safe */ _modules_scrollbar_scrollbar_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
-/* harmony export */   "Swiper": () => (/* reexport safe */ _core_core_js__WEBPACK_IMPORTED_MODULE_0__["default"]),
-/* harmony export */   "Thumbs": () => (/* reexport safe */ _modules_thumbs_thumbs_js__WEBPACK_IMPORTED_MODULE_15__["default"]),
-/* harmony export */   "Virtual": () => (/* reexport safe */ _modules_virtual_virtual_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
-/* harmony export */   "Zoom": () => (/* reexport safe */ _modules_zoom_zoom_js__WEBPACK_IMPORTED_MODULE_8__["default"]),
+/* harmony export */   A11y: () => (/* reexport safe */ _modules_a11y_a11y_js__WEBPACK_IMPORTED_MODULE_11__["default"]),
+/* harmony export */   Autoplay: () => (/* reexport safe */ _modules_autoplay_autoplay_js__WEBPACK_IMPORTED_MODULE_14__["default"]),
+/* harmony export */   Controller: () => (/* reexport safe */ _modules_controller_controller_js__WEBPACK_IMPORTED_MODULE_10__["default"]),
+/* harmony export */   EffectCards: () => (/* reexport safe */ _modules_effect_cards_effect_cards_js__WEBPACK_IMPORTED_MODULE_24__["default"]),
+/* harmony export */   EffectCoverflow: () => (/* reexport safe */ _modules_effect_coverflow_effect_coverflow_js__WEBPACK_IMPORTED_MODULE_22__["default"]),
+/* harmony export */   EffectCreative: () => (/* reexport safe */ _modules_effect_creative_effect_creative_js__WEBPACK_IMPORTED_MODULE_23__["default"]),
+/* harmony export */   EffectCube: () => (/* reexport safe */ _modules_effect_cube_effect_cube_js__WEBPACK_IMPORTED_MODULE_20__["default"]),
+/* harmony export */   EffectFade: () => (/* reexport safe */ _modules_effect_fade_effect_fade_js__WEBPACK_IMPORTED_MODULE_19__["default"]),
+/* harmony export */   EffectFlip: () => (/* reexport safe */ _modules_effect_flip_effect_flip_js__WEBPACK_IMPORTED_MODULE_21__["default"]),
+/* harmony export */   FreeMode: () => (/* reexport safe */ _modules_free_mode_free_mode_js__WEBPACK_IMPORTED_MODULE_16__["default"]),
+/* harmony export */   Grid: () => (/* reexport safe */ _modules_grid_grid_js__WEBPACK_IMPORTED_MODULE_17__["default"]),
+/* harmony export */   HashNavigation: () => (/* reexport safe */ _modules_hash_navigation_hash_navigation_js__WEBPACK_IMPORTED_MODULE_13__["default"]),
+/* harmony export */   History: () => (/* reexport safe */ _modules_history_history_js__WEBPACK_IMPORTED_MODULE_12__["default"]),
+/* harmony export */   Keyboard: () => (/* reexport safe */ _modules_keyboard_keyboard_js__WEBPACK_IMPORTED_MODULE_2__["default"]),
+/* harmony export */   Lazy: () => (/* reexport safe */ _modules_lazy_lazy_js__WEBPACK_IMPORTED_MODULE_9__["default"]),
+/* harmony export */   Manipulation: () => (/* reexport safe */ _modules_manipulation_manipulation_js__WEBPACK_IMPORTED_MODULE_18__["default"]),
+/* harmony export */   Mousewheel: () => (/* reexport safe */ _modules_mousewheel_mousewheel_js__WEBPACK_IMPORTED_MODULE_3__["default"]),
+/* harmony export */   Navigation: () => (/* reexport safe */ _modules_navigation_navigation_js__WEBPACK_IMPORTED_MODULE_4__["default"]),
+/* harmony export */   Pagination: () => (/* reexport safe */ _modules_pagination_pagination_js__WEBPACK_IMPORTED_MODULE_5__["default"]),
+/* harmony export */   Parallax: () => (/* reexport safe */ _modules_parallax_parallax_js__WEBPACK_IMPORTED_MODULE_7__["default"]),
+/* harmony export */   Scrollbar: () => (/* reexport safe */ _modules_scrollbar_scrollbar_js__WEBPACK_IMPORTED_MODULE_6__["default"]),
+/* harmony export */   Swiper: () => (/* reexport safe */ _core_core_js__WEBPACK_IMPORTED_MODULE_0__["default"]),
+/* harmony export */   Thumbs: () => (/* reexport safe */ _modules_thumbs_thumbs_js__WEBPACK_IMPORTED_MODULE_15__["default"]),
+/* harmony export */   Virtual: () => (/* reexport safe */ _modules_virtual_virtual_js__WEBPACK_IMPORTED_MODULE_1__["default"]),
+/* harmony export */   Zoom: () => (/* reexport safe */ _modules_zoom_zoom_js__WEBPACK_IMPORTED_MODULE_8__["default"]),
 /* harmony export */   "default": () => (/* reexport safe */ _core_core_js__WEBPACK_IMPORTED_MODULE_0__["default"])
 /* harmony export */ });
 /* harmony import */ var _core_core_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/core.js */ "./node_modules/swiper/core/core.js");
