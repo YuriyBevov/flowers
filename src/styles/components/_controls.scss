@@ -1,0 +1,67 @@
+.lw-main-control-box {
+  input[type="radio"],
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  margin: 12px 0;
+
+  input[type="radio"] + label,
+  input[type="checkbox"] + label {
+    position: relative;
+
+    display: flex;
+    padding-left: 36px;
+    min-height: 28px;
+    font-weight: 300;
+    font-size: 16px;
+
+    cursor: pointer;
+
+    &::before {
+      position: absolute;
+
+      top: -2px;
+      left: 0;
+
+      content: "";
+      width: 28px;
+      height: 28px;
+
+      border-radius: 6px;
+
+      background-color: var(--primary);
+      background-size: 18px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &::after {
+      position: absolute;
+      top: -2px;
+      left: 0;
+
+      content: "";
+      width: 28px;
+      height: 28px;
+
+      border-radius: 10px;
+
+      background-color: var(--primary);
+      z-index: 2;
+
+      transition: opacity 0.4s ease-in;
+    }
+  }
+
+  input[type="radio"]:checked + label,
+  input[type="checkbox"]:checked + label {
+    &::before {
+      background-image: url("../assets/img/icon-check.svg");
+    }
+
+    &::after {
+      opacity: 0;
+    }
+  }
+}

@@ -4,42 +4,43 @@
         margin-left: clamp(70px, 9vw, 95px);
     }
 
-    &-square {
-        &-box {
-            position: absolute;
-            bottom: clamp(10px, 1.2vw, 20px);
-            left: clamp(10px, 1.2vw, 20px);
-            width: fit-content;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        width: 15px;
-        height: 15px;
-        background-color: var(--white);
+  &-square {
+    &-box {
+      position: absolute;
+      bottom: clamp(10px, 1.2vw, 20px);
+      left: clamp(10px, 1.2vw, 20px);
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    img {
-        display: block;
-        width: 100%;
-        max-width: 316px;
-        height: auto;
-        aspect-ratio: 1 / 1;
-    }
+    width: 15px;
+    height: 15px;
+    background-color: var(--white);
+  }
 
-    &__title {
-        position: relative;
+  img {
+    display: block;
+    width: 100%;
+    max-width: 316px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 
-        font-family: var(--secondary-font);
-        font-style: normal;
-        font-weight: 400;
-        font-size: clamp(20px, 3.6vw, 32px);
-        text-transform: uppercase;
-        
-        padding-left: clamp(10px, 1.2vw, 20px);
-        margin: clamp(10px, 1.2vw, 20px) 0 0;
-        color: var(--black);
+  &__title {
+    position: relative;
+
+    font-family: var(--secondary-font);
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(20px, 3.6vw, 32px);
+    text-transform: uppercase;
+
+    padding-left: clamp(10px, 1.2vw, 20px);
+    padding-top: clamp(10px, 1.2vw, 20px) 0 0;
+    margin-top: auto;
+    color: var(--black);
 
         &::before {
             position: absolute;

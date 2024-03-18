@@ -4,9 +4,15 @@
   max-width: 560px;
   height: 100%;
 
+  // &:hover {
+  //   .show-btn,
+  //   .favourite-btn {
+  //     opacity: 1;
+  //   }
+  // }
+
   &__top {
     position: relative;
-    margin-bottom: clamp(8px, 1.4vw, 15px);
 
     & > img {
       display: block;
@@ -16,30 +22,34 @@
       aspect-ratio: 1/1.13;
       border-radius: 10px;
     }
+  }
 
-    &-side {
-      position: absolute;
-      top: clamp(10px, 1.3vw, 30px);
-      right: clamp(10px, 1.3vw, 30px);
-      @extend .flex-column;
-      gap: clamp(10px, 1vw, 18px);
-    }
+  &__top-left {
+    position: absolute;
+    top: clamp(10px, 1.3vw, 30px);
+    left: clamp(10px, 1.3vw, 30px);
+    @extend .flex-column;
+    gap: clamp(10px, 1vw, 18px);
+    height: calc(100% - (clamp(10px, 1.3vw, 30px) * 2));
+  }
+
+  &__top-right {
+    position: absolute;
+    top: clamp(10px, 1.3vw, 30px);
+    right: clamp(10px, 1.3vw, 30px);
+    @extend .flex-column;
+    gap: clamp(10px, 1vw, 18px);
+    height: calc(100% - (clamp(10px, 1.3vw, 30px) * 2));
 
     .add-to-cart-btn {
-      position: absolute;
-      bottom: clamp(10px, 1.3vw, 30px);
-      right: clamp(10px, 1.3vw, 30px);
-
-      &:hover,
-      &:focus {
-        transform: scale(1.1);
-      }
+      margin-top: auto;
     }
   }
 
   &__bottom {
     @extend .flex-column;
     flex-grow: 1;
+    padding: 10px 0;
   }
 
   &__title {
@@ -55,11 +65,22 @@
     display: inline-block;
     font-size: clamp(22px, 3.4vw, 30px);
     font-weight: 700;
-    margin-top: auto;
+
+    &-container {
+      margin-top: auto;
+    }
 
     span {
       font-size: clamp(14px, 2.7vw, 20px);
       font-weight: 300;
+    }
+
+    &--old,
+    &--old span {
+      font-size: 14px;
+      text-decoration: line-through;
+      color: var(--info);
+      font-weight: 400;
     }
   }
 }

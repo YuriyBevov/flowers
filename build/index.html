@@ -11,7 +11,25 @@
     <script defer="defer" src="./assets/bundle.js"></script>
   </head>
   <body>
-    <main-header class="main-header">
+    <main-header class="main-header"><div class="search-block">
+<div class="lw-container search-block-container">
+<div id="title-search" class="search-block-wrapper">
+<form action="/search/index.php" class="search-block-form">
+<input class="search-block-field" id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off">
+<button class="search-block-field-submit" type="submit" aria-label="Поиск" name="s" value="Поиск">
+<svg width="18" height="18">
+<use xlink:href="./assets/sprite.svg#icon-search"></use>
+</svg>
+</button>
+</form>
+</div>
+<button class="search-block-closer" aria-label="Закрыть поиск">
+<svg width="20" height="20">
+<use xlink:href="./assets/sprite.svg#icon-close"></use>
+</svg>
+</button>
+</div>
+</div>
       <div class="lw-container main-header__container">
         <div class="main-header__section main-header__section--top-nav">
           <div class="header-top-nav">
@@ -159,10 +177,13 @@
               </svg></a><a href="#">
               <svg width="22" height="20">
                 <use xlink:href="./assets/sprite.svg#icon-heart"></use>
-              </svg></a><a href="#">
+              </svg></a>
+            <button class="search-block-opener">
               <svg width="20" height="20">
                 <use xlink:href="./assets/sprite.svg#icon-search"></use>
-              </svg></a></div>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
     </main-header>
@@ -199,18 +220,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название букета</h3><span class="product-card__price">5 000<span> руб.</span></span>
@@ -220,18 +245,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название букета длинно или очень длинное название букета" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название букета длинно или очень длинное название букета</h3><span class="product-card__price">640<span> руб.</span></span>
@@ -241,18 +270,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета длинно или очень" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название букета длинно или очень</h3><span class="product-card__price">14 000<span> руб.</span></span>
@@ -262,18 +295,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>
@@ -305,18 +342,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название букета</h3><span class="product-card__price">5 000<span> руб.</span></span>
@@ -326,18 +367,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название букета длинно или очень длинное название букета" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название букета длинно или очень длинное название букета</h3><span class="product-card__price">640<span> руб.</span></span>
@@ -347,18 +392,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_1.png" alt="Название букета длинно или очень" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название букета длинно или очень</h3><span class="product-card__price">14 000<span> руб.</span></span>
@@ -368,18 +417,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>
@@ -389,18 +442,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>
@@ -410,18 +467,22 @@
                 <div class="swiper-slide">
                         <div class="product-card">
                           <div class="product-card__top"><img src="./assets/img/mock/buket_2.png" alt="Название" width="560" height="640">
-                            <div class="product-card__top-side">
+                            <div class="product-card__top-left">
+                              <div class="product-card-badge">-20%</div>
+                              <div class="product-card-badge">TOP</div>
+                            </div>
+                            <div class="product-card__top-right">
                               <button class="favourite-btn" type="button" aria-label="Добавить в избранное"><img src="./assets/img/icon-heart.svg" alt="Избранное" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-heart")
                                 -->
                               </button><a class="show-btn" href="#" aria-label="Смотреть"><img src="./assets/img/icon-more.svg" alt="Далее" width="24" height="24">
                                 <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-arrow-r")
                                 --></a>
+                              <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
+                                <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
+                                -->
+                              </button>
                             </div>
-                            <button class="add-to-cart-btn" type="button" aria-label="Добавить в корзину"><img src="./assets/img/icon-cart.svg" alt="Купить" width="24" height="24">
-                              <!--svg(width="24" height="24")use(xlink:href="./assets/sprite.svg#icon-cart")
-                              -->
-                            </button>
                           </div>
                           <div class="product-card__bottom"><span class="product-card__category"></span>
                             <h3 class="product-card__title">Название</h3><span class="product-card__price">135 000<span> руб.</span></span>

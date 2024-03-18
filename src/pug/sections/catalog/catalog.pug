@@ -1,0 +1,93 @@
+include ../../mixins/product-card
+
+section.catalog
+  .lw-container
+    h2.lw-section-title Выбрать букет
+
+    .lw-filter
+      form.smartfilter
+        .lw-filter__content
+          .lw-filter__item.expanded
+            .lw-filter__item-title
+              span По цене
+            .lw-filter__item-content
+              .lw-filter__item-content-parameters
+                fieldset.lw-main-control-box
+                  input(type="radio" id="1" name="unique_name")
+                  label(for="1") до 3 000
+                fieldset.lw-main-control-box
+                  input(type="radio" id="2" name="unique_name")
+                  label(for="2") от 3 000 до 5 000
+                fieldset.lw-main-control-box
+                  input(type="radio" id="3" name="unique_name")
+                  label(for="3") от 5 000 до 10 000
+                fieldset.lw-main-control-box
+                  input(type="radio" id="4" name="unique_name")
+                  label(for="4") от 10 000
+              .lw-filter__item-content-footer.bx-filter-container-modef
+                button.main-btn.main-btn--outlined Сбросить
+                button.main-btn Показать
+          .lw-filter__item.expanded
+            .lw-filter__item-title
+              span По размеру
+            .lw-filter__item-content
+              .lw-filter__item-content-parameters
+                fieldset.lw-main-control-box
+                  input(type="checkbox" id="5" name="unique_name")
+                  label(for="5") Мини
+                fieldset.lw-main-control-box
+                  input(type="checkbox" id="6" name="unique_name")
+                  label(for="6") Миди
+                fieldset.lw-main-control-box
+                  input(type="checkbox" id="7" name="unique_name")
+                  label(for="7") Макси
+              .lw-filter__item-content-footer.bx-filter-container-modef
+                button.main-btn.main-btn--outlined Сбросить
+                button.main-btn Показать
+        .lw-filter__footer
+
+
+
+  <div class="catalog-wrapper" data-entity="container-1">
+    <div class="catalog-section" data-entity="container-2">
+
+      .lw-container
+        <div class="catalog-section-grid">
+          +product-card({
+            img: 'buket_1.png',
+            imgW: '560',
+            imgH: '640',
+            title: 'Название букета',
+            price: '5 000'
+          })
+          +product-card({
+            img: 'buket_1.png',
+            imgW: '560',
+            imgH: '640',
+            title: 'Название букета',
+            price: '5 000'
+          })
+          +product-card({
+            img: 'buket_1.png',
+            imgW: '560',
+            imgH: '640',
+            title: 'Название букета',
+            price: '5 000'
+          })
+          +product-card({
+            img: 'buket_1.png',
+            imgW: '560',
+            imgH: '640',
+            title: 'Название букета',
+            price: '5 000'
+          })
+          +product-card({
+            img: 'buket_1.png',
+            imgW: '560',
+            imgH: '640',
+            title: 'Название букета',
+            price: '5 000'
+          })
+        </div>
+    </div>
+  </div>

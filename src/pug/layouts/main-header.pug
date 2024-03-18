@@ -1,6 +1,26 @@
 include ../mixins/main-btn
 
 main-header.main-header
+  <div class="search-block">
+    <div class="lw-container search-block-container">
+      <div id="title-search" class="search-block-wrapper">
+
+        <form action="/search/index.php" class="search-block-form">
+          <input class="search-block-field" id="title-search-input" type="text" name="q" value="" size="40" maxlength="50" autocomplete="off">
+          <button class="search-block-field-submit" type="submit" aria-label="Поиск" name="s" value="Поиск">
+            <svg width="18" height="18">
+              <use xlink:href="./assets/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+      </div>
+      <button class="search-block-closer" aria-label="Закрыть поиск">
+          <svg width="20" height="20">
+            <use xlink:href="./assets/sprite.svg#icon-close"></use>
+          </svg>
+      </button>
+    </div>
+  </div>
   .lw-container.main-header__container
     .main-header__section.main-header__section--top-nav
       include ../components/header-top-nav

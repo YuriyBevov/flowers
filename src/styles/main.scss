@@ -8,6 +8,7 @@
 @import "common";
 
 /* Компоненты */
+@import "components/search-field-block";
 @import "components/burger";
 @import "components/header-top-nav";
 @import "components/header-social";
@@ -26,8 +27,18 @@
 @import "components/social";
 @import "components/blog-card";
 @import "components/content-block";
+@import "components/product-card-badge";
 
 @import "components/catalog-tile-card";
+
+@import "components/lw-filter";
+@import "components/controls";
+
+@import "components/product-item-slider";
+
+/*BX*/
+
+@import "components/bx-popup-window";
 
 /* шаблон */
 @import "layout/main-header";
@@ -52,4 +63,6 @@
 
 @import "sections/common/subscribe";
 @import "sections/common/page-top-section";
+
+@import "sections/product-item/product-item";
 /* Модальные окна */
