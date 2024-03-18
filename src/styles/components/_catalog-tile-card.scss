@@ -1,5 +1,5 @@
 .catalog-tile-card {
-    &__header {
+    &__top {
         position: relative;
         margin-left: clamp(70px, 9vw, 95px);
     }
@@ -52,6 +52,4 @@
             z-index: -1;
         }
     }
-
-
 }

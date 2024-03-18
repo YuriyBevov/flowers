@@ -7,5 +7,10 @@
         @extend .flex-wrap;
         justify-content: center;
         gap: clamp(20px, 4.2vw, 60px) 20px;
+
+        li {
+            width: 100%;
+            max-width: 415px;
+        }
     }
 }

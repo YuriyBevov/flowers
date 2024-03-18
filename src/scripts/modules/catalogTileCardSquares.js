@@ -1,4 +1,4 @@
-const containers = document.querySelectorAll(".catalog-tile-card__header");
+const containers = document.querySelectorAll(".catalog-tile-card__top");
 
 if (containers) {
   const COUNT = 3;
