@@ -352,9 +352,9 @@ if (productItemSlider) {
   const thumbslider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-thumbslider", {
     centeredSlides: true,
     centeredSlidesBounds: true,
-    slidesPerView: "auto",
+    slidesPerView: 3,
     watchOverflow: true,
-    // freeMode: true,
+    spaceBetween: 10,
     // watchSlidesVisibility: true,
     watchSlidesProgress: true,
     direction: "vertical"
@@ -364,7 +364,8 @@ if (productItemSlider) {
     watchOverflow: true,
     // watchSlidesVisibility: true,
     watchSlidesProgress: true,
-    // preventInteractionOnTransition: true,
+    effect: "fade",
+    preventInteractionOnTransition: true,
     navigation: {
       nextEl: ".product-item-slider .swiper-button-next",
       prevEl: ".product-item-slider .swiper-button-prev"
