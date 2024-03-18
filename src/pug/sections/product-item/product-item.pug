@@ -61,7 +61,7 @@ section.product-item
                 span Розы
                 span <strong>15</strong> шт.
               li
-                span Хризантемы
+                span Хризантемы Хризантемы Хризантемы Хризантемы
                 span <strong>15</strong> шт.
               li
                 span Тюльпаны
@@ -72,15 +72,35 @@ section.product-item
         .product-item-info-block-field
           .product-item-info-block-field-title Добавить к букету
           .product-item-info-block-field-content
-            a(href="#") Дизайнерские топеры и открытки
-            a(href="#") Эксклюзивные аксессуары и сладости
+            a(href="#").offer-badge
+              img(src="./assets/img/mock/icon-toppers.svg" width="42" height="40")
+              span Дизайнерские топеры и&nbsp;открытки
+            a(href="#").offer-badge
+              img(src="./assets/img/mock/icon-accessories.svg" width="42" height="40")
+              span Эксклюзивные аксессуары и&nbsp;сладости
       .product-item-pay-block
-        p корзина
+        .product-item-price
+          span.product-item-price-old 120 000 руб
+          span.product-item-price-current <strong>105 000</strong> руб.
+        .product-item-count
+          .counter
+            button(type="button").counter-btn.counter-btn--dec.counter-btn--disabled
+            input(type="text" value="10" max="100" min="1").counter-value
+            button(type="button").counter-btn.counter-btn--inc
+        
+        button(type="button").main-btn.product-item-cart-add-btn
+          svg(width="20" height="20")
+            use(xlink:href="./assets/sprite.svg#icon-cart")
+          span В корзину
+        
+        button(type="button").product-item-favourite-btn
+          svg(width="22" height="20")
+            use(xlink:href="./assets/sprite.svg#icon-heart")
       .product-item-additional-block
         .product-item-additional-block-field
           .dropdown-block.delivery-info-block
             a(href="#")
               img(src="./assets/img/delivery-icon.svg" alt="Доставка и оплата" width="22" height="22")
-              span Доставка и оплата
+              span Доставка и&nbsp;оплата
             
 

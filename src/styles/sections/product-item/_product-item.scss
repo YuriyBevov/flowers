@@ -44,7 +44,7 @@
       font-family: var(--secondary-font);
       font-size: clamp(18px, 1.5vw, 20px);
       text-transform: uppercase;
-      margin-bottom: 8px;
+      margin-bottom: 15px;
     }
   
     &-content {
@@ -76,11 +76,120 @@
 
             strong {
               font-weight: 700;
+              margin: 0 5px;
             }
           }
         }
       }
+
+      .offer-badge:not(:last-child) {
+        margin-bottom: 20px;
+      }
     }
+  }
+}
+
+.product-item-pay-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 60px 0;
+
+  .product-item-price {
+    @extend .flex-column;
+    // margin-bottom: -7px;
+
+    &-old {
+      color: var(--lightgray);
+      text-decoration: line-through;
+    }
+
+    &-current {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 20px;
+      line-height: 1;
+
+      strong {
+        font-weight: 600;
+        font-size: 40px;
+      }
+    }
+  }
+
+  .product-item-count {
+    .counter {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 140px;
+      height: 60px;
+      border-radius: 30px;
+      background-color: var(--black);
+      overflow: hidden;
+
+
+      &-btn {
+        width: 50px;
+        min-width: 50px;
+        height: 100%;
+        padding: 10px;
+
+        border: none;
+        background-color: transparent;
+        background-position: center;
+        background-size: 26px;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
+
+        &--inc {
+          background-image: url("../assets/img/increment-icon.svg");
+        }
+
+        &--dec {
+          background-image: url("../assets/img/decrement-icon.svg");
+        }
+
+        &--disabled {
+          opacity: .4;
+        }
+      }
+
+      &-value {
+        border: none;
+        width: 35px;
+        height: 100%;
+        outline: none;
+        text-align: center;
+        pointer-events: none;
+
+        font-size: 16px;
+        color: var(--white);
+        background-color: transparent;
+      }
+    }
+  }
+
+  .product-item-cart-add-btn {
+    flex-grow: 1;
+    width: auto;
+    min-height: 60px;
+
+    svg {
+      fill: var(--white);
+      margin-right: 12px;
+    }
+  }
+
+  .product-item-favourite-btn {
+    @extend .btn-reset;
+    @extend .flex-centered-content;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f2f3f6;
   }
 }
 
@@ -137,5 +246,3 @@
     }
   }
 }
-
-
