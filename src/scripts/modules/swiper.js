@@ -192,8 +192,8 @@ const productItemSlider = document.querySelector(".product-item-slider");
 
 if (productItemSlider) {
   const thumbslider = new Swiper(".product-item-thumbslider", {
-    centeredSlides: true,
-    centeredSlidesBounds: true,
+    // centeredSlides: true,
+    // centeredSlidesBounds: true,
     slidesPerView: 3,
     watchOverflow: true,
     spaceBetween: 10,
