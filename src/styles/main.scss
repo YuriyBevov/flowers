@@ -8,6 +8,7 @@
 @import "common";
 
 /* Компоненты */
+@import "components/ui-components";
 @import "components/search-field-block";
 @import "components/burger";
 @import "components/header-top-nav";
@@ -29,6 +30,8 @@
 @import "components/content-block";
 @import "components/product-card-badge";
 @import "components/offer-badge";
+@import "components/counter";
+@import "components/lw-basket";
 
 @import "components/catalog-tile-card";
 

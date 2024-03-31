@@ -1,0 +1,82 @@
+/* UI-COMPONENTS */
+
+/* RADIO-BTN */
+.lw-main-radio-btn {
+  display: none;
+}
+
+.lw-main-radio-btn-label,
+.lw-main-label {
+  font-size: 16px;
+  font-family: var(--secondary-font);
+  color: var(--black);
+  cursor: pointer;
+}
+
+.lw-main-radio-btn-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 36px;
+}
+
+.lw-main-radio-btn-label::before,
+.lw-main-radio-btn-label::after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+
+.lw-main-radio-btn-label::before {
+  top: 4px;
+  left: 0;
+  width: 28px;
+  height: 16px;
+  border: 1px solid var(--primary);
+  background-color: transparent;
+  border-radius: 10px;
+  transition: background-color var(--main-transition);
+}
+
+.lw-main-radio-btn-label::after {
+  top: 8px;
+  left: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  transition: background-color var(--main-transition),
+    left var(--main-transition);
+}
+
+.lw-main-radio-btn:checked + .lw-main-radio-btn-label::before {
+  background-color: var(--primary);
+}
+
+.lw-main-radio-btn:checked + .lw-main-radio-btn-label::after {
+  left: 16px;
+  background-color: var(--white);
+}
+/* RADIO-BTN END*/
+
+/* CHECKBOX */
+.lw-main-checkbox {
+  display: none;
+}
+
+.lw-main-checkbox-label {
+  position: relative;
+  padding-left: 20px;
+}
+
+.lw-main-checkbox-label::before,
+.lw-main-checkbox-label::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: 0;
+}
+
+/* CHECKBOX END */
+
+/* UI-COMPONENTS END*/

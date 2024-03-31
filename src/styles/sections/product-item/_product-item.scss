@@ -24,7 +24,7 @@
     font-size: clamp(14px, 1.4vw, 18px);
     font-weight: 300;
 
-    width: 100%; //calc(80% - clamp(10px, 1.3vw, 20px));
+    width: 100%;
     max-height: 500px;
     overflow: hidden;
     overflow-y: auto;
@@ -99,6 +99,12 @@
   gap: 10px;
   margin: 60px 0;
 
+  form {
+    display: flex;
+    gap: 10px;
+    flex-grow: 1;
+  }
+
   .product-item-price {
     @extend .flex-column;
 
@@ -122,56 +128,6 @@
   }
 
   .product-item-count {
-    .counter {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 140px;
-      height: 60px;
-      border-radius: 30px;
-      background-color: var(--black);
-      overflow: hidden;
-
-      &-btn {
-        width: 50px;
-        min-width: 50px;
-        height: 100%;
-        padding: 10px;
-
-        border: none;
-        background-color: transparent;
-        background-position: center;
-        background-size: 26px;
-        background-repeat: no-repeat;
-
-        cursor: pointer;
-
-        &--inc {
-          background-image: url("../assets/img/increment-icon.svg");
-        }
-
-        &--dec {
-          background-image: url("../assets/img/decrement-icon.svg");
-        }
-
-        &--disabled {
-          opacity: 0.4;
-        }
-      }
-
-      &-value {
-        border: none;
-        width: 35px;
-        height: 100%;
-        outline: none;
-        text-align: center;
-        pointer-events: none;
-
-        font-size: 16px;
-        color: var(--white);
-        background-color: transparent;
-      }
-    }
   }
 
   .product-item-cart-add-btn {

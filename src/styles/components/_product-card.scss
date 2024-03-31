@@ -2,14 +2,7 @@
   @extend .flex-column;
   width: 100%;
   max-width: 560px;
-  height: 100%;
-
-  // &:hover {
-  //   .show-btn,
-  //   .favourite-btn {
-  //     opacity: 1;
-  //   }
-  // }
+  height: 100% !important;
 
   &__top {
     position: relative;

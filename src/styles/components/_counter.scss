@@ -1,0 +1,50 @@
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 140px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: var(--black);
+  overflow: hidden;
+
+  &-btn {
+    width: 50px;
+    min-width: 50px;
+    height: 100%;
+    padding: 10px;
+
+    border: none;
+    background-color: transparent;
+    background-position: center;
+    background-size: 26px;
+    background-repeat: no-repeat;
+
+    cursor: pointer;
+
+    &--inc {
+      background-image: url("../assets/img/increment-icon.svg");
+    }
+
+    &--dec {
+      background-image: url("../assets/img/decrement-icon.svg");
+    }
+
+    &--disabled {
+      opacity: 0.4;
+    }
+  }
+
+  &-value {
+    border: none;
+    width: 35px;
+    height: 100%;
+    outline: none;
+    text-align: center;
+    pointer-events: none;
+
+    font-size: 16px;
+    color: var(--white);
+    background-color: transparent;
+  }
+}

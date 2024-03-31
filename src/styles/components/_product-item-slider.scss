@@ -16,11 +16,14 @@
   .swiper-slide {
     overflow: hidden;
     background-color: var(--light);
+    max-height: 720px;
+
     img {
       display: block;
       width: 100%;
       height: auto;
-      object-fit: contain;
+      object-fit: cover;
+      aspect-ratio: 1 / 1.1;
     }
   }
 }
@@ -28,6 +31,14 @@
 .product-item-slider {
   order: 2;
   width: calc(80% - clamp(10px, 1.3vw, 20px));
+
+  .product-card-badge {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 10;
+    font-size: 24px;
+  }
 
   .swiper-slide {
     width: 100%;
@@ -66,4 +77,3 @@
     }
   }
 }
-
