@@ -265,7 +265,6 @@ if (catalogTopSlider) {
 var catalogSectionSlider = document.querySelector(".swiper-container .catalog-section-swiper");
 
 if (catalogSectionSlider) {
-  var initialSlide = catalogSectionSlider.querySelectorAll(".swiper-slide").length;
   var controls = catalogSectionSlider.parentNode.querySelector(".swiper-controls");
   var prevEl = controls.querySelector(".swiper-button-prev");
   var nextEl = controls.querySelector(".swiper-button-next");
@@ -273,7 +272,6 @@ if (catalogSectionSlider) {
     slidesPerView: 2,
     spaceBetween: 10,
     speed: 1000,
-    // initialSlide,
     slidesOffsetAfter: 0,
     grabCursor: true,
     navigation: {
@@ -298,7 +296,7 @@ if (catalogSectionSlider) {
 var reviewSlider = document.querySelector(".swiper-container .review-swiper");
 
 if (reviewSlider) {
-  var _initialSlide = reviewSlider.querySelectorAll(".swiper-slide").length;
+  var initialSlide = reviewSlider.querySelectorAll(".swiper-slide").length;
 
   var _controls = reviewSlider.parentNode.querySelector(".swiper-controls");
 
@@ -399,19 +397,15 @@ var productItemSlider = document.querySelector(".product-item-slider");
 
 if (productItemSlider) {
   var thumbslider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-thumbslider", {
-    // centeredSlides: true,
-    // centeredSlidesBounds: true,
     slidesPerView: 3,
     watchOverflow: true,
     spaceBetween: 10,
-    // watchSlidesVisibility: true,
     watchSlidesProgress: true,
     direction: "vertical"
   });
   var mainSlider = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](".product-item-slider", {
     slidesPerView: 1,
     watchOverflow: true,
-    // watchSlidesVisibility: true,
     watchSlidesProgress: true,
     effect: "fade",
     preventInteractionOnTransition: true,
@@ -422,31 +416,8 @@ if (productItemSlider) {
     thumbs: {
       swiper: thumbslider
     }
-  }); // mainSlider.on("slideChangeTransitionStart", function () {
-  //   thumbslider.slideTo(mainSlider.activeIndex);
-  // });
-  // thumbslider.on("transitionStart", function () {
-  //   mainSlider.slideTo(thumbslider.activeIndex);
-  // });
-  // two way control
-  // mainSlider.controller.control = thumbslider;
-  // thumbslider.controller.control = mainSlider;
-} // var swiper = new Swiper(".mySwiper", {
-//   spaceBetween: 10,
-//   slidesPerView: 4,
-//   freeMode: true,
-//   watchSlidesProgress: true,
-// });
-// var swiper2 = new Swiper(".mySwiper2", {
-//   spaceBetween: 10,
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-//   thumbs: {
-//     swiper: swiper,
-//   },
-// });
+  });
+}
 
 /***/ }),
 

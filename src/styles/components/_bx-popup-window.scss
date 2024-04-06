@@ -3,8 +3,8 @@
 }
 
 .popup-window {
-  width: 95vw;
-  max-width: 360px;
+  width: 70vw;
+  max-width: 600px;
   padding: 30px !important;
   border-radius: 10px;
   opacity: 0;
@@ -13,6 +13,13 @@
   top: 50% !important;
   left: 50% !important;
   transform: translate(calc(-50% + 20px), -50%);
+
+  font: initial;
+  font-family: var(--main-font);
+
+  @include m-b-mobile-lg-down {
+    width: 90vw;
+  }
 }
 
 @keyframes lwShowPopup {

@@ -8,6 +8,10 @@
   background-color: var(--black);
   overflow: hidden;
 
+  @include m-b-mobile-lg-down {
+    height: 44px;
+  }
+
   &-btn {
     width: 50px;
     min-width: 50px;

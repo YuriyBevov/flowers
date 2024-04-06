@@ -32,6 +32,7 @@
 
     &--logo {
       a {
+        @extend .flex-centered-content;
         width: clamp(125px, 34vw, 260px);
       }
     }

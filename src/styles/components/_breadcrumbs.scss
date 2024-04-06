@@ -1,4 +1,8 @@
 .breadcrumbs {
+  @include m-b-down(960px) {
+    display: none;
+  }
+
   &__list {
     @extend .list-reset;
     @extend .flex-centered-content;
@@ -6,7 +10,6 @@
 
   &__list-item {
     padding: 0 20px;
-
     font-weight: 300;
 
     a {
@@ -28,6 +31,11 @@
 
     & > span {
       color: var(--basic-gray);
+    }
+
+    a,
+    span {
+      white-space: nowrap;
     }
   }
 }

@@ -8,6 +8,8 @@
 @import "common";
 
 /* Компоненты */
+@import "components/temp";
+@import "components/swiper-common";
 @import "components/ui-components";
 @import "components/search-field-block";
 @import "components/burger";
@@ -52,7 +54,6 @@
 /* Секции */
 @import "sections/index-page/intro";
 @import "sections/index-page/features";
-@import "sections/common/catalog-section";
 @import "sections/index-page/about";
 @import "sections/common/faq";
 @import "sections/common/reviews";

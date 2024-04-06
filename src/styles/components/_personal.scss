@@ -11,6 +11,14 @@
     @extend .btn-reset;
   }
 
+  & > *:not(:last-child) {
+    margin-right: auto;
+
+    @include m-b-laptop-down {
+      margin: 0;
+    }
+  }
+
   a,
   button {
     width: 40px;
@@ -28,14 +36,6 @@
       &:hover,
       &:focus {
         fill: var(--black) !important;
-      }
-    }
-
-    &:not(:last-child) {
-      margin-right: auto;
-
-      @include m-b-laptop-down {
-        margin: 0;
       }
     }
   }

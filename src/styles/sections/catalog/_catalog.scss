@@ -1,8 +1,9 @@
 .catalog {
   &-section {
+    @extend .lw-section-offset;
     position: relative;
 
-    &::before {
+    &:not(.catalog-section--nopanel)::before {
       position: absolute;
       top: 0;
       left: 0;
@@ -10,6 +11,84 @@
       height: clamp(70px, 15vw, 168px);
       content: "";
       background-color: #a1c982;
+    }
+
+    .lw-section-title {
+      margin-bottom: clamp(30px, 5.2vw, 60px);
+    }
+
+    &--wide,
+    &--recommended {
+      .catalog-section-swiper .swiper-slide {
+        width: calc(100% / 3);
+        max-width: 415px;
+        height: auto;
+      }
+
+      .lw-container-fluid {
+        padding-left: 0;
+        padding-right: 0;
+
+        @include m-b-mobile-lg-down {
+          padding: 0 var(--container-offset);
+        }
+      }
+    }
+
+    // SWIPER
+
+    .swiper-container {
+      &--offset-right {
+        padding-right: 200px;
+
+        @include m-b-laptop-down {
+          padding-right: clamp(10px, 2.5vw, 100px);
+        }
+
+        @include m-b-tablet-down {
+          padding-left: clamp(10px, 2.5vw, 100px);
+        }
+
+        @include m-b-mobile-lg-down {
+          padding: 0;
+        }
+
+        .swiper-controls {
+          position: absolute;
+          top: 35%;
+          right: 60px;
+          transform: translateY(-100%);
+
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          justify-content: space-between;
+
+          width: 120px;
+          height: auto;
+          z-index: 10;
+
+          transform: rotate(180deg);
+
+          .swiper-button-next,
+          .swiper-button-prev {
+            position: relative;
+            top: unset;
+            right: unset;
+            left: unset;
+            bottom: unset;
+            margin: 0;
+          }
+
+          @include m-b-laptop-down {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .swiper-slide {
+      height: auto;
     }
   }
 

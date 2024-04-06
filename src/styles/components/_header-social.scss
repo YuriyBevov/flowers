@@ -1,5 +1,9 @@
 .header-social {
   margin: 0 auto;
+
+  @include m-b-mobile-lg-down {
+    display: none;
+  }
   &__list {
     @extend .list-reset;
     display: flex;

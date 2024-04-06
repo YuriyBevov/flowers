@@ -13,19 +13,10 @@
   }
 
   .content-block {
-    // ПЕРЕНЕСТИ!!!
     font-size: clamp(16px, 1.2vw, 20px);
 
-    p,
-    span,
-    li,
-    strong,
-    b {
-      font-size: 1em;
-    }
-
-    small {
-      font-size: 0.75em;
+    & > * {
+      color: var(--white);
     }
   }
 
@@ -36,6 +27,8 @@
   }
 
   .lw-section-title {
+    padding: 0;
+    margin-top: 0;
     margin-bottom: clamp(8px, 1.8vw, 30px);
     text-align: left;
     color: var(--white);

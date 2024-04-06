@@ -47,13 +47,17 @@
 
   &-navigation {
     position: absolute;
-    bottom: 40px;
-    right: 40px;
+    bottom: clamp(20px, 2vw, 40px);
+    right: clamp(20px, 2vw, 40px);
     height: 40px;
     width: 100%;
-    max-width: 160px;
+    max-width: clamp(120px, 8vw, 160px);
 
     z-index: 10;
+
+    @include m-b-mobile-lg-down {
+      display: none;
+    }
   }
 }
 
@@ -62,6 +66,10 @@
   height: 33vw;
   order: 1;
   max-height: 600px;
+
+  @include m-b-tablet-down {
+    height: 70vw;
+  }
 
   .swiper-slide {
     opacity: 0.6;

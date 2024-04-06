@@ -26,8 +26,8 @@
   }
 
   @media (hover: hover) {
-    &:hover,
-    &:focus {
+    &:not(.main-btn--nohover):hover,
+    &:not(.main-btn--nohover):focus {
       box-shadow: 0px 4px 28.6px #b3686f;
     }
   }

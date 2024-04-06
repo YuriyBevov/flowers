@@ -1,15 +1,15 @@
 .catalog-tile {
-  margin-bottom: 150px;
+  margin-bottom: clamp(40px, 10vw, 150px);
 
-    ul {
-        @extend .list-reset;
-        @extend .flex-wrap;
-        justify-content: center;
-        gap: clamp(20px, 4.2vw, 60px) 20px;
+  ul {
+    @extend .list-reset;
+    @extend .flex-wrap;
+    justify-content: center;
+    gap: clamp(25px, 4.2vw, 60px) 20px;
 
-        li {
-            width: 100%;
-            max-width: 415px;
-        }
+    li {
+      width: 100%;
+      max-width: 260px;
     }
+  }
 }
