@@ -33,3 +33,7 @@
 .swiper-button-prev::before {
   transform: translate(-50%, -50%) rotate(180deg);
 }
+
+.catalog-top-swiper .swiper-slide {
+  margin-left: 0 !important;
+}

@@ -54,7 +54,7 @@
           </div>
         </div>
         <div class="main-header__section main-header__section--offer">
-              <button class="main-header__callback-btn main-btn" type="button"><img src="./assets/img/phone-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Обратный звонок</span>
+              <button class="main-header__callback-btn main-btn" type="button" data-modal-anchor="request-modal"><img src="./assets/img/phone-icon.svg" alt="Иконка кнопки" width="20" height="20"><span>Обратный звонок</span>
               </button>
         </div>
         <div class="main-header__section main-header__section--logo"><a href="#" aria-label="Цвет Счастья"><img src="./assets/img/logo-black.svg" alt="Логотип" width="270" height="60"></a></div>
@@ -1196,8 +1196,29 @@
           </div>
         </div>
       </div>
-    </footer>
-    <!--include ./modals/...-->
+    </footer><div class="modal request-modal" id="request-modal">
+<div class="modal__overlay">
+<div class="modal__content">
+<button class="modal-closer">
+<svg width="24" height="24">
+<use xlink:href="./assets/sprite.svg#icon-close"></use>
+</svg>
+</button>
+<div class="modal__content-body">
+    <form action=""><div class="form-header"><span class="form-title">Обратный звонок</span><span class="form-description lw-base-text">lorem ipsum dolor amet</span></div>
+      <fieldset>
+        <label class="visually-hidden" for="1">Ваше имя</label>
+        <input type="text" id="1">
+      </fieldset>
+      <fieldset>
+        <label class="visually-hidden" for="2">Ваше имя</label>
+        <input type="text" id="2">
+      </fieldset>
+      <input class="lw-main-btn" type="submit" value="Оставить заявку"><small>Отправляя форму вы соглашаетесь с <a href="#" target="blank">условиями обработки персональных данных</a></small>
+    </form></div>
+</div>
+</div>
+</div>
     <!--script(src="./js/bundle.js")-->
   </body>
 </html>

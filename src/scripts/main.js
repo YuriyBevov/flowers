@@ -6,3 +6,4 @@ import "./modules/swiper";
 import "./modules/accordeon";
 import "./modules/template-common";
 import "./modules/catalogTileCardSquares";
+import "./modules/modal";

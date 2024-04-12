@@ -8,7 +8,8 @@
 @import "common";
 
 /* Компоненты */
-@import "components/temp";
+@import "components/temp"; //временно скрытые элементы сайта находятся тут !
+
 @import "components/swiper-common";
 @import "components/ui-components";
 @import "components/search-field-block";
@@ -34,6 +35,7 @@
 @import "components/offer-badge";
 @import "components/counter";
 @import "components/lw-basket";
+@import "components/contact-block";
 
 @import "components/catalog-tile-card";
 
@@ -70,4 +72,9 @@
 @import "sections/common/page-top-section";
 
 @import "sections/product-item/product-item";
+
+@import "sections/contacts/contacts";
+
+@import "modals/main-modal";
+@import "modals/modal";
 /* Модальные окна */

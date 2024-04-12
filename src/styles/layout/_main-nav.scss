@@ -307,11 +307,14 @@
     font-weight: 300;
 
     &-phone {
-      font-family: var(--secondary-font);
-      font-size: 20px;
-      margin-bottom: 6px;
-      color: var(--white);
-      @extend .hover-opacity;
+      a {
+        display: block !important;
+        font-family: var(--secondary-font) !important;
+        font-size: 20px !important;
+        margin-bottom: 6px !important;
+        color: var(--white) !important;
+        @extend .hover-opacity;
+      }
     }
 
     &-worktime {
@@ -320,14 +323,15 @@
     }
 
     &-mail {
-      color: #b3686f;
-      @extend .hover-opacity;
+      a {
+        color: #b3686f;
+        @extend .hover-opacity;
+      }
     }
   }
 
   &__social {
     .social__list {
-      justify-content: space-between;
       max-width: 320px;
     }
   }

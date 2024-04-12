@@ -1,0 +1,122 @@
+.main-modal {
+
+  .modal-content__header {
+    margin-bottom: 40px;
+  }
+
+  .form-header {
+    margin-bottom: 40px;
+
+    @include m-b-tablet-down {
+      margin-bottom: 30px;
+    }
+  }
+
+  .form-title {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--white);
+
+    @include m-b-tablet-down {
+      font-size: 28px;
+    }
+
+    @include m-b-mobile-lg-down {
+      font-size: 22px;
+    }
+  }
+
+  .form-description {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .form-note {
+    display: inline-block;
+    font-size: 14px;
+    max-width: 400px;
+    margin-top: 20px;
+    color: var(--white);
+
+    a {
+      color: var(--danger);
+    }
+  }
+
+  .form-answer {
+    display: block;
+    padding: 35px 0;
+    font-size: 28px;
+    text-align: center;
+    color: var(--white);
+  }
+
+  form {
+    width: 100%;
+    @extend .flex-column;
+    margin: 0 auto;
+    align-items: center;
+
+    fieldset {
+      @extend .fieldset-reset;
+      width: 100%;
+
+      max-width: 400px;
+      margin: 0 auto;
+
+      input {
+        @extend .input-reset;
+        @extend .flex-wrap;
+        align-items: center;
+        font-size: 20px;
+        line-height: 1;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        color: var(--primary);
+
+
+        @include m-b-tablet-down {
+          font-size: 16px;
+          padding: 10px;
+          padding-top: 12px;
+        }
+
+        &::placeholder {
+          font-size: 20px;
+          color: #8794BA;
+
+          @include m-b-tablet-down {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      .invalid-field {
+        border-color: var(--danger);
+      }
+    }
+
+    input[type="submit"] {
+      margin-top: 30px;
+
+      @include m-b-tablet-down {
+        margin-top: 10px;
+      }
+
+      @include m-b-down(480px) {
+        width: 100%;
+      }
+    }
+  }
+}

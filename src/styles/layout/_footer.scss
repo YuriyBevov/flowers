@@ -63,7 +63,11 @@
         }
       }
 
-      *:not(.footer-logo):not(.footer-logo img) {
+      small {
+        font-weight: 300;
+      }
+
+      & > *:not(.footer-logo):not(.footer-logo img) {
         padding-left: clamp(0px, 4vw, 80px);
 
         @include m-b-down(1280px) {

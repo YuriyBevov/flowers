@@ -1,0 +1,41 @@
+.contacts-block {
+  &__section {
+    @extend .flex-column;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &-title {
+      display: inline-block;
+      font-family: var(--secondary-font);
+      font-size: 20px;
+
+      margin-bottom: 5px;
+      color: var(--dark);
+    }
+
+    a {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--primary);
+    }
+
+    span:not(.contacts-block__section-title) {
+      color: var(--info);
+    }
+
+    &--requisites {
+      small {
+        font-size: 14px;
+        color: var(--info);
+
+        strong {
+          display: inline-block;
+          margin-bottom: 5px;
+          color: var(--dark);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+<div class="modal request-modal" id="request-modal">
+  <div class="modal__overlay">
+    <div class="modal__content">
+      <button class="modal-closer">
+        <svg width="24" height="24">
+          <use xlink:href="./assets/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <div class="modal__content-body">
+        form(action="")
+          <div class="form-header">
+            span.form-title Обратный звонок
+            span.form-description.lw-base-text lorem ipsum dolor amet
+          </div>
+
+          fieldset
+            label.visually-hidden(for="1") Ваше имя
+            input(type="text" id="1")
+
+          fieldset
+            label.visually-hidden(for="2") Ваше имя
+            input(type="text" id="2")
+
+          input(type="submit" class="lw-main-btn" value="Оставить заявку")
+
+          small Отправляя форму вы соглашаетесь с <a href="#" target="blank">условиями обработки персональных данных</a>
+      </div>
+
+    </div>
+  </div>
+</div>
