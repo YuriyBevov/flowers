@@ -105,3 +105,40 @@
   max-height: 75px;
   background-color: var(--secondary);
 }
+
+.title-before-line {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -5px;
+    width: 3.6vw;
+    min-width: 26px;
+    max-width: 68px;
+    height: 99%;
+    content: "";
+    background-color: var(--secondary);
+    z-index: -1;
+
+    @include m-b-laptop-down {
+      width: 4vw;
+    }
+  }
+}
+
+.square-after-text {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+
+    @extend .square;
+
+    max-width: 50px;
+    max-height: 50px;
+  }
+}

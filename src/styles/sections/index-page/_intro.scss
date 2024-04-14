@@ -161,11 +161,6 @@
       max-height: 80%;
     }
 
-    // @include m-b-down(520px) {
-    //   width: 48vw;
-    //   max-height: 70%;
-    // }
-
     @include m-b-down(480px) {
       width: 48vw;
       right: 0;

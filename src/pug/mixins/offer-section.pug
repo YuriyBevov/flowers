@@ -1,14 +1,14 @@
 include ./main-btn
 
 mixin offer-section(data)
-  - console.log(data)
   section.offer-section(class= data.cls ? data.cls : null)
     .lw-container
       h2.lw-section-title!= data.title
 
       .offer-section__grid
         .offer-section__grid-field
-          span.offer-section__grid-field-title!= data.subtitle
+          if data.subtitle
+            span.offer-section__grid-field-title!= data.subtitle
 
           if data.description
             each desc of data.description
