@@ -1,0 +1,24 @@
+include ./main-btn
+
+mixin offer-section(data)
+  - console.log(data)
+  section.offer-section(class= data.cls ? data.cls : null)
+    .lw-container
+      h2.lw-section-title!= data.title
+
+      .offer-section__grid
+        .offer-section__grid-field
+          span.offer-section__grid-field-title!= data.subtitle
+
+          if data.description
+            each desc of data.description
+              p!= desc
+
+          +main-btn(data.offerBtn)
+
+        .offer-section__grid-field.offer-section-gallery
+          .offer-section-gallery__side
+            img(src= `./assets/img/mock/${data.gallery.topSideImg}` alt="" width="400" height="270")
+            img(src= `./assets/img/mock/${data.gallery.bottomSideImg}` alt="" width="400" height="270")
+
+          img(src= `./assets/img/mock/${data.gallery.mainImg}` alt="" width="830" height="730")
