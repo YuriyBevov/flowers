@@ -1,4 +1,26 @@
 .proposal {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    background-image: url("../assets/img/logo-underlay.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    width: 100%;
+    max-width: 1920px;
+    height: 50%;
+    z-index: -1;
+
+    @include m-b-tablet-down {
+      bottom: 50px;
+    }
+  }
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -13,6 +35,7 @@
     position: sticky;
     top: 20px;
     height: fit-content;
+    z-index: 1;
 
     padding-left: clamp(10px, 4vw, 70px);
 
@@ -23,6 +46,7 @@
 
     &--lined {
       padding-left: 0;
+      z-index: -1;
 
       &::before {
         position: absolute;
@@ -65,16 +89,19 @@
     &::before {
       position: absolute;
       top: 0;
-      left: calc(1px - 1px - clamp(10px, 4vw, 70px) - var(--container-fluid-offset));
+      left: calc(
+        1px - 1px - clamp(10px, 4vw, 70px) - var(--container-fluid-offset)
+      );
       width: clamp(10px, 2.1vw, 40px);
       height: 100%;
-      content: '';
+      content: "";
       background-color: var(--secondary);
     }
   }
 
   &__list-item {
     display: flex;
+    align-items: center;
 
     &:not(:last-child) {
       margin-bottom: clamp(20px, 3vw, 40px);
@@ -85,8 +112,6 @@
       width: clamp(28px, 8vw, 56px);
       height: clamp(28px, 8vw, 56px);
       margin-right: 15px;
-
-
     }
 
     span {
@@ -101,11 +126,11 @@
     margin-bottom: clamp(24px, 6vw, 80px);
     text-align: left;
     padding-left: 0;
+    max-width: 500px;
 
     @extend .title-before-line;
 
     @include m-b-down(960px) {
-      text-align: center;
       &::before {
         display: none;
       }

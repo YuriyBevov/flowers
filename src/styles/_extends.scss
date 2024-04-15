@@ -113,17 +113,13 @@
     position: absolute;
     top: 0;
     left: -5px;
-    width: 2.6vw;
-    min-width: 26px;
-    max-width: 68px;
-    height: 90%;
+    width: 3vw;
+    min-width: 40px;
+    max-width: 50px;
+    height: 100%;
     content: "";
     background-color: var(--secondary);
     z-index: -1;
-
-    @include m-b-laptop-down {
-      width: 3vw;
-    }
   }
 }
 
