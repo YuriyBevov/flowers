@@ -1289,6 +1289,14 @@ a {
   direction: ltr;
 }
 
+main {
+  margin-bottom: clamp(30px, 10vw, 100px);
+}
+
+a[href^="tel:"] {
+  white-space: nowrap;
+}
+
 /* flex*/
 .flex-wrap, .main-modal form fieldset input, .catalog-tile ul, .lw-filter__item-content-parameters, .social__list, .header-top-nav__list {
   display: -webkit-box;
