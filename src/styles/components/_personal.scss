@@ -1,6 +1,7 @@
 .personal {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   width: 100%;
 
   @include m-b-laptop-down {
@@ -12,10 +13,10 @@
   }
 
   & > *:not(:last-child) {
-    margin-right: auto;
+    margin-right: 12px;
 
     @include m-b-laptop-down {
-      margin: 0;
+      margin: 6px;
     }
   }
 
@@ -52,25 +53,36 @@
     }
   }
 
-  span {
+  &-count {
     position: absolute;
-    top: -6px;
-    left: calc(100% + -14px);
+    // top: -6px;
+    // left: calc(100% + -14px);
     @extend .flex-centered-content;
-    font-size: 12px;
-    line-height: 1;
-    text-align: center;
-    width: fit-content;
-    min-width: 21px;
-    height: fit-content;
-    min-height: 21px;
+    // font-size: 12px;
+    // line-height: 1;
+    // text-align: center;
+    // width: fit-content;
+    // min-width: 21px;
+    // height: fit-content;
+    // min-height: 21px;
     border-radius: 50%;
-    color: var(--white);
+    // color: var(--white);
+    // background-color: var(--primary);
+    width: 6px;
+    height: 6px;
+    min-height: 6px;
+    min-width: 6px;
     background-color: var(--primary);
+    top: 5px;
+    right: 5px;
 
     @include m-b-laptop-down {
-      color: var(--black);
+      // color: var(--black);
       background-color: var(--white);
+    }
+
+    &-hidden {
+      display: none;
     }
   }
 }

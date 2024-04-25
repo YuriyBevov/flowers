@@ -20,43 +20,44 @@
     &--wide,
     &--recommended {
       .catalog-section-swiper .swiper-slide {
-        width: calc(100% / 3);
-        max-width: 415px;
+        width: calc(100% / 3 - 14px);
+        max-width: 360px;
         height: auto;
       }
 
-      .lw-container-fluid {
-        padding-left: 0;
-        padding-right: 0;
+      // .lw-container-fluid {
+      //   padding-left: 0;
+      //   padding-right: 0;
 
-        @include m-b-mobile-lg-down {
-          padding: 0 var(--container-offset);
-        }
-      }
+      //   @include m-b-mobile-lg-down {
+      //     padding: 0 var(--container-offset);
+      //   }
+      // }
     }
 
     // SWIPER
 
     .swiper-container {
       &--offset-right {
-        padding-right: 200px;
+        padding-right: 150px;
 
         @include m-b-laptop-down {
-          padding-right: clamp(10px, 2.5vw, 100px);
-        }
-
-        @include m-b-tablet-down {
-          padding-left: clamp(10px, 2.5vw, 100px);
-        }
-
-        @include m-b-mobile-lg-down {
           padding: 0;
+          // padding-right: clamp(10px, 2.5vw, 100px);
         }
+
+        // @include m-b-tablet-down {
+        //   padding-left: clamp(10px, 2.5vw, 100px);
+        // }
+
+        // @include m-b-mobile-lg-down {
+        //   padding: 0;
+        // }
 
         .swiper-controls {
           position: absolute;
           top: 35%;
-          right: 60px;
+          right: 15px;
           transform: translateY(-100%);
 
           display: flex;
@@ -88,16 +89,21 @@
     }
 
     .swiper-slide {
+      width: fit-content;
       height: auto;
     }
   }
 
   &-section-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 40px 20px;
 
     @include m-b-laptop-down {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include m-b-tablet-down {
       grid-template-columns: repeat(3, 1fr);
     }
 
@@ -105,7 +111,7 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include m-b-down(400px) {
+    @include m-b-down(360px) {
       grid-template-columns: 1fr;
     }
   }

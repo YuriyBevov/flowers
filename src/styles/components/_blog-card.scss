@@ -9,13 +9,17 @@
 
   &-image {
     position: relative;
-    width: 50%;
-    max-width: 400px;
+    width: 40%;
+    max-width: 360px;
     height: auto;
     max-height: 90%;
     aspect-ratio: 1 / 1.1;
     z-index: 2;
     border-radius: 10px;
+
+    @include m-b-down(960px) {
+      width: 30%;
+    }
 
     @include m-b-mobile-lg-down {
       width: 100%;
@@ -25,9 +29,10 @@
       border-radius: 10px 10px 0 0;
     }
   }
+
   &-content {
     @extend .flex-column;
-    padding: clamp(18px, 4.8vw, 75px) clamp(18px, 3.2vw, 135px);
+    padding: clamp(18px, 4.8vw, 35px) clamp(18px, 3.2vw, 40px);
 
     border-radius: 0 0 10px 10px;
     height: 100%;

@@ -1,8 +1,18 @@
 .product-card {
   @extend .flex-column;
   width: 100%;
-  max-width: 560px;
+  max-width: 360px;
   height: 100% !important;
+
+  @media (hover: hover) {
+    &:hover {
+      .product-card__top .show-btn,
+      .product-card__top .add-to-cart-btn,
+      .product-card__top .favourite-btn {
+        opacity: 1;
+      }
+    }
+  }
 
   &__top {
     position: relative;
@@ -34,7 +44,7 @@
     gap: clamp(10px, 1vw, 18px);
     height: calc(100% - (clamp(10px, 1.3vw, 30px) * 2));
 
-    .add-to-cart-btn {
+    .add-to-cart-btn-wrapper {
       margin-top: auto;
     }
   }

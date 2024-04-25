@@ -14,8 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   if (catalogTopSlider) {
-    console.log(catalogTopSlider, "TEST");
-
     new Swiper(catalogTopSlider, {
       slidesPerView: 1,
       spaceBetween: 10,
@@ -23,13 +21,18 @@ document.addEventListener("DOMContentLoaded", () => {
       speed: 1000,
 
       breakpoints: {
-        420: {
+        375: {
           slidesPerView: 2,
           spaceBetween: 15,
         },
 
         534: {
           slidesPerView: 3,
+          spaceBetween: 20,
+        },
+
+        768: {
+          slidesPerView: 4,
           spaceBetween: 20,
         },
       },
@@ -51,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: 2,
       spaceBetween: 10,
       speed: 1000,
-      slidesOffsetAfter: 0,
-      grabCursor: true,
+      // slidesOffsetAfter: 0,
+      // grabCursor: true,
 
       navigation: {
         prevEl,
@@ -63,12 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
         534: {
           slidesPerView: 3,
           spaceBetween: 20,
-          slidesOffsetAfter: 0,
+          // slidesOffsetAfter: 0,
         },
         768: {
           slidesPerView: "auto",
           spaceBetween: 20,
-          slidesOffsetAfter: 20,
+          // slidesOffsetAfter: 20,
         },
       },
     });

@@ -1,6 +1,6 @@
 .catalog-tile {
   @extend .lw-section-offset;
-  margin-bottom: clamp(40px, 10vw, 150px);
+  // margin-bottom: clamp(40px, 10vw, 150px);
 
   &--no-margin-bottom {
     margin-bottom: 0;

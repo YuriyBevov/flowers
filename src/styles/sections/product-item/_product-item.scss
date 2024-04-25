@@ -1,16 +1,8 @@
 .product-item {
   &-container {
     display: flex;
-    column-gap: clamp(25px, 8vw, 165px);
+    column-gap: clamp(25px, 3.2vw, 65px);
     margin-bottom: 60px;
-
-    @include m-b-desktop-down {
-      column-gap: clamp(25px, 6vw, 165px);
-    }
-
-    @include m-b-laptop-down {
-      gap: 25px;
-    }
 
     @include m-b-tablet-down {
       flex-direction: column;
@@ -153,7 +145,7 @@
   .product-item-cart-add-btn {
     flex-grow: 1;
     width: auto;
-    min-height: 60px;
+    min-height: 44px;
     min-width: 120px;
 
     svg {

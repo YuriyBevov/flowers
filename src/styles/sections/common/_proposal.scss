@@ -104,7 +104,7 @@
     align-items: center;
 
     &:not(:last-child) {
-      margin-bottom: clamp(20px, 3vw, 40px);
+      margin-bottom: clamp(16px, 3vw, 24px);
     }
 
     img {
@@ -115,7 +115,7 @@
     }
 
     span {
-      font-size: clamp(14px, 2.1vw, 20px);
+      font-size: clamp(14px, 2.1vw, 18px);
       font-weight: 300;
       color: var(--black);
     }

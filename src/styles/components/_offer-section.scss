@@ -63,7 +63,7 @@
       }
     }
 
-    p {
+    /*p {
       font-family: "Roboto";
       font-weight: 300;
       font-size: clamp(14px, 1.6vw, 20px);
@@ -76,11 +76,12 @@
       @include m-b-down(960px) {
         text-align: center;
       }
-    }
+    }*/
 
     .main-btn {
       max-width: fit-content;
       min-width: 180px;
+      margin-left: 40px;
 
       @include m-b-down(960px) {
         margin: 0 auto;

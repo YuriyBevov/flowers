@@ -440,7 +440,6 @@ var modals = document.querySelectorAll(".modal");
 
 if (modals) {
   modals.forEach(function (modal) {
-    console.log(modal);
     new _classes_Modal__WEBPACK_IMPORTED_MODULE_0__.Modal(modal);
   });
 }
@@ -484,19 +483,22 @@ document.addEventListener("DOMContentLoaded", function () {
   var catalogTopSlider = document.querySelector(".swiper-container .catalog-top-swiper");
 
   if (catalogTopSlider) {
-    console.log(catalogTopSlider, "TEST");
     new swiper__WEBPACK_IMPORTED_MODULE_0__["default"](catalogTopSlider, {
       slidesPerView: 1,
       spaceBetween: 10,
       grabCursor: true,
       speed: 1000,
       breakpoints: {
-        420: {
+        375: {
           slidesPerView: 2,
           spaceBetween: 15
         },
         534: {
           slidesPerView: 3,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 4,
           spaceBetween: 20
         }
       }
@@ -513,8 +515,8 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 2,
       spaceBetween: 10,
       speed: 1000,
-      slidesOffsetAfter: 0,
-      grabCursor: true,
+      // slidesOffsetAfter: 0,
+      // grabCursor: true,
       navigation: {
         prevEl: prevEl,
         nextEl: nextEl
@@ -522,13 +524,13 @@ document.addEventListener("DOMContentLoaded", function () {
       breakpoints: {
         534: {
           slidesPerView: 3,
-          spaceBetween: 20,
-          slidesOffsetAfter: 0
+          spaceBetween: 20 // slidesOffsetAfter: 0,
+
         },
         768: {
           slidesPerView: "auto",
-          spaceBetween: 20,
-          slidesOffsetAfter: 20
+          spaceBetween: 20 // slidesOffsetAfter: 20,
+
         }
       }
     });
