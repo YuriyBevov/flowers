@@ -14,6 +14,7 @@
     }
 
     .lw-section-title {
+      margin-top: 0;
       margin-bottom: clamp(30px, 5.2vw, 60px);
     }
 
@@ -24,15 +25,6 @@
         max-width: 360px;
         height: auto;
       }
-
-      // .lw-container-fluid {
-      //   padding-left: 0;
-      //   padding-right: 0;
-
-      //   @include m-b-mobile-lg-down {
-      //     padding: 0 var(--container-offset);
-      //   }
-      // }
     }
 
     // SWIPER
@@ -43,16 +35,7 @@
 
         @include m-b-laptop-down {
           padding: 0;
-          // padding-right: clamp(10px, 2.5vw, 100px);
         }
-
-        // @include m-b-tablet-down {
-        //   padding-left: clamp(10px, 2.5vw, 100px);
-        // }
-
-        // @include m-b-mobile-lg-down {
-        //   padding: 0;
-        // }
 
         .swiper-controls {
           position: absolute;

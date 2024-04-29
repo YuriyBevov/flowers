@@ -17,6 +17,9 @@
 
     @include m-b-mobile-lg-down {
       flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0;
     }
   }
 
@@ -72,22 +75,19 @@
     @include m-b-mobile-lg-down {
       padding: 5px 10px;
 
-      .counter {
-        border-radius: 6px;
-      }
-
       &:nth-child(2) {
         width: 100%;
       }
 
       &:nth-child(3) {
+        margin-right: 0;
         .lw-basket-item-price-current {
           font-size: 18px;
         }
       }
 
       &:nth-child(5) {
-        justify-content: space-between;
+        flex-direction: column;
       }
     }
   }
@@ -115,6 +115,10 @@
 
     &-title {
       margin: 0;
+
+      @include m-b-mobile-lg-down {
+        text-align: center;
+      }
     }
 
     &-title a {
@@ -122,6 +126,7 @@
     }
 
     &-title span {
+      width: 100%;
       font-size: 16px;
       font-weight: 300;
       color: var(--black);
@@ -156,12 +161,15 @@
       background-size: 22px;
       background-position: center;
       background-repeat: no-repeat;
+      cursor: pointer;
     }
 
     &-section--total-price {
       flex-direction: row;
       align-items: center;
+      justify-content: flex-end;
       gap: 30px;
+      min-width: 200px;
     }
 
     &-restore-overlay {

@@ -12,10 +12,26 @@
     max-width: var(--container-fluid-width);
   }
 
+  &-alert {
+    @extend .flex-centered-content;
+    padding: 10px;
+    margin: 10px 0 20px;
+
+    &--danger {
+      color: var(--white);
+      background-color: var(--primary);
+    }
+
+    &--success {
+      color: var(--black);
+      background-color: var(--success);
+    }
+  }
+
   //-- section styles --//
 
   &-section-offset {
-    padding: clamp(24px, 3.2vw, 40px) 0;
+    padding: clamp(24px, 7vw, 60px) 0;
   }
 
   //-- font styles --//

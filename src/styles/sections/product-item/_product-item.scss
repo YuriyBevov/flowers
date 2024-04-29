@@ -6,6 +6,7 @@
 
     @include m-b-tablet-down {
       flex-direction: column;
+      gap: 30px;
     }
   }
 
@@ -147,6 +148,7 @@
     width: auto;
     min-height: 44px;
     min-width: 120px;
+    max-width: 200px;
 
     svg {
       fill: var(--white);

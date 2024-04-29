@@ -146,13 +146,13 @@ export class Modal {
     evt.preventDefault();
     this.bodyLocker(true);
 
-    const service = evt.target.dataset.service;
-
+    const service = evt.currentTarget.dataset.service;
     if (service) {
       const hidden = this.modal.querySelector(
         ".control-wrapper--hidden > input"
       );
-      hidden.value = service;
+
+      if (hidden) hidden.value = service;
     }
 
     gsap.fromTo(

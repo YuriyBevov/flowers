@@ -80,6 +80,7 @@
     }
 
     &--info {
+      margin: 0 auto;
       @include m-b-down(640px) {
         margin-bottom: 20px;
       }

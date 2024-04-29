@@ -98,8 +98,8 @@ document.addEventListener("DOMContentLoaded", () => {
       slidesPerView: 1,
       spaceBetween: 10,
       // initialSlide,
-      slidesOffsetAfter: 20,
-      grabCursor: true,
+      // slidesOffsetAfter: 20,
+      // grabCursor: true,
       speed: 1000,
 
       navigation: {
@@ -111,13 +111,13 @@ document.addEventListener("DOMContentLoaded", () => {
         534: {
           slidesPerView: 2,
           spaceBetween: 20,
-          slidesOffsetBefore: 0,
+          // slidesOffsetBefore: 0,
         },
 
         768: {
           slidesPerView: "auto",
           spaceBetween: 20,
-          slidesOffsetBefore: 20,
+          // slidesOffsetBefore: 20,
         },
       },
     });

@@ -7,3 +7,6 @@ import "./modules/accordeon";
 import "./modules/template-common";
 import "./modules/catalogTileCardSquares";
 import "./modules/modal";
+
+import "./modules/reviewCardLimitStr";
+import "./modules/reviewModalFill";

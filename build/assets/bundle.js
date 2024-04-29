@@ -145,12 +145,12 @@ var Modal = /*#__PURE__*/function () {
 
       _this.bodyLocker(true);
 
-      var service = evt.target.dataset.service;
+      var service = evt.currentTarget.dataset.service;
 
       if (service) {
         var hidden = _this.modal.querySelector(".control-wrapper--hidden > input");
 
-        hidden.value = service;
+        if (hidden) hidden.value = service;
       }
 
       gsap__WEBPACK_IMPORTED_MODULE_0__.gsap.fromTo(_this.modal, {
@@ -446,6 +446,64 @@ if (modals) {
 
 /***/ }),
 
+/***/ "./src/scripts/modules/reviewCardLimitStr.js":
+/*!***************************************************!*\
+  !*** ./src/scripts/modules/reviewCardLimitStr.js ***!
+  \***************************************************/
+/***/ (() => {
+
+function limitStr(elem, str, n) {
+  str = str.trim();
+
+  if (str.length > n) {
+    elem.parentNode.querySelector(".review-card-btn").style.display = "flex";
+    return str.slice(0, n) + "...";
+  } else {
+    return str;
+  }
+}
+
+var texts = document.querySelectorAll(".lw-limited-text");
+
+if (texts.length) {
+  texts.forEach(function (text) {
+    text.innerHTML = limitStr(text, text.innerHTML, 300);
+  });
+}
+
+/***/ }),
+
+/***/ "./src/scripts/modules/reviewModalFill.js":
+/*!************************************************!*\
+  !*** ./src/scripts/modules/reviewModalFill.js ***!
+  \************************************************/
+/***/ (() => {
+
+var moreBtns = document.querySelectorAll(".review-card-btn");
+
+if (moreBtns.length) {
+  var onClickFillReviewModal = function onClickFillReviewModal(evt) {
+    var modal = document.querySelector("#review-text-modal");
+
+    if (modal) {
+      var content = modal.querySelector(".modal__content-body");
+      var isDirty = content.querySelector(".review-card");
+      if (isDirty) isDirty.remove();
+      var text = evt.currentTarget.getAttribute("data-review-text");
+      var clone = evt.currentTarget.parentNode.cloneNode(true);
+      clone.querySelector("button").remove();
+      clone.querySelector(".review-card-content").innerHTML = text;
+      content.appendChild(clone);
+    }
+  };
+
+  moreBtns.forEach(function (btn) {
+    btn.addEventListener("click", onClickFillReviewModal);
+  });
+}
+
+/***/ }),
+
 /***/ "./src/scripts/modules/search-field.js":
 /*!*********************************************!*\
   !*** ./src/scripts/modules/search-field.js ***!
@@ -555,8 +613,8 @@ document.addEventListener("DOMContentLoaded", function () {
       slidesPerView: 1,
       spaceBetween: 10,
       // initialSlide,
-      slidesOffsetAfter: 20,
-      grabCursor: true,
+      // slidesOffsetAfter: 20,
+      // grabCursor: true,
       speed: 1000,
       navigation: {
         prevEl: _prevEl ? _prevEl : null,
@@ -565,13 +623,13 @@ document.addEventListener("DOMContentLoaded", function () {
       breakpoints: {
         534: {
           slidesPerView: 2,
-          spaceBetween: 20,
-          slidesOffsetBefore: 0
+          spaceBetween: 20 // slidesOffsetBefore: 0,
+
         },
         768: {
           slidesPerView: "auto",
-          spaceBetween: 20,
-          slidesOffsetBefore: 20
+          spaceBetween: 20 // slidesOffsetBefore: 20,
+
         }
       }
     });
@@ -20104,6 +20162,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_catalogTileCardSquares__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/catalogTileCardSquares */ "./src/scripts/modules/catalogTileCardSquares.js");
 /* harmony import */ var _modules_catalogTileCardSquares__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_modules_catalogTileCardSquares__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _modules_modal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./modules/modal */ "./src/scripts/modules/modal.js");
+/* harmony import */ var _modules_reviewCardLimitStr__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./modules/reviewCardLimitStr */ "./src/scripts/modules/reviewCardLimitStr.js");
+/* harmony import */ var _modules_reviewCardLimitStr__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_modules_reviewCardLimitStr__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _modules_reviewModalFill__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./modules/reviewModalFill */ "./src/scripts/modules/reviewModalFill.js");
+/* harmony import */ var _modules_reviewModalFill__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_modules_reviewModalFill__WEBPACK_IMPORTED_MODULE_10__);
+
+
 
 
 

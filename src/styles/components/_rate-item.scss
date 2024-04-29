@@ -1,0 +1,13 @@
+.rate-item {
+  display: block;
+  width: 14px;
+  height: 14px;
+  margin: 0 1px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url("../assets/img/icon-rate.svg");
+
+  &.active {
+    background-image: url("../assets/img/rate-star-filled.svg");
+  }
+}
